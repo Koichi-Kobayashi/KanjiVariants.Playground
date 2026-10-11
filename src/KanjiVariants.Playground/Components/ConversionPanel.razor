@@ -1,0 +1,65 @@
+@inject ConversionService Converter
+
+<section class="panel input-panel" aria-labelledby="conversion-title">
+    <h2 id="conversion-title">文章をまとめて変換する</h2>
+    <form @onsubmit="Run" @onsubmit:preventDefault>
+        <fieldset disabled="@busy">
+            <label for="conversion-input">変換したい文章</label>
+            <textarea id="conversion-input" rows="4" @bind="input" @bind:event="oninput" aria-describedby="conversion-help" spellcheck="false"></textarea>
+            <p id="conversion-help" class="help">最大100,000 UTF-16単位。補助文字は2単位分です。改行・空白を保持し、入力は上書きしません。</p>
+            <div class="examples"><span>字形情報の入力例</span>
+                <button type="button" class="chip" @onclick="() => SetVariationExample(VariationExamples.Ivs)">IVSの例を試す</button>
+                <button type="button" class="chip" @onclick="() => SetVariationExample(VariationExamples.Svs)">SVSの例を試す</button>
+            </div>
+            <p class="help">IVS：辻 + U+E0100（U+8FBB U+E0100）／SVS：不 + U+FE00（U+4E0D U+FE00）。例を押すと入力と変換先をJIS X 0208に設定します。OFFで保持、ONで基底文字になる違いを試せます。字体が同じに見える環境もあります。</p>
+            <CharacterSetSelect Id="conversion-target" Label="変換先の文字集合" @bind-Value="target" />
+            <label class="fallback-option" for="conversion-fallback"><input id="conversion-fallback" type="checkbox" @bind="fallback" aria-describedby="fallback-help" /> IVS/SVSの基底文字へのフォールバックを許可する</label>
+            <p id="fallback-help" class="help">初期値はOFFです。ONでは登録済みIVS/SVSの字形情報を失う場合があります。未登録の組み合わせは削除しません。MJの一意な縮退先への変換はOFFでも行われ、フォールバックより優先されます。</p>
+            <button class="primary convert-button" type="submit">@(busy ? "変換中…" : "一括変換する") <span aria-hidden="true">→</span></button>
+        </fieldset>
+    </form>
+    @if (error is not null) { <p class="error" role="alert">@error</p> }
+</section>
+<section class="results" aria-labelledby="conversion-results-title" aria-busy="@busy.ToString().ToLowerInvariant()">
+    <h2 id="conversion-results-title">変換結果</h2>
+    @if (result is null)
+    {
+        <div class="panel empty"><span aria-hidden="true">字</span><p>文章を入力して「一括変換する」を押してください。</p><p class="help">一意に決まる文字だけを変換し、変換できない文字はそのまま残します。</p></div>
+    }
+    else
+    {
+        @if (input != result.OriginalText || target != result.Target.Value || Options != result.Options)
+        { <p class="help" role="status">入力または設定が変更されています。以下は前回実行時の結果です。更新するには再度変換してください。</p> }
+        <ConversionResults Result="result" @key="result" />
+    }
+</section>
+
+@code {
+    private string input = "髙橋𠮷野さんに資料を送ります。";
+    private CharacterSet target = CharacterSet.JisX0208;
+    private bool fallback, busy;
+    private string? error;
+    private ConversionResult? result;
+    private KanjiFallbackOptions Options => fallback ? KanjiFallbackOptions.AllowVariationSelectorFallback : KanjiFallbackOptions.None;
+    private void SetVariationExample(string example)
+    {
+        input = example;
+        target = CharacterSet.JisX0208;
+        // オプションは維持し、利用者がOFF/ONを比較できるようにする。自動実行はしない。
+    }
+    private async Task Run()
+    {
+        if (busy) return;
+        var text = input;
+        var selectedTarget = target;
+        var options = Options;
+        busy = true;
+        error = null;
+        result = null;
+        await Task.Delay(20); // 実行中の表示を反映してからブラウザ内で処理する。
+        try { result = Converter.Convert(text, selectedTarget, options); }
+        catch (ArgumentException ex) { error = ex.Message; }
+        catch (Exception) { error = "変換を完了できませんでした。入力を短くしてもう一度お試しください。"; }
+        finally { busy = false; }
+    }
+}

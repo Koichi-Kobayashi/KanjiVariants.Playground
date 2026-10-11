@@ -1,4 +1,4 @@
-@inject IJSRuntime JS
+@inject ClipboardService Clipboard
 
 <div class="panel result-panel">
     <div class="summary" role="status">
@@ -6,6 +6,7 @@
         <p><strong>@Result.Target.Label</strong> · @Result.Rows.Count 単位中 @Result.Rows.Count(x => !x.Item.IsSupported) 単位が対象外</p>
         <p class="help">診断した入力：<span class="original-text">@Result.Text</span></p>
         <p class="help">診断・候補検索 @Result.ElapsedMilliseconds.ToString("F1") ms（配信・画面描画時間を除く）</p>
+        <p class="help">元の表現の適合判定はVSを保持したまま行います。候補はすべて @Result.Target.Label で使用可能です。「許可時の変換先」はフォールバックONのAPIが選ぶ文字で、MJの一意な縮退先が優先されます。自動変更は行いません。</p>
     </div>
     <div class="table-scroll">
         <table>
@@ -15,19 +16,30 @@
                 @foreach (var row in Result.Rows)
                 {
                     <tr>
-                        <th scope="row"><span class="character">@Visible(row.Item)</span><span class="position">位置 @row.Item.Utf16Index · @row.Item.Utf16Length 単位</span></th>
+                        <th scope="row"><span class="character">@CharacterDisplay.Visible(row.Item.Original, row.Item.Reason)</span><span class="position">@CharacterDisplay.CodePoints(row.Item.Original, row.Item.Reason)</span><span class="position">位置 @row.Item.Utf16Index · @row.Item.Utf16Length 単位</span></th>
                         <td data-label="判定"><span class="status-dot @(row.Item.IsSupported ? "ok" : "outside")" aria-hidden="true"></span>@DiagnosticService.Explain(row.Item.Reason)</td>
                         <td data-label="代替候補">
-                            @if (row.Alternatives.Count > 0)
+                            @if (row.Candidates.Count > 0)
                             {
                                 <div class="candidates">
-                                    @foreach (var candidate in row.Alternatives)
+                                    @foreach (var candidate in row.Candidates)
                                     {
-                                        <button type="button" class="candidate" @onclick="() => Copy(candidate)" aria-label="@($"代替候補 {candidate} をコピー")"><span>@candidate</span><small>コピー</small></button>
+                                        <div class="candidate-item">
+                                            <button type="button" class="candidate" @onclick="() => Copy(candidate.Text)" aria-label="@($"代替候補 {candidate.Text} をコピー")"><span>@candidate.Text</span><small>コピー</small></button>
+                                            <span class="position">@CharacterDisplay.CodePoints(candidate.Text)</span>
+                                            <span class="candidate-kind">@(candidate.Kind == AlternativeKind.MjMapping ? "MJ縮退マップ" : "基底文字フォールバック（許可時）")</span>
+                                            @if (row.HasVariationSelector && candidate.IsPreferred)
+                                            { <span class="position">許可時の変換先：@CharacterDisplay.ChangeReason(candidate.SelectionReason!.Value)</span> }
+                                        </div>
                                     }
                                 </div>
                             }
-                            else { <span class="help">@(row.CanSearchAlternatives ? "この文字集合で使える候補はありません" : "候補検索の対象外（漢字または登録済みIVS・SVSではありません）")</span> }
+                            else { <span class="help">@(row.Item.Reason == KanjiDiagnosticReason.UnregisteredVariationSequence
+                                ? "未登録のVariation Sequenceです。基底文字への候補は追加しません。"
+                                : row.CanSearchAlternatives ? "この文字集合で使える候補はありません" : "候補検索の対象外（漢字または登録済みIVS・SVSではありません）")</span> }
+                            @if (row.Candidates.Any(x => x.Kind == AlternativeKind.VariationSelectorFallback
+                                || x.SelectionReason == KanjiDiagnosticReason.VariationSelectorFallbackAvailable))
+                            { <p class="help">基底文字へのフォールバックではIVS/SVSの字形情報が失われます。利用する前に確認してください。</p> }
                         </td>
                     </tr>
                 }
@@ -44,9 +56,7 @@
     protected override void OnParametersSet() => copyStatus = "候補を押すと、その文字だけをコピーします。入力は変更しません。";
     private async Task Copy(string candidate)
     {
-        try { await JS.InvokeVoidAsync("playground.copy", candidate); copyStatus = $"「{candidate}」をコピーしました。"; }
-        catch (JSException) { copyStatus = $"コピーできませんでした。候補「{candidate}」を選択して手動でコピーしてください。"; }
+        copyStatus = await Clipboard.CopyAsync(candidate) ? $"「{candidate}」をコピーしました。"
+            : $"コピーできませんでした。候補「{candidate}」を選択して手動でコピーしてください。";
     }
-    private static string Visible(KanjiTextDiagnosticItem item) => item.Reason == KanjiDiagnosticReason.InvalidUtf16
-        ? "不正UTF-16" : item.Original switch { " " => "空白", "\r" => "CR", "\n" => "LF", "\t" => "TAB", "\0" => "NUL", _ => item.Original };
 }

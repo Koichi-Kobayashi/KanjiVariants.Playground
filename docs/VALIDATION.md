@@ -1,5 +1,7 @@
 # 初期構築の検証記録（2026-10-12）
 
+この文書は初期構築時の記録です。その後の文章一括変換の1,117件の仕様照合は[CONVERSION.md](CONVERSION.md)、IVS/SVS候補改善後の合計1,547件の検証は[VARIATIONS.md](VARIATIONS.md)を参照してください。
+
 ## 実行環境とビルド
 
 Windows x64 / .NET SDK 10.0.401 / runtime 10.0.12。NuGet KanjiVariants 1.2.0を使用しました。

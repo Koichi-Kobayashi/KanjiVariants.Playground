@@ -1,0 +1,68 @@
+@inject ClipboardService Clipboard
+
+<div class="panel result-panel">
+    <div class="summary" role="status">
+        <span class="badge @(Result.IsSupported ? "success" : "warning")">@StatusLabel</span>
+        <p><strong>@Result.Target.Label</strong> · 変換 @Result.ChangedCount.ToString("N0") 箇所 · 残った対象外文字 @Result.RemainingCount.ToString("N0") 箇所</p>
+        <p class="help">変換後の適合判定：@(Result.IsSupported ? "すべて使用可能" : "対象外文字あり") · IVS/SVSフォールバック：@(Result.Options == KanjiFallbackOptions.None ? "OFF" : "ON")</p>
+        <p class="help">変換・検証・詳細集計 @Result.ElapsedMilliseconds.ToString("F1") ms（配信・画面描画時間を除く）</p>
+    </div>
+    <div class="comparison">
+        <div><label for="conversion-before">変換前（実行時の入力）</label><textarea id="conversion-before" readonly rows="5" value="@Result.OriginalText" spellcheck="false"></textarea></div>
+        <div><label for="conversion-after">変換後の文章</label><textarea id="conversion-after" readonly rows="5" value="@Result.ConvertedText" spellcheck="false"></textarea></div>
+    </div>
+    @if (Result.OriginalText.Length == 0) { <p class="help">入力は空です。ライブラリの規則では使用可能として扱います。</p> }
+    <button type="button" class="copy-output" @onclick="Copy">変換後の文章全体をコピー</button>
+    <p class="help" role="status">@copyStatus</p>
+    <details class="conversion-details">
+        <summary>変更内容（@Result.Changes.Count 種類・@Result.ChangedCount.ToString("N0") 箇所）</summary>
+        @if (Result.Changes.Count == 0) { <p class="help">置換はありません。対象外の文字が残っているかは上の判定を確認してください。</p> }
+        else
+        {
+            <div class="table-scroll"><table>
+                <caption class="sr-only">変換前後の文字とUnicodeコードポイント、出現回数、診断APIによる変換理由</caption>
+                <thead><tr><th scope="col">変換前</th><th scope="col">変換後</th><th scope="col">回数</th><th scope="col">変換理由</th></tr></thead>
+                <tbody>@foreach (var row in Result.Changes.Take(changeLimit))
+                {
+                    <tr><th scope="row"><span class="character">@row.Original</span><span class="position">@CharacterDisplay.CodePoints(row.Original)</span></th>
+                        <td data-label="変換後"><span class="character">@row.Replacement</span><span class="position">@CharacterDisplay.CodePoints(row.Replacement)</span></td>
+                        <td data-label="回数">@row.Count.ToString("N0")</td><td data-label="変換理由">@CharacterDisplay.ChangeReason(row.Reason)</td></tr>
+                }</tbody>
+            </table></div>
+            @if (Result.Changes.Count > changeLimit) { <button type="button" class="chip" @onclick="() => changeLimit += PageSize">次の50種類を表示（残り @(Result.Changes.Count - changeLimit) 種類）</button> }
+        }
+    </details>
+    @if (Result.Remaining.Count > 0)
+    {
+        <details class="conversion-details" open>
+            <summary>残った対象外文字（@Result.Remaining.Count 種類・@Result.RemainingCount.ToString("N0") 箇所）</summary>
+            <p class="help">変換できない文字はそのまま残しています。文章全体は対象文字集合に収まっていません。</p>
+            <div class="table-scroll"><table>
+                <caption class="sr-only">変換後に残った対象外文字と出現回数、診断理由</caption>
+                <thead><tr><th scope="col">文字</th><th scope="col">回数</th><th scope="col">診断理由</th></tr></thead>
+                <tbody>@foreach (var row in Result.Remaining.Take(remainingLimit))
+                {
+                    <tr><th scope="row"><span class="character">@CharacterDisplay.Visible(row.Original, row.Reason)</span><span class="position">@CharacterDisplay.CodePoints(row.Original, row.Reason)</span></th>
+                        <td data-label="回数">@row.Count.ToString("N0")</td><td data-label="診断理由">@DiagnosticService.Explain(row.Reason)</td></tr>
+                }</tbody>
+            </table></div>
+            @if (Result.Remaining.Count > remainingLimit) { <button type="button" class="chip" @onclick="() => remainingLimit += PageSize">次の50種類を表示（残り @(Result.Remaining.Count - remainingLimit) 種類）</button> }
+        </details>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired] public ConversionResult Result { get; set; } = default!;
+    private const int PageSize = 50;
+    private int changeLimit = PageSize, remainingLimit = PageSize;
+    private string copyStatus = "内容を確認してからコピーしてください。入力は変更しません。";
+    private string StatusLabel => Result.Status switch
+    {
+        ConversionStatus.Unnecessary => "変換不要",
+        ConversionStatus.Supported => "すべて使用可能",
+        _ => "一部に対象外文字が残っています"
+    };
+    private async Task Copy() => copyStatus = await Clipboard.CopyAsync(Result.ConvertedText)
+        ? "変換後の文章をコピーしました。"
+        : "コピーできませんでした。変換後の文章を選択して手動でコピーしてください。";
+}

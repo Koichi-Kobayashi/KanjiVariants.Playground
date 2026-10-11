@@ -1,0 +1,19 @@
+<div class="target-control">
+    <label for="@Id">@Label</label>
+    <select id="@Id" value="@Value" @onchange="Changed" aria-describedby="@(Id + "-help")">
+        @foreach (var option in DiagnosticService.Targets) { <option value="@option.Value">@option.Label</option> }
+    </select>
+    @if (ShowDescription) { <p id="@(Id + "-help")" class="help">@DiagnosticService.Targets.Single(x => x.Value == Value).Description</p> }
+</div>
+
+@code {
+    [Parameter, EditorRequired] public string Id { get; set; } = default!;
+    [Parameter] public string Label { get; set; } = "対象の文字集合";
+    [Parameter] public bool ShowDescription { get; set; } = true;
+    [Parameter] public CharacterSet Value { get; set; }
+    [Parameter] public EventCallback<CharacterSet> ValueChanged { get; set; }
+    private async Task Changed(ChangeEventArgs args)
+    {
+        if (Enum.TryParse<CharacterSet>(args.Value?.ToString(), out var value)) await ValueChanged.InvokeAsync(value);
+    }
+}

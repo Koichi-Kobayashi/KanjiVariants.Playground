@@ -9,5 +9,8 @@
   <ItemGroup>
     <PackageReference Include="KanjiVariants" Version="1.2.0" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/DiagnosticService.cs" Link="DiagnosticService.cs" />
+    <Compile Include="../../src/KanjiVariants.Playground/Services/ConversionService.cs" Link="ConversionService.cs" />
+    <Compile Include="../../src/KanjiVariants.Playground/Services/CharacterDisplay.cs" Link="CharacterDisplay.cs" />
+    <Compile Include="../../src/KanjiVariants.Playground/Services/VariationExamples.cs" Link="VariationExamples.cs" />
   </ItemGroup>
 </Project>

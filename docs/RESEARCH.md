@@ -61,4 +61,6 @@ Releaseの既定トリミングは成功し、ILLink警告なし。KanjiVariants
 
 ## 次の検証
 
+この調査は初期構築時の記録です。その後追加した文章一括変換のAPI仕様・UI・検証範囲は[CONVERSION.md](CONVERSION.md)を参照してください。
+
 実Pages配信での圧縮・Content-Type・初回ロード、iOS Safari等でのメモリ、日本語IME操作、スクリーンリーダー、AOTを確認してください。詳細な実行記録は[VALIDATION.md](VALIDATION.md)にまとめています。

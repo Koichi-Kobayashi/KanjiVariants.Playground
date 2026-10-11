@@ -59,4 +59,6 @@ Check(boundaries.Rows.Select(x => x.Item.Utf16Index).SequenceEqual(new[] { 0, 1,
 Check(boundaries.Rows[3].Item.Reason == KanjiDiagnosticReason.InvalidUtf16, "isolated surrogate safely diagnosed");
 try { service.Analyze(new string('髙', DiagnosticService.MaxUtf16Length + 1), CharacterSet.JisX0208); throw new Exception("length guard missing"); }
 catch (ArgumentException) { checks++; }
+ConversionChecks.Run(Check);
+VariationChecks.Run(Check);
 Console.WriteLine($"Passed {checks} checks.");

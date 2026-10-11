@@ -1,0 +1,59 @@
+@inject DiagnosticService Diagnostics
+
+<section class="panel input-panel" aria-labelledby="diagnostic-title">
+    <h2 id="diagnostic-title">文字を調べる</h2>
+    <form @onsubmit="Run" @onsubmit:preventDefault>
+        <fieldset disabled="@busy">
+            <label for="diagnostic-input">調べたい文字・文章</label>
+            <textarea id="diagnostic-input" rows="3" @bind="input" @bind:event="oninput" aria-describedby="diagnostic-help" spellcheck="false"></textarea>
+            <p id="diagnostic-help" class="help">最大2,000 UTF-16単位。補助文字・IVS・SVSも入力できます。自動変換は行いません。</p>
+            <div class="examples"><span>入力例</span>
+                <button type="button" class="chip" @onclick='() => input = "髙橋"'>髙橋</button>
+                <button type="button" class="chip" @onclick='() => input = "髙橋𠮷野"'>髙橋𠮷野</button>
+                <button type="button" class="chip" @onclick='() => input = "丂丄Ä"'>JIS X 0212の文字</button>
+                <button type="button" class="chip" @onclick='() => input = "辻\U000E0100不\uFE00😀"'>IVS・SVS・絵文字</button>
+            </div>
+            <div class="action-row">
+                <CharacterSetSelect Id="diagnostic-target" Label="診断対象の文字集合" @bind-Value="target" ShowDescription="false" />
+                <button class="primary" type="submit">@(busy ? "診断中…" : "診断する") <span aria-hidden="true">→</span></button>
+            </div>
+            <p id="diagnostic-target-help" class="help">@DiagnosticService.Targets.Single(x => x.Value == target).Description</p>
+        </fieldset>
+    </form>
+    @if (error is not null) { <p class="error" role="alert">@error</p> }
+</section>
+<section class="results" aria-labelledby="diagnostic-results-title" aria-busy="@busy.ToString().ToLowerInvariant()">
+    <h2 id="diagnostic-results-title">診断結果</h2>
+    @if (result is null)
+    {
+        <div class="panel empty"><span aria-hidden="true">字</span><p>文字を入力して「診断する」を押してください。</p><p class="help">文字ごとの判定と、対象集合で使える代替候補を表示します。</p></div>
+    }
+    else
+    {
+        @if (input != result.Text || target != result.Target.Value)
+        { <p class="help" role="status">入力または設定が変更されています。以下は前回実行時の診断結果です。</p> }
+        <DiagnosticResults Result="result" @key="result" />
+    }
+</section>
+
+@code {
+    private string input = "髙橋";
+    private CharacterSet target = CharacterSet.JisX0208;
+    private PlaygroundResult? result;
+    private string? error;
+    private bool busy;
+    private async Task Run()
+    {
+        if (busy) return;
+        var text = input;
+        var selectedTarget = target;
+        busy = true;
+        error = null;
+        result = null;
+        await Task.Delay(20);
+        try { result = Diagnostics.Analyze(text, selectedTarget); }
+        catch (ArgumentException ex) { error = ex.Message; }
+        catch (Exception) { error = "診断を完了できませんでした。入力を短くしてもう一度お試しください。"; }
+        finally { busy = false; }
+    }
+}

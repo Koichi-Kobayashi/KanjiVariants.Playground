@@ -3,7 +3,10 @@ using System.Diagnostics;
 namespace KanjiVariants.Playground.Services;
 
 public sealed record CharacterSetOption(CharacterSet Value, string Label, string Description);
-public sealed record DiagnosticRow(KanjiTextDiagnosticItem Item, bool CanSearchAlternatives, IReadOnlyList<string> Alternatives);
+public enum AlternativeKind { MjMapping, VariationSelectorFallback }
+public sealed record DiagnosticAlternative(string Text, AlternativeKind Kind, bool IsPreferred, KanjiDiagnosticReason? SelectionReason);
+public sealed record DiagnosticRow(KanjiTextDiagnosticItem Item, bool CanSearchAlternatives, IReadOnlyList<string> Alternatives,
+    IReadOnlyList<DiagnosticAlternative> Candidates, bool HasVariationSelector);
 public sealed record PlaygroundResult(string Text, CharacterSetOption Target, bool IsSupported,
     IReadOnlyList<DiagnosticRow> Rows, double ElapsedMilliseconds);
 
@@ -34,7 +37,20 @@ public sealed class DiagnosticService
             IReadOnlyList<string> alternatives = parsed
                 ? Kanji.GetAlternatives(character, target, KanjiFallbackOptions.None).Select(x => x.ToString()).ToArray()
                 : Array.Empty<string>();
-            return new DiagnosticRow(item, parsed, alternatives);
+            var hasVs = parsed && character.HasVariationSelector;
+            var options = hasVs ? KanjiFallbackOptions.AllowVariationSelectorFallback : KanjiFallbackOptions.None;
+            var preferred = parsed && Kanji.TryGetAlternative(character, target, out var replacement, options)
+                ? replacement.ToString() : null;
+            var selectionReason = hasVs ? KanjiDiagnostics.AnalyzeText(item.Original, target, options).Items.Single().Reason
+                : (KanjiDiagnosticReason?)null;
+            // Noneの一覧はMJ由来。許可時だけ追加される候補は登録済み表現の基底文字。
+            // 同じ文字が両経路に存在する場合はMJ候補として一度だけ表示する。
+            var candidates = parsed ? Kanji.GetAlternatives(character, target, options)
+                .Select(x => new DiagnosticAlternative(x.ToString(), alternatives.Contains(x.ToString())
+                    ? AlternativeKind.MjMapping : AlternativeKind.VariationSelectorFallback, x.ToString() == preferred,
+                    x.ToString() == preferred ? selectionReason : null))
+                .OrderByDescending(x => x.IsPreferred).ToArray() : Array.Empty<DiagnosticAlternative>();
+            return new DiagnosticRow(item, parsed, alternatives, candidates, hasVs);
         }).ToArray();
         watch.Stop();
         return new(text, option, diagnosis.IsSupported, rows, watch.Elapsed.TotalMilliseconds);
