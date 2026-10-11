@@ -87,3 +87,28 @@ publishには`wasm-tools`による追加最適化を推奨する案内が出ま�
 Visual StudioのRelease起動でSystem.Net.Security等のIOExceptionのスロー通知が報告されたため、起動設定とJSデバッガーログを確認しました。従来のhttp/httpsプロファイルはReleaseでもDevelopment環境・inspectUri付きです。デバッガーのスロー通知だけで未処理例外とは判断できず、報告にはメッセージ・スタックがないため発生箇所は未確定です。JSログではアプリ画面のタイトル更新まで進んでいます。
 
 切り分け用にrelease-http（Production、HTTP、inspectUriなし）を追加し、`dotnet run --project src/KanjiVariants.Playground -c Release --no-build --launch-profile release-http`で起動しました。Production環境の起動、ブラウザで髙橋の判定と高候補の表示、ブラウザerror/warnログ0件を確認しました。検証後に自分が起動したサーバーを停止しています。Visual Studioの元のHTTPSデバッグ経路でIOExceptionが出なくなったことを検証したものではありません。
+
+## Pages公開物の準備・検証
+
+READMEから移した開発者向けの配信手順です。PowerShell 7を使用し、静的配信の確認にはNode.jsも用意します。
+
+```powershell
+dotnet publish src/KanjiVariants.Playground -c Release -o artifacts/publish
+./scripts/Prepare-Pages.ps1
+./scripts/Verify-Pages.ps1
+node scripts/Serve-Pages.mjs
+```
+
+`http://localhost:5175/KanjiVariants.Playground/`で確認し、終了時はCtrl+Cで停止します。開発サーバーと同時には起動しないでください。静的検証サーバーは127.0.0.1だけで待ち受けます。配信サイズを計測するときは、古い公開物の残りがない新しい出力ディレクトリを使用してください。
+
+開発用indexのbaseは`/`、公開物は`Prepare-Pages.ps1`で`/KanjiVariants.Playground/`に変更します。.NET 10のフィンガープリント付き起動JS・import mapを維持し、CSS・JS・通知を相対パスで参照します。`.nojekyll`を生成し、隠しファイルを含めてPages artifactへ渡します。`Verify-Pages.ps1`でbase・静的参照・通知本文の一致を確認します。
+
+ルート画面と実ファイル`licenses.html`は再読み込みできます。深いSPA経路は現在ないため、404をindexへ転送する回避策は不要です。将来ルートを増やす場合はPagesの404対応も設計してください。
+
+既存ワークフローはlock fileで復元、Releaseビルド、コンソール仕様検証、publish、サブパス準備・静的参照検証、`upload-pages-artifact`、`deploy-pages`の順で実行します。deploy jobだけに`pages: write`と`id-token: write`を与えています。GitHub側ではPagesのSourceをGitHub Actionsにし、Actions・公式Actionsの実行許可、`github-pages` Environmentでmainからのデプロイ許可・必要な承認を確認してください。Push／手動実行後はbuild・deployの成功と公開URLの表示を確認します。
+
+## README改善時の公開確認・撮影
+
+2026年10月12日に既存の公開サイトをブラウザで確認。一括変換、IVS/SVS入力例、診断のMJ・基底文字候補と選択理由を確認しました。初期例文のJIS X 0208への変換結果は「高橋吉野さんに資料を送ります。」で、変更2箇所・対象外0箇所でした。READMEの過去の未公開説明を更新しています。これは画面と動作の照合であり、公開物全体のバイナリとローカル出力の同一性を保証するものではありません。
+
+README掲載画像は実際の公開デモのライトテーマを撮影し、`docs/images/conversion.png`と`docs/images/diagnosis.png`に保存しました。診断の入力は「髙」と「辻 + U+E0100」です。処理時間・字体は撮影時の環境の値で、端末・フォント・実行条件によって異なります。架空の画面や未実装機能は含めていません。今回のREADME整理ではコミット・Push・デプロイ・GitHub設定変更は行いません。
