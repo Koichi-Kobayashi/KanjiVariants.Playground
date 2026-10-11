@@ -1,0 +1,2 @@
+# KanjiVariants.Playground
+日本語の漢字の異体字変換・文字集合判定・漢字診断をブラウザ上で試せるWebアプリケーション。KanjiVariantsを使用しています。
