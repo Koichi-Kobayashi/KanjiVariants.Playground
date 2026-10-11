@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/KanjiVariants.Playground/KanjiVariants.Playground.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/KanjiVariants.Playground.Checks/KanjiVariants.Playground.Checks.csproj" />
+  </Folder>
+</Solution>

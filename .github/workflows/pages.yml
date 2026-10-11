@@ -1,0 +1,46 @@
+name: Build and deploy Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - run: dotnet restore --locked-mode
+      - run: dotnet build -c Release --no-restore
+      - run: dotnet run --project tests/KanjiVariants.Playground.Checks -c Release --no-build
+      - run: dotnet publish src/KanjiVariants.Playground -c Release --no-restore -o artifacts/publish
+      - name: Prepare subpath and static files
+        shell: pwsh
+        run: ./scripts/Prepare-Pages.ps1
+      - name: Verify published references
+        shell: pwsh
+        run: ./scripts/Verify-Pages.ps1
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: artifacts/publish/wwwroot
+          include-hidden-files: true
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

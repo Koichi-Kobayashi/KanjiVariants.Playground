@@ -1,0 +1,89 @@
+@inject DiagnosticService Diagnostics
+@inject IJSRuntime JS
+
+<PageTitle>KanjiVariants Playground — 漢字を調べる</PageTitle>
+<div class="shell">
+    <header class="topbar">
+        <a class="brand" href="./" aria-label="KanjiVariants Playground ホーム"><span class="brand-mark" aria-hidden="true">字</span> KanjiVariants</a>
+        <label class="theme-control">表示
+            <select aria-label="表示テーマ" @onchange="ChangeTheme">
+                <option value="system">システム</option><option value="light">ライト</option><option value="dark">ダーク</option>
+            </select>
+        </label>
+    </header>
+    <main id="main">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">漢字の違いを、確かめる。</p>
+            <h1 id="page-title">KanjiVariants <span>Playground</span></h1>
+            <p class="lead">「髙」と「高」、使える文字はどちら？<br />文字集合への適合と、漢字の代替候補をブラウザで調べられます。</p>
+            <p class="privacy"><span aria-hidden="true">●</span> 診断はこのブラウザ内で完結します。入力内容は送信しません。</p>
+        </section>
+        <section class="panel input-panel" aria-labelledby="input-title">
+            <h2 id="input-title">文字を調べる</h2>
+            <form @onsubmit="Run" @onsubmit:preventDefault>
+                <label for="input-text">調べたい文字・文章</label>
+                <textarea id="input-text" rows="3" @bind="input" @bind:event="oninput" aria-describedby="input-help" spellcheck="false"></textarea>
+                <p id="input-help" class="help">最大2,000 UTF-16単位。補助文字・IVS・SVSも入力できます。自動変換は行いません。</p>
+                <div class="examples"><span>入力例</span>
+                    <button type="button" class="chip" @onclick='() => SetExample("髙橋")'>髙橋</button>
+                    <button type="button" class="chip" @onclick='() => SetExample("髙橋𠮷野")'>髙橋𠮷野</button>
+                    <button type="button" class="chip" @onclick='() => SetExample("丂丄Ä")'>JIS X 0212の文字</button>
+                    <button type="button" class="chip" @onclick='() => SetExample("辻\U000E0100不\uFE00😀")'>IVS・SVS・絵文字</button>
+                </div>
+                <div class="action-row">
+                    <div class="target-control">
+                        <label for="target">診断対象の文字集合</label>
+                        <select id="target" @bind="target">
+                            @foreach (var option in DiagnosticService.Targets) { <option value="@option.Value">@option.Label</option> }
+                        </select>
+                    </div>
+                    <button class="primary" type="submit" disabled="@busy">@(busy ? "診断中…" : "診断する") <span aria-hidden="true">→</span></button>
+                </div>
+                <p class="help">@DiagnosticService.Targets.Single(x => x.Value == target).Description</p>
+            </form>
+            @if (error is not null) { <p class="error" role="alert">@error</p> }
+        </section>
+        <section class="results" aria-labelledby="results-title" aria-busy="@busy.ToString().ToLowerInvariant()">
+            <h2 id="results-title">診断結果</h2>
+            @if (result is null)
+            {
+                <div class="panel empty"><span aria-hidden="true">字</span><p>文字を入力して「診断する」を押してください。</p><p class="help">文字ごとの判定と、対象集合で使える代替候補を表示します。</p></div>
+            }
+            else { <DiagnosticResults Result="result" /> }
+        </section>
+        <aside class="notes">
+            <h2>判定の読み方</h2>
+            <p>KanjiVariantsの文字列APIの規則で判定します。ASCII（制御文字を含む）は各集合で使用可能として扱います。Shift-JIS・CP932などへのエンコード可否を示すものではありません。</p>
+            <p>IVS・SVS付き表現は、そのままではすべての対象集合で対象外です。Variation Selectorを自動で取り除きません。代替候補はMJ縮退マップ由来で、旧字体・異体字を網羅する辞書ではありません。表示される字体は端末のフォントにも依存します。</p>
+        </aside>
+    </main>
+    <footer>
+        <span>KanjiVariants 1.2.0 · .NET 10 / WebAssembly</span>
+        <nav aria-label="関連リンク"><a href="https://github.com/Koichi-Kobayashi/KanjiVariants">KanjiVariants本体 ↗</a><a href="https://github.com/Koichi-Kobayashi/KanjiVariants.Playground">Playground GitHub ↗</a><a href="licenses.html">ライセンス・データ出典</a></nav>
+    </footer>
+</div>
+
+@code {
+    private string input = "髙橋";
+    private CharacterSet target = CharacterSet.JisX0208;
+    private PlaygroundResult? result;
+    private string? error;
+    private bool busy;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) await JS.InvokeVoidAsync("playground.markReady");
+    }
+    private void SetExample(string example) => input = example;
+    private async Task Run()
+    {
+        busy = true;
+        error = null;
+        result = null;
+        await Task.Delay(20); // 描画を先に反映してからブラウザ内で実行。
+        try { result = Diagnostics.Analyze(input, target); }
+        catch (ArgumentException ex) { error = ex.Message; }
+        catch (Exception) { error = "診断を完了できませんでした。入力を短くしてもう一度お試しください。"; }
+        finally { busy = false; }
+    }
+    private async Task ChangeTheme(ChangeEventArgs args) => await JS.InvokeVoidAsync("playground.setTheme", args.Value?.ToString() ?? "system");
+}

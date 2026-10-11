@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "KanjiVariants": {
+        "type": "Direct",
+        "requested": "[1.2.0, )",
+        "resolved": "1.2.0",
+        "contentHash": "HswJEWBB/956F9nB79AJmBX96v7p2OmmCuvGbEe07XJJ9g14eSi0XXPUoJ7ZUtlA1shJYBgrVsOpBo2vav0+0g=="
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@inject IJSRuntime JS
+
+<div class="panel result-panel">
+    <div class="summary" role="status">
+        <span class="badge @(Result.IsSupported ? "success" : "warning")">@(Result.IsSupported ? "すべて使用可能" : "対象外の文字あり")</span>
+        <p><strong>@Result.Target.Label</strong> · @Result.Rows.Count 単位中 @Result.Rows.Count(x => !x.Item.IsSupported) 単位が対象外</p>
+        <p class="help">診断した入力：<span class="original-text">@Result.Text</span></p>
+        <p class="help">診断・候補検索 @Result.ElapsedMilliseconds.ToString("F1") ms（配信・画面描画時間を除く）</p>
+    </div>
+    <div class="table-scroll">
+        <table>
+            <caption class="sr-only">@Result.Target.Label の判定と代替候補。位置は0始まりのUTF-16単位です。</caption>
+            <thead><tr><th scope="col">元の文字</th><th scope="col">判定</th><th scope="col">代替候補 · @Result.Target.Label</th></tr></thead>
+            <tbody>
+                @foreach (var row in Result.Rows)
+                {
+                    <tr>
+                        <th scope="row"><span class="character">@Visible(row.Item)</span><span class="position">位置 @row.Item.Utf16Index · @row.Item.Utf16Length 単位</span></th>
+                        <td data-label="判定"><span class="status-dot @(row.Item.IsSupported ? "ok" : "outside")" aria-hidden="true"></span>@DiagnosticService.Explain(row.Item.Reason)</td>
+                        <td data-label="代替候補">
+                            @if (row.Alternatives.Count > 0)
+                            {
+                                <div class="candidates">
+                                    @foreach (var candidate in row.Alternatives)
+                                    {
+                                        <button type="button" class="candidate" @onclick="() => Copy(candidate)" aria-label="@($"代替候補 {candidate} をコピー")"><span>@candidate</span><small>コピー</small></button>
+                                    }
+                                </div>
+                            }
+                            else { <span class="help">@(row.CanSearchAlternatives ? "この文字集合で使える候補はありません" : "候補検索の対象外（漢字または登録済みIVS・SVSではありません）")</span> }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    @if (Result.Rows.Count == 0) { <p>入力は空です。ライブラリの規則では使用可能として扱います。</p> }
+    <p class="help" role="status">@copyStatus</p>
+</div>
+
+@code {
+    [Parameter, EditorRequired] public PlaygroundResult Result { get; set; } = default!;
+    private string copyStatus = "候補を押すと、その文字だけをコピーします。入力は変更しません。";
+    protected override void OnParametersSet() => copyStatus = "候補を押すと、その文字だけをコピーします。入力は変更しません。";
+    private async Task Copy(string candidate)
+    {
+        try { await JS.InvokeVoidAsync("playground.copy", candidate); copyStatus = $"「{candidate}」をコピーしました。"; }
+        catch (JSException) { copyStatus = $"コピーできませんでした。候補「{candidate}」を選択して手動でコピーしてください。"; }
+    }
+    private static string Visible(KanjiTextDiagnosticItem item) => item.Reason == KanjiDiagnosticReason.InvalidUtf16
+        ? "不正UTF-16" : item.Original switch { " " => "空白", "\r" => "CR", "\n" => "LF", "\t" => "TAB", "\0" => "NUL", _ => item.Original };
+}
