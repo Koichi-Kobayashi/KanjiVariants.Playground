@@ -1,0 +1,7 @@
+vendor/
+generated/
+results/
+node_modules/
+baseline-status.txt
+**/bin/
+**/obj/

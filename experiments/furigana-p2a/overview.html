@@ -1,0 +1,18 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>P2a 実測結果</title>
+<style>body{font:16px/1.7 system-ui;background:#f3f5f8;color:#202b3c;max-width:1120px;margin:auto;padding:30px}h1{margin:0}section{background:white;border:1px solid #d7dee8;border-radius:12px;padding:24px;margin:18px 0}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:10px;text-align:left;border-bottom:1px solid #d7dee8}small{color:#526176}.success{color:#18633f}.warn{color:#865016}</style>
+<h1>自動ふりがな P2a — 実ブラウザ比較</h1><small>本番統合なし / Lindera WASM 6.2.0＋IPADIC / kuromoji.js 0.1.2</small>
+<section><h2>性能・配信負荷</h2><div id="performance">測定JSONを読み込んでいます。</div><p><small>cold初期化は各5回、解析は各長さ11回×5系列の中央値。ローカルgzip配信。20 / 500 / 2,000はUTF-16単位。</small></p></section>
+<section><h2>精度と安全性</h2><p>両者とも20評価例中15例が期待読み。日付・未知字氏名・文脈依存で誤解析が残ります。</p><p class="warn">一日中 → いちにちちゅう / 五月一日 → ごがついちにち<br>髙橋：Linderaは語全体が未知語。kuromojiは髙が未知語、橋を「きょう」。</p><p class="success">Unicode位置：今回の23有効例で原文substringの不一致0。<br>IVS/SVSで本体の論理単位を分断する候補は拒否。不正UTF-16は解析前に拒否。</p></section>
+<section><h2>Blazor・Worker検証</h2><div id="interop"></div></section>
+<p>候補はLinderaを優先。モバイルのメモリ・安定性、辞書NOTICEの原典版表記を確認してからP2bへ。<br><small>WASMの方が解析単体で速いという結果ではありません。真のpeakメモリ・Pages実配信は未検証。</small></p>
+<script type="module">
+const summary=await(await fetch('results/summary.json')).json();
+const table=document.createElement('table');
+table.innerHTML='<thead><tr><th>エンジン / 実行場所</th><th>cold初期化 ms</th><th>20 / 500 / 2,000解析 ms</th><th>実転送 MB</th></tr></thead>';
+for(const row of summary.groups.filter(g=>g.cache==='cold')) {
+ const tr=document.createElement('tr');
+ for(const value of [`${row.kind} / ${row.mode}`,row.init,row.benchmarks.map(x=>x.nativeMedian).join(' / '),(row.transfer/1e6).toFixed(2)]){const td=document.createElement('td');td.textContent=value;tr.append(td);}table.append(tr);
+}
+document.querySelector('#performance').replaceChildren(table);
+for(const row of summary.interop) {const p=document.createElement('p');p.className='success';p.textContent=`${row.kind}: 実呼出・再利用 ${row.sameReadings?'成功':'失敗'} / 旧結果破棄 ${row.staleDiscarded?'成功':'失敗'} / キャンセル ${row.cancellationObserved?'成功':'失敗'} / 再初期化 ${row.retrySucceeded?'成功':'失敗'}`;document.querySelector('#interop').append(p);}
+</script></html>

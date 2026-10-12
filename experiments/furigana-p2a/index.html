@@ -1,0 +1,35 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>自動ふりがな P2a 技術検証</title>
+<style>body{font:16px/1.6 system-ui;max-width:1100px;margin:auto;padding:24px;background:#f3f5f8;color:#202b3c}button{padding:12px;margin:8px}pre{white-space:pre-wrap}iframe{width:100%;height:250px;border:1px solid #ccc}table{border-collapse:collapse}td,th{padding:8px;border:1px solid #ccc}</style>
+<h1>自動ふりがな P2a 技術検証</h1><p>ローカル実験専用。入力文章はブラウザ内で解析。本番画面・配信物には統合しません。</p>
+<p>Lindera WASM 6.2.0＋同版IPADIC / kuromoji.js 0.1.2＋同梱IPADIC</p>
+<button id="suite">5回の比較を実行（main / Worker、cold / cache）</button>
+<button id="instrument">kuromoji展開時間を測定（計測用コピー）</button>
+<p id="status">未実行。エンジン・辞書はまだ取得していません。</p><div id="frames"></div><pre id="summary"></pre>
+<script type="module">
+const results=[];let active;
+addEventListener('message',event=>{if(event.origin!==location.origin||event.source!==active?.frame.contentWindow)return;
+ if(event.data.type==='p2a-result')active.resolve(event.data.result);if(event.data.type==='p2a-error')active.reject(new Error(event.data.error));});
+async function one(engine,mode,cache,run,instrumented=false,compression='gzip'){
+ return new Promise((resolve,reject)=>{
+  const frame=document.createElement('iframe');active={frame,resolve,reject};document.querySelector('#frames').replaceChildren(frame);
+  frame.src=`bench.html?auto=true&engine=${engine}&mode=${mode}&cache=${cache}&run=${run}&instrumented=${instrumented}&compression=${compression}`;
+ });
+}
+async function execute(instrumented=false){
+ document.querySelectorAll('button').forEach(b=>b.disabled=true);
+ try {
+  const plan=[];
+  if(instrumented)for(let i=0;i<3;i++)plan.push(['kuromoji','main','cold','instrument-'+i,true]);
+  else {
+   for(let i=0;i<5;i++)for(const mode of ['main','worker'])for(const engine of i%2?['kuromoji','lindera']:['lindera','kuromoji'])plan.push([engine,mode,'cold',i,false]);
+   for(const engine of ['lindera','kuromoji'])for(let i=0;i<3;i++)plan.push([engine,'main','warm','warm-'+i,false]);
+   for(const engine of ['lindera','kuromoji'])plan.push([engine,'main','cold','raw',false,'raw']);
+  }
+  for(const entry of plan){document.querySelector('#status').textContent=`測定中 ${entry.join(' / ')}`;const result=await one(...entry);results.push(result);
+   document.querySelector('#summary').textContent=JSON.stringify(results.map(r=>({kind:r.kind,mode:r.mode,cache:r.options.cache,run:r.options.run,compression:r.options.compression,init:r.init.stats.total,bench:r.benchmarks.map(x=>({length:x.length,median:x.median})),positionFailures:r.cases.reduce((s,x)=>s+(x.safePositionFailures??0),0)})),null,2);
+  }
+  document.querySelector('#status').textContent=`完了 ${results.length} 測定。結果をローカルresults/へ保存しました。`;
+ }catch(error){document.querySelector('#status').textContent=String(error);}finally{document.querySelectorAll('button').forEach(b=>b.disabled=false);}
+}
+document.querySelector('#suite').onclick=()=>execute();document.querySelector('#instrument').onclick=()=>execute(true);
+</script></html>

@@ -1,0 +1,23 @@
+@using Microsoft.JSInterop
+@using Microsoft.AspNetCore.Components.Web
+@inject IJSRuntime JS
+@inject Microsoft.AspNetCore.Components.NavigationManager Navigation
+<h1>P2a Blazor interop検証（隔離アプリ）</h1>
+<p>既存のP1・本番アプリは変更しません。ボタン操作でmodule→Worker→固定版エンジンを呼びます。</p>
+<button disabled="@busy" @onclick='() => Run("lindera")'>Linderaを検証</button>
+<button disabled="@busy" @onclick='() => Run("kuromoji")'>kuromojiを検証</button>
+<p role="status">@status</p><pre>@result</pre>
+@code {
+    private IJSObjectReference? module;
+    private bool busy;
+    private string status="未初期化",result="";
+    private async Task Run(string kind)
+    {
+        busy=true;status="Worker初期化・解析中";
+        try {
+            module??=await JS.InvokeAsync<IJSObjectReference>("import",new Uri(new Uri(Navigation.BaseUri),"../interop.mjs").AbsoluteUri);
+            result=await module.InvokeAsync<string>("probe",kind,"今日。今日、図書館で宇宙の本を読みました。");
+            status="完了: "+kind;
+        } catch(Exception ex){status="失敗: "+ex.Message;} finally {busy=false;}
+    }
+}
