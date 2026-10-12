@@ -4,6 +4,8 @@
 
 ## 結論
 
+**同日の後続検証:** 固定ソースの`--locked --offline`自前WASMビルドと別targetでの再ビルドに成功。最新Release publishに全27通知・証跡が同梱され、全SHA-256一致を確認した。詳細は[自前ビルド・同梱検証](../experiments/furigana-self-build/REPORT.md)。過去の未実施記録は当時の事実として残すが、27件のpublish同梱の未検証状態は解消した。本番は公式版のままで、その実build対応未証明による公開停止は維持。
+
 **確認した固定ソース依存範囲の通知不足は解消。公式npm WASMとの完全対応は未証明のため、公開承認は保留を維持する。** IPADIC版表記に加え、kanaria 0.2.0を開発元の同一コミットと照合してMIT全文・著作権通知を補った。限定スコープは106件（normal target候補84、proc-macro host subtree候補21、build-only候補1）。既知の通知未充足は0件。
 
 残る問題は**公式npm WASMの実ビルド構成と固定ソース依存範囲の完全対応**。npm gitHeadは固定タグと一致するが、実ビルド時のCargo.lock・全依存版・featureの記録は未取得。公式コマンドに`--locked`がないことは、Cargo.lockが変わった証拠ではない。既存lockがそのまま使われた可能性もあり、一部版文字列も一致するが、全件一致の証明にはならない。ログ取得は403、完全なSBOM・同一バイナリの再現証明も未取得。
@@ -177,3 +179,14 @@ node scripts/Verify-FuriganaLicenseEvidence.mjs
 - 自動ふりがな通知へのsourceライセンスページの12リンク先の存在を確認。
 - **追加Release publishは未実施:** 自動承認レビューが利用上限のため完了できず、要求は実行されなかった。安全性を理由とする拒否ではないが、承認経路を回避せず停止した。したがって、今回追加した27通知・証跡を含むpublish配布物の同梱確認は未検証。初回監査の24通知のpublish同梱成功とは区別する。
 - 機能変更・コミット・Push・デプロイなし。前回の未コミット監査変更は保持した。
+
+## 後続: 自前ビルドと最新publish同梱（2026-10-12）
+
+- 監査開始時点`983c77c`、clean。固定公式archive全704ファイルとの一致とlock前後不変を確認。Rust 1.98.1、wasm-bindgen 0.2.126、wasm32-unknown-unknown、root featuresなし/default無効、transitive defaults維持、release/LTO、`--locked --offline`で実ビルド成功。
+- 別targetディレクトリでも最終WASM/JSのSHA-256が一致。自前WASMは`602b7f57f805ef3321ddebe6be1fb8f212afa3d9e67846a9d049ad755d37fe2e`。JSは公式版と完全一致。本番配布WASMは置換していない。
+- 106件の実コンパイルpackageの版・feature variant・host/target区別を記録し、既存通知へ全件対応。今回発見した通知不足は0件。compiler-artifactは標準ライブラリ内部や最終link成分の完全SBOMではない。標準ライブラリ入力ファイルのハッシュも記録したが、その限界は維持。
+- Node・ブラウザWorkerで23文章の生token、位置、読み、未知語情報が公式版と一致。実Blazor画面でも自前版の自動生成・手動修正保持・学年変更・原文変更の旧版隔離・未知語/VS/補助文字保持を確認。
+- 最新ローカルRelease publish成功。Prepare-Pages / Verify-Pages成功、24静的参照。`artifacts/furigana-notices-final-publish/wwwroot`の全27通知・証跡を実際に読み、SHA-256一致を確認。今回は承認利用上限で停止していない。
+- 既存Release Checks 2,333件・JavaScript Worker Checks成功。Verify-FuriganaLicenseEvidence成功。公開前チェックは通知充足の表示後、公式npm実build対応未証明でexit 1、publicationApproved falseを維持。
+- 比較・測定条件・未検証範囲・正式採用手順は[REPORT](../experiments/furigana-self-build/REPORT.md)、106件の版と生成物/同梱ハッシュは[MEASUREMENTS](../experiments/furigana-self-build/MEASUREMENTS.json)。正式採用と公開承認を今回の検証成功に含めない。
+- モバイル実機・Safari/Firefox・独立環境での再現性は未検証。機能・本番アセット・gate条件変更、コミット・Push・デプロイなし。

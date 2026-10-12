@@ -31,6 +31,8 @@ The remaining uncertainty concerns correspondence and notice coverage for any un
 
 ## 回答の評価
 
+2026-10-12の後続検証で、固定lock/ソースをRust 1.98.1・wasm-bindgen 0.2.126により`--locked --offline`でビルドし、別targetでも自前WASMのハッシュ一致を確認した。生成JSは公式版と同一だが、自前WASMは公式版と異なる。したがって、上記の公式実buildへの問い合わせ事項は未解消。[検証記録](../experiments/furigana-self-build/REPORT.md)を参照。通知の既知未充足0件と、公式版の全対応未証明を引き続き分ける。問い合わせは送信していない。
+
 - 実buildのlock/feature記録が固定ソースと一致すれば、その根拠を監査結果へ保存する。
 - 追加・相違依存が判明したら、その原許諾・著作権・通知を追加する。ソースで見つからないものをMITと推定しない。
 - 固定ソース候補と実リンク内容は分ける。build tool全体をWASM内コードとして数えない。
