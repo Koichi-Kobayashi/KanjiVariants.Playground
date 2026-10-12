@@ -8,6 +8,7 @@ const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': '
 http.createServer((req, res) => {
     try {
         const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+        if (process.env.PAGES_LOG_REQUESTS === '1') console.log(pathname);
         if (pathname === base.slice(0, -1)) { res.writeHead(301, { Location: base }); res.end(); return; }
         if (!pathname.startsWith(base)) { res.writeHead(404); res.end(); return; }
         const file = path.resolve(root, pathname.slice(base.length) || 'index.html');

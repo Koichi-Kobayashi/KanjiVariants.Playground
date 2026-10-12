@@ -27,8 +27,11 @@ public sealed class FuriganaService
         EducationKanjiDiagnosticReason.LearnedInLaterGrade or EducationKanjiDiagnosticReason.NotEducationKanji;
 }
 
-public sealed record FuriganaRange(long Revision, int Start, int Length, string Surface, string Reading = "");
-public sealed record FuriganaPart(string Text, string? Reading, bool NeedsReview);
+public enum FuriganaReadingOrigin { None, Automatic, Manual }
+public sealed record FuriganaRange(long Revision, int Start, int Length, string Surface, string Reading = "",
+    FuriganaReadingOrigin Origin = FuriganaReadingOrigin.None, string? ReviewMessage = null);
+public sealed record FuriganaPart(string Text, string? Reading, bool NeedsReview,
+    FuriganaReadingOrigin Origin = FuriganaReadingOrigin.None, string? ReviewMessage = null);
 
 // Rendering and copy share the same policy. No HTML or tokenizer-specific types are stored here.
 public static class FuriganaPresentation
@@ -42,7 +45,7 @@ public static class FuriganaPresentation
             if (offset < range.Start) parts.Add(new(document.Text[offset..range.Start], null, false));
             bool target = document.UnlearnedCount(range) > 0;
             var reading = target && showReadings && !string.IsNullOrWhiteSpace(range.Reading) ? range.Reading : null;
-            parts.Add(new(range.Surface, reading, target && string.IsNullOrWhiteSpace(range.Reading)));
+            parts.Add(new(range.Surface, reading, target && string.IsNullOrWhiteSpace(range.Reading), range.Origin, range.ReviewMessage));
             offset = range.Start + range.Length;
         }
         if (offset < document.Text.Length) parts.Add(new(document.Text[offset..], null, false));
@@ -100,7 +103,7 @@ public sealed class FuriganaDocument
         // A reading is a short, single-line annotation. Arbitrary text is escaped by Razor.
         if (reading.Length > 200 || reading.Any(char.IsControl) || !IsValidUtf16(reading))
             throw new ArgumentException("読みは200 UTF-16単位以内、改行・制御文字・不正UTF-16なしで入力してください。");
-        ranges[index] = range with { Reading = reading.Trim() };
+        ranges[index] = range with { Reading = reading.Trim(), Origin = FuriganaReadingOrigin.Manual, ReviewMessage = null };
     }
     private static bool IsValidUtf16(string text)
     {
@@ -116,10 +119,11 @@ public sealed class FuriganaDocument
     public void Split(FuriganaRange range)
     {
         int index = Find(range);
-        var units = Units(range).ToArray();
+        var units = Units(range).Where(FuriganaService.IsKanji).ToArray();
         if (units.Length < 2) return;
         ranges.RemoveAt(index);
-        ranges.InsertRange(index, units.Select(x => new FuriganaRange(Revision, x.Utf16Index, x.Utf16Length, x.Original)));
+        ranges.InsertRange(index, units.Select(x => new FuriganaRange(Revision, x.Utf16Index, x.Utf16Length, x.Original,
+            Origin: FuriganaReadingOrigin.Manual)));
     }
     public bool CanMerge(FuriganaRange range)
     {
@@ -131,7 +135,17 @@ public sealed class FuriganaDocument
         int index = Find(range);
         if (!CanMerge(range)) throw new ArgumentException("隣接する漢字範囲がありません。");
         var next = ranges[index + 1];
-        ranges[index] = new(Revision, range.Start, range.Length + next.Length, range.Surface + next.Surface);
+        ranges[index] = new(Revision, range.Start, range.Length + next.Length, range.Surface + next.Surface,
+            Origin: FuriganaReadingOrigin.Manual);
         ranges.RemoveAt(index + 1);
+    }
+
+    public void ApplyAutomatic(IReadOnlyList<ReadingToken> tokens) =>
+        ReplaceRanges(FuriganaAutomaticPlan.Build(this, tokens));
+
+    private void ReplaceRanges(IReadOnlyList<FuriganaRange> replacement)
+    {
+        ranges.Clear();
+        ranges.AddRange(replacement);
     }
 }

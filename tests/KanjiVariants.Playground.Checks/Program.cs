@@ -63,4 +63,5 @@ ConversionChecks.Run(Check);
 VariationChecks.Run(Check);
 CharacterDetailsChecks.Run(Check);
 FuriganaChecks.Run(Check);
+FuriganaAutomaticChecks.Run(Check);
 Console.WriteLine($"Passed {checks} checks.");

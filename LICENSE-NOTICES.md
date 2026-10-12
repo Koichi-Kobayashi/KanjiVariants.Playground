@@ -32,3 +32,8 @@ Microsoft.AspNetCore.Components.WebAssemblyおよび.NETランタイムを配信
 - [.NET Runtime第三者通知](https://github.com/dotnet/runtime/blob/main/THIRD-PARTY-NOTICES.TXT)
 
 Webサイトの`licenses.html`からも、これらの通知とデータ出典へアクセスできます。
+## 自動ふりがな P2b の追加通知（ローカル実装・公開未承認）
+
+Lindera WASM 6.2.0（MIT）と同版のIPADIC format 2を利用します。配布物、SHA-256、必要な通知は`src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0/manifest.json`、`LICENSE`、`IPADIC-NOTICE.txt`に保存しています。
+
+IPADICはエンジンと別条件です。NAISTの著作権・許諾・免責およびICOT由来条件を保持します。原典20250920と配布NOTICEの20070801表記の照合、WASM第三者crateの通知確認は未完了です。現時点で公開可能とは判断せず、`scripts/Verify-FuriganaRedistribution.ps1`でPages公開を停止します。

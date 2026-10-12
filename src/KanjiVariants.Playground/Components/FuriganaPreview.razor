@@ -1,4 +1,4 @@
-<div class="furigana-preview original-text" aria-label="@Label">@foreach (var part in FuriganaPresentation.Build(Document, ShowReadings)) { if (part.Reading is not null) { <ruby>@part.Text<rt>@part.Reading</rt></ruby> } else { <span class="@(part.NeedsReview ? "furigana-pending" : null)">@part.Text</span> } }</div>
+<div class="furigana-preview original-text" aria-label="@Label">@foreach (var part in FuriganaPresentation.Build(Document, ShowReadings)) { if (part.Reading is not null) { <ruby class="@(part.Origin == FuriganaReadingOrigin.Automatic ? "furigana-auto" : null)" title="@(part.Origin == FuriganaReadingOrigin.Automatic ? "自動推定・未確認。" + part.ReviewMessage : "手動確認済み")">@part.Text<rt>@part.Reading</rt></ruby> } else { <span class="@(part.NeedsReview ? "furigana-pending" : null)" title="@part.ReviewMessage">@part.Text</span> } }</div>
 
 @code {
     [Parameter, EditorRequired] public FuriganaDocument Document { get; set; } = default!;

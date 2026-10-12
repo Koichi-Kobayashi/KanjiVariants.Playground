@@ -1,0 +1,1727 @@
+[
+  {
+    "Text": "今日",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "明日",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "明日",
+        "reading": "アシタ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "大人",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "大人",
+        "reading": "オトナ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "図書館",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 3,
+        "surface": "図書館",
+        "reading": "トショカン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "宇宙",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "宇宙",
+        "reading": "ウチュウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "生きる",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 3,
+        "surface": "生きる",
+        "reading": "イキル",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "人気がある",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "人気",
+        "reading": "ニンキ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "が",
+        "reading": "ガ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 5,
+        "surface": "ある",
+        "reading": "アル",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "人気がない場所",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "人気",
+        "reading": "ニンキ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "が",
+        "reading": "ガ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 5,
+        "surface": "ない",
+        "reading": "ナイ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "形容詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 5,
+        "end": 7,
+        "surface": "場所",
+        "reading": "バショ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "一日中",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 1,
+        "surface": "一",
+        "reading": "イチ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "数",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "surface": "日",
+        "reading": "ニチ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "助数詞",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "中",
+        "reading": "チュウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "副詞可能",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "五月一日",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "五月",
+        "reading": "ゴガツ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "一",
+        "reading": "イチ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "数",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 4,
+        "surface": "日",
+        "reading": "ニチ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "助数詞",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "五月雨",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 3,
+        "surface": "五月雨",
+        "reading": "サミダレ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "今日は図書館で大人と宇宙の本を読みます。",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "は",
+        "reading": "ハ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "係助詞",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 6,
+        "surface": "図書館",
+        "reading": "トショカン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 6,
+        "end": 7,
+        "surface": "で",
+        "reading": "デ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 7,
+        "end": 9,
+        "surface": "大人",
+        "reading": "オトナ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 9,
+        "end": 10,
+        "surface": "と",
+        "reading": "ト",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "並立助詞",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 12,
+        "surface": "宇宙",
+        "reading": "ウチュウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 13,
+        "surface": "の",
+        "reading": "ノ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "連体化",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 14,
+        "surface": "本",
+        "reading": "ホン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 15,
+        "surface": "を",
+        "reading": "ヲ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 17,
+        "surface": "読み",
+        "reading": "ヨミ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 19,
+        "surface": "ます",
+        "reading": "マス",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 20,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "高橋さんと髙橋さん",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "高橋",
+        "reading": "タカハシ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "固有名詞",
+          "人名",
+          "姓"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 4,
+        "surface": "さん",
+        "reading": "サン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "人名",
+          "*"
+        ]
+      },
+      {
+        "start": 4,
+        "end": 5,
+        "surface": "と",
+        "reading": "ト",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 5,
+        "end": 7,
+        "surface": "髙橋",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 7,
+        "end": 9,
+        "surface": "さん",
+        "reading": "サン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "人名",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "𠮷野さん",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "𠮷",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "記号",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "野",
+        "reading": "ノ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 5,
+        "surface": "さん",
+        "reading": "サン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "人名",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "読みました",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "読み",
+        "reading": "ヨミ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 4,
+        "surface": "まし",
+        "reading": "マシ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 4,
+        "end": 5,
+        "surface": "た",
+        "reading": "タ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "行った",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "行っ",
+        "reading": "イッ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "た",
+        "reading": "タ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "食べました",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "食べ",
+        "reading": "タベ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 4,
+        "surface": "まし",
+        "reading": "マシ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 4,
+        "end": 5,
+        "surface": "た",
+        "reading": "タ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "今日、大人は図書館へ行った。明日は宇宙の本を読みました。",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "、",
+        "reading": "、",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "読点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 5,
+        "surface": "大人",
+        "reading": "オトナ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 5,
+        "end": 6,
+        "surface": "は",
+        "reading": "ハ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "係助詞",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 6,
+        "end": 9,
+        "surface": "図書館",
+        "reading": "トショカン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 9,
+        "end": 10,
+        "surface": "へ",
+        "reading": "ヘ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 12,
+        "surface": "行っ",
+        "reading": "イッ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 13,
+        "surface": "た",
+        "reading": "タ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 14,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 16,
+        "surface": "明日",
+        "reading": "アシタ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 17,
+        "surface": "は",
+        "reading": "ハ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "係助詞",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 19,
+        "surface": "宇宙",
+        "reading": "ウチュウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 20,
+        "surface": "の",
+        "reading": "ノ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "連体化",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "surface": "本",
+        "reading": "ホン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 21,
+        "end": 22,
+        "surface": "を",
+        "reading": "ヲ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 24,
+        "surface": "読み",
+        "reading": "ヨミ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 24,
+        "end": 26,
+        "surface": "まし",
+        "reading": "マシ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 26,
+        "end": 27,
+        "surface": "た",
+        "reading": "タ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 27,
+        "end": 28,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "五月一日に五月雨が降った。一日中雨だった。",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "五月",
+        "reading": "ゴガツ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "一",
+        "reading": "イチ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "数",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 4,
+        "surface": "日",
+        "reading": "ニチ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "助数詞",
+          "*"
+        ]
+      },
+      {
+        "start": 4,
+        "end": 5,
+        "surface": "に",
+        "reading": "ニ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 5,
+        "end": 8,
+        "surface": "五月雨",
+        "reading": "サミダレ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 8,
+        "end": 9,
+        "surface": "が",
+        "reading": "ガ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助詞",
+          "格助詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 9,
+        "end": 11,
+        "surface": "降っ",
+        "reading": "フッ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "動詞",
+          "自立",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 11,
+        "end": 12,
+        "surface": "た",
+        "reading": "タ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 13,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 16,
+        "surface": "一日中",
+        "reading": "イチニチジュウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 17,
+        "surface": "雨",
+        "reading": "ウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 19,
+        "surface": "だっ",
+        "reading": "ダッ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 20,
+        "surface": "た",
+        "reading": "タ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "助動詞",
+          "*",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "今日。今日、今日。図書館。図書館。",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 3,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 5,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 5,
+        "end": 6,
+        "surface": "、",
+        "reading": "、",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "読点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 6,
+        "end": 8,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 8,
+        "end": 9,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 9,
+        "end": 12,
+        "surface": "図書館",
+        "reading": "トショカン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 13,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 16,
+        "surface": "図書館",
+        "reading": "トショカン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 17,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "😀今日\r\n 今日 辻󠄀不︀𠮷野さん。今日。",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 2,
+        "surface": "😀",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "記号",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 2,
+        "end": 4,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 4,
+        "end": 5,
+        "surface": "\r",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "記号",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 7,
+        "end": 9,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 11,
+        "surface": "辻",
+        "reading": "ツジ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "固有名詞",
+          "人名",
+          "姓"
+        ]
+      },
+      {
+        "start": 11,
+        "end": 13,
+        "surface": "󠄀",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "記号",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 14,
+        "surface": "不",
+        "reading": "フ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "接頭詞",
+          "名詞接続",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "surface": "︀𠮷",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "記号",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 18,
+        "surface": "野",
+        "reading": "ノ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 18,
+        "end": 20,
+        "surface": "さん",
+        "reading": "サン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "接尾",
+          "人名",
+          "*"
+        ]
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 21,
+        "end": 23,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 23,
+        "end": 24,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "  今日\t図書館\n\n今日　宇宙。",
+    "Tokens": [
+      {
+        "start": 2,
+        "end": 4,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 5,
+        "end": 8,
+        "surface": "図書館",
+        "reading": "トショカン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 12,
+        "surface": "今日",
+        "reading": "キョウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "副詞可能",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 13,
+        "surface": "　",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "サ変接続",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 15,
+        "surface": "宇宙",
+        "reading": "ウチュウ",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "surface": "。",
+        "reading": "。",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "記号",
+          "句点",
+          "*",
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "Text": "ヌポラ漢𠮷ヌポラ",
+    "Tokens": [
+      {
+        "start": 0,
+        "end": 3,
+        "surface": "ヌポラ",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "固有名詞",
+          "一般",
+          "*"
+        ]
+      },
+      {
+        "start": 3,
+        "end": 4,
+        "surface": "漢",
+        "reading": "カン",
+        "unknown": false,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "固有名詞",
+          "地域",
+          "国"
+        ]
+      },
+      {
+        "start": 4,
+        "end": 6,
+        "surface": "𠮷",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "記号",
+          "一般",
+          "*",
+          "*"
+        ]
+      },
+      {
+        "start": 6,
+        "end": 9,
+        "surface": "ヌポラ",
+        "reading": "*",
+        "unknown": true,
+        "valid": true,
+        "pos": [
+          "名詞",
+          "固有名詞",
+          "組織",
+          "*"
+        ]
+      }
+    ]
+  }
+]

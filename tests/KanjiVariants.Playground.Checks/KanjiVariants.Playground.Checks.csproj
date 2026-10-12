@@ -7,10 +7,12 @@
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Update="FuriganaAutomaticTokens.json" CopyToOutputDirectory="PreserveNewest" />
     <PackageReference Include="KanjiVariants" Version="1.2.0" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/DiagnosticService.cs" Link="DiagnosticService.cs" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/FuriganaService.cs" Link="FuriganaService.cs" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/FuriganaSession.cs" Link="FuriganaSession.cs" />
+    <Compile Include="../../src/KanjiVariants.Playground/Services/FuriganaAutomaticPlan.cs" Link="FuriganaAutomaticPlan.cs" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/ConversionService.cs" Link="ConversionService.cs" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/CharacterDisplay.cs" Link="CharacterDisplay.cs" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/VariationExamples.cs" Link="VariationExamples.cs" />

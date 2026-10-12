@@ -3,6 +3,7 @@ namespace KanjiVariants.Playground.Services;
 // Component-owned session: switching screens preserves it, editing creates a new source revision.
 public sealed class FuriganaSession(FuriganaService service)
 {
+    private long requestSequence;
     public string Input { get; private set; } = "今日は図書館で大人と宇宙の本を読みます。";
     public KanjiGrade Grade { get; private set; } = KanjiGrade.Grade1;
     public long Revision { get; private set; }
@@ -16,6 +17,7 @@ public sealed class FuriganaSession(FuriganaService service)
         if (Input == input) return;
         Input = input;
         Revision++;
+        requestSequence++;
         Error = null;
     }
     public void SetGrade(KanjiGrade grade)
@@ -40,4 +42,17 @@ public sealed class FuriganaSession(FuriganaService service)
     public void Split(FuriganaRange range) => Current().Split(range);
     public void MergeNext(FuriganaRange range) => Current().MergeNext(range);
     public string CopyText() => FuriganaPresentation.CopyText(Current(), ShowReadings);
+    public FuriganaAutomaticRequest? BeginAutomatic()
+    {
+        Generate();
+        return IsCurrent && Error is null ? new(++requestSequence, Revision, Input) : null;
+    }
+    public bool ApplyAutomatic(FuriganaAutomaticRequest request, IReadOnlyList<ReadingToken> tokens)
+    {
+        if (request.Id != requestSequence || request.Revision != Revision || request.Text != Input || !IsCurrent) return false;
+        Document!.ApplyAutomatic(tokens);
+        return true;
+    }
 }
+
+public sealed record FuriganaAutomaticRequest(long Id, long Revision, string Text);

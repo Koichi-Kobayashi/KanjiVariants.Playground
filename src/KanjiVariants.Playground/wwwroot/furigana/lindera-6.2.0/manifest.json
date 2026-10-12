@@ -1,0 +1,95 @@
+{
+  "engine": "lindera-wasm",
+  "version": "6.2.0",
+  "dictionaryId": "lindera-ipadic-6.2.0",
+  "dictionaryFormat": 2,
+  "publicationApproved": false,
+  "publicationBlockers": [
+    "IPADIC原典20250920とNOTICE内20070801の表記照合",
+    "WASM第三者crate通知の最終確認"
+  ],
+  "dictionary": [
+    {
+      "file": "metadata.json.gz",
+      "gzip": true,
+      "sha256": "266156314e4cdd67473456289972429c1f868b5d272eef876aaaf380a61212e8",
+      "rawSha256": "305addfbf05e41d985a1541035c79a7b6f8ae254e4bc94f1721be21adf31068f",
+      "bytes": 320,
+      "rawBytes": 779
+    },
+    {
+      "file": "dict.trie.gz",
+      "gzip": true,
+      "sha256": "765abf86395adab3a833c278aadf48bff03fd2e20af1901487b97118e0644745",
+      "rawSha256": "b176188057bbd78fa73c2161db1f00fbabf9afbc3471732c4b549bf707413dfb",
+      "bytes": 2163587,
+      "rawBytes": 4587532
+    },
+    {
+      "file": "dict.valsidx.gz",
+      "gzip": true,
+      "sha256": "bf7de84162948566e0c5d7eed5933da68a11cf5a87a7793de98192ad5491f55e",
+      "rawSha256": "f1b17f1c4682a5bd42dabe95ab7cefb461c888b839a18d213dd5c7133d3a1a76",
+      "bytes": 848412,
+      "rawBytes": 1303480
+    },
+    {
+      "file": "dict.vals.gz",
+      "gzip": true,
+      "sha256": "79e0ba1dcf0c3f814da38e593584e8c8cfad57b5186980722b9208701dbb2209",
+      "rawSha256": "62af946542a17c4f16cf1122cb069b5d26f7cf652066b3b846cc4c230b6a8aa1",
+      "bytes": 1464366,
+      "rawBytes": 3921250
+    },
+    {
+      "file": "dict.wordsidx.gz",
+      "gzip": true,
+      "sha256": "d911ecaec523f792bc5bc3a227cf9a30ce1657a99f506bfc52198e401af5e9e4",
+      "rawSha256": "a38e0b55d6e0fa67555078f8beb6f634f264b2a6b2ea2c9a7aa111f085ada721",
+      "bytes": 1192311,
+      "rawBytes": 1568504
+    },
+    {
+      "file": "dict.words.gz",
+      "gzip": true,
+      "sha256": "c51b9752f49d91e0e12158d3f42b828220ff7d18cc14ff8f649b51cfc22cce38",
+      "rawSha256": "fc1d924e12af84a352feccce35b772383322760ee2b3da4be0e173ad82953938",
+      "bytes": 4135936,
+      "rawBytes": 32674733
+    },
+    {
+      "file": "matrix.mtx.gz",
+      "gzip": true,
+      "sha256": "221c42265c124a5d5970f38d7ff10be3e57fadf4159314fe77945f817bc23fa8",
+      "rawSha256": "915733be6589bee90b8f2af5cd314c384a1f9a2fc3af498384555986447b168b",
+      "bytes": 1704237,
+      "rawBytes": 3463718
+    },
+    {
+      "file": "char_def.bin.gz",
+      "gzip": true,
+      "sha256": "34c49af9557c5243c0b522c94abc32794fff6ae36a24279351bf307bb958be13",
+      "rawSha256": "ef37cf70d7e72ec023bec8e632783a6fe255b2d5fd1bce22600b595fccae48b1",
+      "bytes": 828,
+      "rawBytes": 2360
+    },
+    {
+      "file": "unk.bin.gz",
+      "gzip": true,
+      "sha256": "3458d4c295f3bd8e762f4314163bad512e5f99c2228ba6f6b47aba899efd4f90",
+      "rawSha256": "3eeebe0ef3f8907be325aa3acb0ccbd4ccb6f5ac20ff3dd0742ff1af1c468da6",
+      "bytes": 705,
+      "rawBytes": 2492
+    }
+  ],
+  "javascript": {
+    "file": "lindera_wasm.js",
+    "sha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
+    "bytes": 66542
+  },
+  "wasm": {
+    "file": "lindera_wasm_bg.wasm",
+    "sha256": "52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431",
+    "bytes": 1784285
+  }
+}

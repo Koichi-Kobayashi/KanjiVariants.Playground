@@ -79,3 +79,7 @@ fieldset:disabled { opacity:.65; }
 .furigana-editor input { width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; color:var(--text); background:var(--surface); }
 .furigana-stale { border:2px solid var(--warn); }
 @media(max-width:600px) { .mode-switch { width:100%; } .mode-switch button { padding:10px 12px; flex:1; } .furigana-map { padding:10px; } }
+
+.furigana-actions { display:flex; flex-direction:column; gap:8px; }
+.furigana-auto { background:var(--soft); border-radius:3px; }
+@media(max-width:600px) { .furigana-actions { width:100%; } .furigana-actions .primary { min-width:0; width:100%; } }
