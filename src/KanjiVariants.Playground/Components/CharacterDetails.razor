@@ -1,0 +1,56 @@
+<section class="character-details" aria-label="文字の詳細情報">
+    <h3>文字の詳細</h3>
+    <dl class="detail-facts">
+        <dt>元の文字表現</dt><dd class="original-text">@CharacterDisplay.Visible(Model.Original, Item.Reason)</dd>
+        <dt>コードポイント</dt><dd>@CharacterDisplay.CodePoints(Model.Original, Item.Reason)</dd>
+        <dt>UTF-16長</dt><dd>@Item.Utf16Length 単位</dd>
+        <dt>Variation Selector</dt><dd>@(Model.VariationSelectors.Count == 0 ? "なし" : "あり · " + string.Join(" · ", Model.VariationSelectors.Select(x => $"U+{x:X4}")))</dd>
+    </dl>
+    @if (Model.Error is not null) { <p class="error" role="alert">@Model.Error</p> }
+    else if (!Model.CanAnalyze)
+    {
+        <p class="help">この表現は詳細APIの取得対象外です。漢字かどうかを断定するものではありません。未登録の字形指定を除去したり、基底文字だけで判定し直したりしません。</p>
+    }
+    else
+    {
+        @if (Model.VariationSelectors.Count > 0)
+        { <p class="help">元のIVS/SVS付き表現の情報です。基底文字の所属や音訓へ読み替えていません。</p> }
+        <h4>JIS文字集合への所属</h4>
+        <dl class="detail-facts">
+            @foreach (var set in Model.JisSets) { <dt>@set.Target.Label</dt><dd>@(set.IsSupported ? "所属する" : "所属しない")</dd> }
+        </dl>
+        <h4>漢字表の情報</h4>
+        <dl class="detail-facts">
+            <dt>常用漢字表の本表字</dt><dd>@(Model.JoyoEntry is not null ? "該当する" : "該当しない")</dd>
+            <dt>教育漢字</dt><dd>@(Model.EducationGrade is { } grade ? $"該当する · 小学{(int)grade}年生に配当" : "該当しない")</dd>
+            <dt>人名用漢字表の863字</dt><dd>@(Model.IsJinmeiyoKanji == true ? "該当する" : "該当しない")</dd>
+            <dt>常用または人名用漢字</dt><dd>@(Model.IsNameUsableKanji == true ? "該当する" : "該当しない")</dd>
+        </dl>
+        <p class="help">人名用漢字表の掲載と、常用漢字を含むライブラリ上の分類を区別しています。戸籍上の氏名への使用可否全般を保証するものではありません。</p>
+        @if (Model.JoyoEntry is { } joyo)
+        {
+            @foreach (var type in new[] { KanjiReadingType.On, KanjiReadingType.Kun })
+            {
+                @if (joyo.Readings.Any(x => x.Type == type))
+                {
+                    <h4>@(type == KanjiReadingType.On ? "掲載音読み" : "掲載訓読み")</h4>
+                    <ul class="reading-list">
+                        @foreach (var reading in joyo.Readings.Where(x => x.Type == type))
+                        {
+                            <li><strong>@reading.Reading</strong>
+                                @if (reading.Examples.Count > 0) { <span class="reading-examples">用例：@string.Join("、", reading.Examples)</span> }
+                            </li>
+                        }
+                    </ul>
+                }
+            }
+            @foreach (var note in joyo.Readings.Select(x => x.Note).Where(x => !string.IsNullOrEmpty(x)).Distinct(StringComparer.Ordinal))
+            { <p class="reading-note"><strong>備考</strong><br />@note</p> }
+        }
+    }
+</section>
+
+@code {
+    [Parameter, EditorRequired] public CharacterDetailsModel Model { get; set; } = default!;
+    [Parameter, EditorRequired] public KanjiTextDiagnosticItem Item { get; set; } = default!;
+}

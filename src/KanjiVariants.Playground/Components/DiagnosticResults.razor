@@ -1,4 +1,5 @@
 @inject ClipboardService Clipboard
+@inject CharacterDetailsService Details
 
 <div class="panel result-panel">
     <div class="summary" role="status">
@@ -15,8 +16,13 @@
             <tbody>
                 @foreach (var row in Result.Rows)
                 {
+                    var expansion = session.GetExpansion(row.Item.Utf16Index);
                     <tr>
-                        <th scope="row"><span class="character">@CharacterDisplay.Visible(row.Item.Original, row.Item.Reason)</span><span class="position">@CharacterDisplay.CodePoints(row.Item.Original, row.Item.Reason)</span><span class="position">位置 @row.Item.Utf16Index · @row.Item.Utf16Length 単位</span></th>
+                        <th scope="row"><button type="button" class="detail-toggle" @onclick="() => session.Toggle(row.Item)"
+                            aria-expanded="@((expansion is not null).ToString().ToLowerInvariant())"
+                            aria-controls="@DetailId(row.Item)" aria-label="@($"位置 {row.Item.Utf16Index} の文字の詳細を開閉")">
+                            <span class="character">@CharacterDisplay.Visible(row.Item.Original, row.Item.Reason)</span><small>詳細 @(expansion is not null ? "−" : "＋")</small></button>
+                            <span class="position">@CharacterDisplay.CodePoints(row.Item.Original, row.Item.Reason)</span><span class="position">位置 @row.Item.Utf16Index · @row.Item.Utf16Length 単位</span></th>
                         <td data-label="判定"><span class="status-dot @(row.Item.IsSupported ? "ok" : "outside")" aria-hidden="true"></span>@DiagnosticService.Explain(row.Item.Reason)</td>
                         <td data-label="代替候補">
                             @if (row.Candidates.Count > 0)
@@ -42,6 +48,14 @@
                             { <p class="help">基底文字へのフォールバックではIVS/SVSの字形情報が失われます。利用する前に確認してください。</p> }
                         </td>
                     </tr>
+                    <tr class="character-detail-row" id="@DetailId(row.Item)" hidden="@(expansion is null)">
+                        <td colspan="3" data-details-cachehit="@((expansion?.WasCached ?? false).ToString().ToLowerInvariant())"
+                            data-details-ms="@((expansion?.LookupMilliseconds ?? 0).ToString("F3", System.Globalization.CultureInfo.InvariantCulture))"
+                            data-details-cache-count="@session.CacheCount">
+                            @if (expansion is not null)
+                            { <CharacterDetails Model="expansion.Model" Item="row.Item" /> }
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
@@ -53,7 +67,17 @@
 @code {
     [Parameter, EditorRequired] public PlaygroundResult Result { get; set; } = default!;
     private string copyStatus = "候補を押すと、その文字だけをコピーします。入力は変更しません。";
-    protected override void OnParametersSet() => copyStatus = "候補を押すと、その文字だけをコピーします。入力は変更しません。";
+    private CharacterDetailsSession session = default!;
+    private PlaygroundResult? previousResult;
+    private readonly string resultId = Guid.NewGuid().ToString("N");
+    private string DetailId(KanjiTextDiagnosticItem item) => $"character-detail-{resultId}-{item.Utf16Index}";
+    protected override void OnParametersSet()
+    {
+        if (ReferenceEquals(previousResult, Result)) return;
+        previousResult = Result;
+        session = new CharacterDetailsSession(Details.Get);
+        copyStatus = "候補を押すと、その文字だけをコピーします。入力は変更しません。";
+    }
     private async Task Copy(string candidate)
     {
         copyStatus = await Clipboard.CopyAsync(candidate) ? $"「{candidate}」をコピーしました。"

@@ -12,5 +12,7 @@
     <Compile Include="../../src/KanjiVariants.Playground/Services/ConversionService.cs" Link="ConversionService.cs" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/CharacterDisplay.cs" Link="CharacterDisplay.cs" />
     <Compile Include="../../src/KanjiVariants.Playground/Services/VariationExamples.cs" Link="VariationExamples.cs" />
+    <Compile Include="../../src/KanjiVariants.Playground/Services/CharacterDetailsService.cs" Link="CharacterDetailsService.cs" />
+    <Compile Include="../../src/KanjiVariants.Playground/Services/CharacterDetailsSession.cs" Link="CharacterDetailsSession.cs" />
   </ItemGroup>
 </Project>

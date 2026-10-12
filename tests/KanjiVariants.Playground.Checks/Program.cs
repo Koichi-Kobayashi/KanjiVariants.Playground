@@ -61,4 +61,5 @@ try { service.Analyze(new string('髙', DiagnosticService.MaxUtf16Length + 1), C
 catch (ArgumentException) { checks++; }
 ConversionChecks.Run(Check);
 VariationChecks.Run(Check);
+CharacterDetailsChecks.Run(Check);
 Console.WriteLine($"Passed {checks} checks.");

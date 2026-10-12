@@ -2,6 +2,10 @@ namespace KanjiVariants.Playground.Services;
 
 public static class CharacterDisplay
 {
+    // 表示専用のUnicode VS範囲。登録の判定・論理単位の分割・基底文字への変換には使わない。
+    public static IReadOnlyList<int> VariationSelectorCodePoints(string text) => Array.AsReadOnly(text.EnumerateRunes()
+        .Where(x => x.Value is >= 0xFE00 and <= 0xFE0F or >= 0xE0100 and <= 0xE01EF)
+        .Select(x => x.Value).ToArray());
     // 表示専用。変換・比較・論理単位の分割には使わない。不正なUTF-16をU+FFFDと誤表示しない。
     public static string CodePoints(string text, KanjiDiagnosticReason reason = KanjiDiagnosticReason.Supported) =>
         reason == KanjiDiagnosticReason.InvalidUtf16 ? "不正UTF-16（Unicodeスカラーなし）"
