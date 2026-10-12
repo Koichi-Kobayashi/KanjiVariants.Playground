@@ -1,8 +1,9 @@
-param([string]$Root = (Join-Path $PSScriptRoot '../..'))
+param([string]$Root = (Join-Path $PSScriptRoot '../..'), [string]$SourceDirectory)
 $ErrorActionPreference = 'Stop'
 $repo = (Resolve-Path -LiteralPath $Root).Path
 $archivePath = Join-Path $repo 'artifacts/license-audit/lindera-v6.2.0.zip'
 $fixedSourcePath = Join-Path $repo 'artifacts/license-audit/source/lindera-6.2.0'
+if ($SourceDirectory) { $fixedSourcePath = (Resolve-Path -LiteralPath $SourceDirectory).Path }
 $output = Join-Path $repo 'artifacts/furigana-self-build'
 New-Item -ItemType Directory -Force -Path $output | Out-Null
 if ((Get-FileHash -LiteralPath $archivePath).Hash.ToLowerInvariant() -ne 'f8aa68d5714f0fa17c793a8686d2fb7abef284e336c78c1895837e52c26613c4') { throw 'Fixed source archive mismatch' }

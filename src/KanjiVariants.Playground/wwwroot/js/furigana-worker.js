@@ -15,6 +15,8 @@ async function initialize() {
     const response=await fetch(new URL('manifest.json',base));
     if(!response.ok)throw new Error('辞書の構成情報を取得できませんでした。');
     const manifest=await response.json();
+    if(manifest.buildOrigin!=='self-built'||manifest.wasm?.sha256!=='fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba')
+        throw new Error('採用済みエンジンの構成情報ではありません。キャッシュを更新して再試行してください。');
     const module=await import(new URL('lindera_wasm.js',base));
     await module.default({module_or_path:await checkedFetch(manifest.wasm)});
     let arrays=await Promise.all(manifest.dictionary.map(checkedFetch));

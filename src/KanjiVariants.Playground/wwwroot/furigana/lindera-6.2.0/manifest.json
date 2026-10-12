@@ -5,7 +5,7 @@
   "dictionaryFormat": 2,
   "publicationApproved": false,
   "publicationBlockers": [
-    "公式npm WASMと限定した固定ソース依存範囲の完全対応が未証明。確認した範囲の通知不足は解消したが、実ビルドの追加・相違依存に対する通知網羅性が未確定（公開前監査基準による停止）"
+    "公開承認は保留。標準ライブラリ内部・最終リンク成分の完全SBOM、別環境の再現性、モバイル実機等の未検証事項は監査記録を参照"
   ],
   "dictionary": [
     {
@@ -81,16 +81,6 @@
       "rawBytes": 2492
     }
   ],
-  "javascript": {
-    "file": "lindera_wasm.js",
-    "sha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
-    "bytes": 66542
-  },
-  "wasm": {
-    "file": "lindera_wasm_bg.wasm",
-    "sha256": "52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431",
-    "bytes": 1784285
-  },
   "licenseAudit": {
     "date": "2026-10-12",
     "status": "blocked",
@@ -104,12 +94,12 @@
       "status": "satisfied-for-fixed-source-scope",
       "unresolved": [],
       "kanaria": "resolved by byte-identical crate source and original manifest at license-bearing upstream commit",
-      "limitation": "Does not prove notice completeness for unidentified additional dependencies in the official binary"
+      "limitation": "106 compiled packages and recorded Rust notices covered; not proof of every final linked component."
     },
     "sbomCompleteness": {
       "status": "unproven",
       "binaryAttested": false,
-      "reason": "Official build dependency resolution/features/lock use unconfirmed; source graph is not a binary SBOM"
+      "reason": "Self-build compilation and toolchain inputs recorded; standard-library internals and final linked contents are not a complete SBOM."
     },
     "noticeFiles": [
       {
@@ -142,7 +132,7 @@
       },
       {
         "file": "LICENSE-INVENTORY.json",
-        "sha256": "318828764674f0c9ca8e42171065eba729bbd098ebc30b989b69076a3fe344b4"
+        "sha256": "c031ad59dc22eee97d4ffe9dddaa9d362921aca9e8c74b8976b7bfc1478c2305"
       },
       {
         "file": "LINDERA-CORE-LICENSE",
@@ -219,7 +209,34 @@
       {
         "file": "WASM-SOURCE-DEPENDENCIES.json",
         "sha256": "a10d9dd4fa2ce95e0eb062248e8bf99722902307af475d098017eb40c8e1304a"
+      },
+      {
+        "file": "SELF-BUILD-PROVENANCE.json",
+        "sha256": "e1fa48d4a5685f401a353281712d74619fd0231712ebce934fc3476c6374b686"
+      },
+      {
+        "file": "SELF-BUILD-CARGO.lock",
+        "sha256": "6b30d175d6234ad39b8b969101af13834b28545f3eb9801e454002832db18d75"
       }
-    ]
+    ],
+    "buildProvenance": {
+      "status": "recorded-self-build",
+      "file": "SELF-BUILD-PROVENANCE.json"
+    }
+  },
+  "buildOrigin": "self-built",
+  "buildProvenance": {
+    "file": "SELF-BUILD-PROVENANCE.json",
+    "sha256": "e1fa48d4a5685f401a353281712d74619fd0231712ebce934fc3476c6374b686"
+  },
+  "javascript": {
+    "file": "lindera_wasm.js",
+    "sha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
+    "bytes": 66542
+  },
+  "wasm": {
+    "file": "lindera_wasm_bg.wasm",
+    "sha256": "fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba",
+    "bytes": 2214024
   }
 }

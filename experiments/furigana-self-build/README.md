@@ -1,6 +1,10 @@
 # 自動ふりがな WASM自前ビルド検証
 
+**現行手順:** [パス正規化・再現手順](../../docs/FURIGANA-PATH-NORMALIZATION.md)。Buildは自動remapを適用して`pkg-normalized`へ出力し、通常モードでは新hashとprivacyを検証する。NORMALIZED-BUILD.jsonが現行記録。以下のREPORT/MEASUREMENTS・pkg/公式比較等は移行前の履歴であり、旧hashを採用値として使わない。
+
 2026-10-12。実験専用。本番WASM・辞書・公開承認は変更しない。
+
+**2026-10-13追記:** 上記とREPORT/MEASUREMENTSは移行前の実験記録。現在は[自前版採用・開発者手順](../../docs/FURIGANA-SELF-BUILD.md)に従う。Buildとverifyは現行self版にも対応し、verifyの公式比較元は独立したP2a npm artifactへ固定した。旧record-evidence/検証サイトは履歴再現用で、現行配布の監査更新・公開承認には使わない。
 
 - [REPORT.md](REPORT.md): 結論、比較、残課題、正式採用に必要な検証
 - [MEASUREMENTS.json](MEASUREMENTS.json): 固定ソース、106コンパイルpackageの版・feature variant・通知対応、生成物ハッシュ、測定値、27通知のpublish同梱ハッシュ

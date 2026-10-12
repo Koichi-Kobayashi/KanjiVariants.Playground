@@ -24,9 +24,12 @@ jobs:
       - run: dotnet build -c Release --no-restore
       - run: dotnet run --project tests/KanjiVariants.Playground.Checks -c Release --no-build
       - run: node --experimental-default-type=module tests/KanjiVariants.Playground.Checks/FuriganaWorkerChecks.mjs
-      - name: Verify furigana redistribution approval
-        shell: pwsh
-        run: ./scripts/Verify-FuriganaRedistribution.ps1
+      - name: Verify adopted self-build assets and notices
+        run: node scripts/Verify-FuriganaLicenseEvidence.mjs
+      - name: Check distribution tamper rejection
+        run: node tests/KanjiVariants.Playground.Checks/FuriganaDistributionChecks.mjs
+      - name: Check local path and sensitive string rejection
+        run: node tests/KanjiVariants.Playground.Checks/FuriganaPathChecks.mjs
       - run: dotnet publish src/KanjiVariants.Playground -c Release --no-restore -o artifacts/publish
       - name: Prepare subpath and static files
         shell: pwsh
@@ -34,6 +37,11 @@ jobs:
       - name: Verify published references
         shell: pwsh
         run: ./scripts/Verify-Pages.ps1
+      - name: Verify published self-build and all notices
+        run: node scripts/Verify-FuriganaLicenseEvidence.mjs artifacts/publish/wwwroot
+      - name: Verify furigana redistribution approval
+        shell: pwsh
+        run: ./scripts/Verify-FuriganaRedistribution.ps1
       - uses: actions/upload-pages-artifact@v5
         with:
           path: artifacts/publish/wwwroot

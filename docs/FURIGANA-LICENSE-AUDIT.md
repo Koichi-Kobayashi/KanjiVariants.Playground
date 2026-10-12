@@ -4,6 +4,10 @@
 
 ## 結論
 
+**2026-10-13のパス正規化:** [ローカルパス除去](FURIGANA-PATH-NORMALIZATION.md)を実施。配布WASMを`fbe6bf9a...`へ更新し、開発者名・ローカル絶対パス0件、別source/Cargo home/targetでbyte一致を確認した。106件とstd inputは不変、必要通知29件は維持。完全SBOM・公開承認は保留のまま。
+
+**2026-10-13の現行構成:** 固定ソースからの[自前WASMを正式採用](FURIGANA-SELF-BUILD.md)した。既存27通知を保持し、来歴JSONとCargo.lockを追加した29件を検証。106件のコンパイル依存と通知の対応、source/lock/toolchain/実配布hashを確認。公式版の来歴未証明は以下の移行前履歴であり、現行self版の証跡と混同しない。完全SBOMは未証明、公開承認falseを維持する。公開前checkはself版の来歴・通知を確認後、承認falseで停止する。
+
 **同日の後続検証:** 固定ソースの`--locked --offline`自前WASMビルドと別targetでの再ビルドに成功。最新Release publishに全27通知・証跡が同梱され、全SHA-256一致を確認した。詳細は[自前ビルド・同梱検証](../experiments/furigana-self-build/REPORT.md)。過去の未実施記録は当時の事実として残すが、27件のpublish同梱の未検証状態は解消した。本番は公式版のままで、その実build対応未証明による公開停止は維持。
 
 **確認した固定ソース依存範囲の通知不足は解消。公式npm WASMとの完全対応は未証明のため、公開承認は保留を維持する。** IPADIC版表記に加え、kanaria 0.2.0を開発元の同一コミットと照合してMIT全文・著作権通知を補った。限定スコープは106件（normal target候補84、proc-macro host subtree候補21、build-only候補1）。既知の通知未充足は0件。

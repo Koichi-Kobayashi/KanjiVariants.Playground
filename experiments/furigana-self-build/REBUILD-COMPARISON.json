@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-13",
+  "scope": "Same Windows toolchain; separate Cargo home and target, NOT independent OS/runner proof",
+  "records": [
+    {
+      "kind": "baseline",
+      "wasmSha256": "602b7f57f805ef3321ddebe6be1fb8f212afa3d9e67846a9d049ad755d37fe2e",
+      "wasmBytes": 2219656,
+      "jsSha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
+      "compilerLogSha256": "5fe259ba22f774a05535210d30c97bf81eb4a1f9281ade40110f34734d925c77",
+      "compiledVariantCount": 119,
+      "compiledVariantsSha256": "35efbbeb734278709b6b193f507cdd1e9cd284200f5d41564d3a015ab71cb8e2",
+      "sections": [
+        {
+          "id": 1,
+          "name": "",
+          "bytes": 708,
+          "sha256": "db6c77ccf773e7921d786a93f10a6c83c2ce0411e549799e8d58bf1961dd2bf2"
+        },
+        {
+          "id": 2,
+          "name": "",
+          "bytes": 2591,
+          "sha256": "24533fc6313d9610c17e5514abd3dd431f11197a3f3e278bdec5eb4964469364"
+        },
+        {
+          "id": 3,
+          "name": "",
+          "bytes": 2536,
+          "sha256": "2add81c96abe2459cdf8a78a91421445935ab91d3cdf5187700d9ec715e85839"
+        },
+        {
+          "id": 4,
+          "name": "",
+          "bytes": 11,
+          "sha256": "b5c811d964f508ac7a469ebaa9dfde2bfa4a9c4edbde5a77eecab99f9b9ef7fb"
+        },
+        {
+          "id": 5,
+          "name": "",
+          "bytes": 3,
+          "sha256": "d9d66e08d82b4c5feb47731d5655b4b59de2b32b52972147fc20e41649886903"
+        },
+        {
+          "id": 6,
+          "name": "",
+          "bytes": 25,
+          "sha256": "c08d6a8219320cb1f21f9702142338b6b64c624320620ff260d5be3d3020f434"
+        },
+        {
+          "id": 7,
+          "name": "",
+          "bytes": 2962,
+          "sha256": "b10a3f58748893b52730730049f07cf815e9062af46e746244254d32509f1850"
+        },
+        {
+          "id": 9,
+          "name": "",
+          "bytes": 1948,
+          "sha256": "ab071ca57ce0f066a281ced40db8127ff7d92048776678a388c6f99441bc2b9c"
+        },
+        {
+          "id": 10,
+          "name": "",
+          "bytes": 1205859,
+          "sha256": "e2444c62667704bc5937a1545de3acf9c29f0100e57f4ccb5bc240ee045ea6c6"
+        },
+        {
+          "id": 11,
+          "name": "",
+          "bytes": 684487,
+          "sha256": "61d10e3d0aa9d33d38eb3df5ce232f253b8a2946befa0665bd0fa36c4f2891c2"
+        },
+        {
+          "id": 0,
+          "name": "name",
+          "bytes": 318208,
+          "sha256": "240c9298c14e7b6d5322f68f6b032f13f59025e050d66ae25a0af19ee2cf91f2"
+        },
+        {
+          "id": 0,
+          "name": "producers",
+          "bytes": 124,
+          "sha256": "62e8eadee89085216d378d81b2a9bc76e73d046c2223b17d832990df1f12df8b"
+        },
+        {
+          "id": 0,
+          "name": "target_features",
+          "bytes": 148,
+          "sha256": "97ceea95e0687b14437e21c205ebb40eea27aa5ecaa971f7d87601e3aa213bfd"
+        }
+      ],
+      "fixtureCount": 23,
+      "tokensEqual": true,
+      "wasmApiEqual": true
+    },
+    {
+      "kind": "isolated",
+      "wasmSha256": "3c19df8ddc9aa6f1273a468af1f640a466690e1430bcba30aed3af2d23ccb6c3",
+      "wasmBytes": 2227208,
+      "jsSha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
+      "compilerLogSha256": "56e9fc9888a7a8a0886e241c1207d19df9454bcca673e9d6b446230b90162eec",
+      "compiledVariantCount": 119,
+      "compiledVariantsSha256": "35efbbeb734278709b6b193f507cdd1e9cd284200f5d41564d3a015ab71cb8e2",
+      "sections": [
+        {
+          "id": 1,
+          "name": "",
+          "bytes": 708,
+          "sha256": "db6c77ccf773e7921d786a93f10a6c83c2ce0411e549799e8d58bf1961dd2bf2"
+        },
+        {
+          "id": 2,
+          "name": "",
+          "bytes": 2591,
+          "sha256": "24533fc6313d9610c17e5514abd3dd431f11197a3f3e278bdec5eb4964469364"
+        },
+        {
+          "id": 3,
+          "name": "",
+          "bytes": 2536,
+          "sha256": "2add81c96abe2459cdf8a78a91421445935ab91d3cdf5187700d9ec715e85839"
+        },
+        {
+          "id": 4,
+          "name": "",
+          "bytes": 11,
+          "sha256": "b5c811d964f508ac7a469ebaa9dfde2bfa4a9c4edbde5a77eecab99f9b9ef7fb"
+        },
+        {
+          "id": 5,
+          "name": "",
+          "bytes": 3,
+          "sha256": "d9d66e08d82b4c5feb47731d5655b4b59de2b32b52972147fc20e41649886903"
+        },
+        {
+          "id": 6,
+          "name": "",
+          "bytes": 25,
+          "sha256": "1b7b67d18911e2da0b74af0eb61e91d8b3681735ea72da7e9e1105f7b1c07175"
+        },
+        {
+          "id": 7,
+          "name": "",
+          "bytes": 2962,
+          "sha256": "b10a3f58748893b52730730049f07cf815e9062af46e746244254d32509f1850"
+        },
+        {
+          "id": 9,
+          "name": "",
+          "bytes": 1948,
+          "sha256": "ab071ca57ce0f066a281ced40db8127ff7d92048776678a388c6f99441bc2b9c"
+        },
+        {
+          "id": 10,
+          "name": "",
+          "bytes": 1205859,
+          "sha256": "f2751f26c27d232bb164912ec2f3a660c3d0e0713b0c54e28f05aeefcbe217fe"
+        },
+        {
+          "id": 11,
+          "name": "",
+          "bytes": 692039,
+          "sha256": "a3b5aac6e856bfc71a45bbc827c3a2fe7705d573da46359704756789cd29daaf"
+        },
+        {
+          "id": 0,
+          "name": "name",
+          "bytes": 318208,
+          "sha256": "240c9298c14e7b6d5322f68f6b032f13f59025e050d66ae25a0af19ee2cf91f2"
+        },
+        {
+          "id": 0,
+          "name": "producers",
+          "bytes": 124,
+          "sha256": "62e8eadee89085216d378d81b2a9bc76e73d046c2223b17d832990df1f12df8b"
+        },
+        {
+          "id": 0,
+          "name": "target_features",
+          "bytes": 148,
+          "sha256": "97ceea95e0687b14437e21c205ebb40eea27aa5ecaa971f7d87601e3aa213bfd"
+        }
+      ],
+      "fixtureCount": 23,
+      "tokensEqual": true,
+      "wasmApiEqual": true
+    },
+    {
+      "kind": "remapped",
+      "wasmSha256": "602b7f57f805ef3321ddebe6be1fb8f212afa3d9e67846a9d049ad755d37fe2e",
+      "wasmBytes": 2219656,
+      "jsSha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
+      "compilerLogSha256": "20c9543b6b06f557b793dfc115bcbb5ccf0692ab11708d6d5015e37d2c95cc23",
+      "compiledVariantCount": 119,
+      "compiledVariantsSha256": "35efbbeb734278709b6b193f507cdd1e9cd284200f5d41564d3a015ab71cb8e2",
+      "sections": [
+        {
+          "id": 1,
+          "name": "",
+          "bytes": 708,
+          "sha256": "db6c77ccf773e7921d786a93f10a6c83c2ce0411e549799e8d58bf1961dd2bf2"
+        },
+        {
+          "id": 2,
+          "name": "",
+          "bytes": 2591,
+          "sha256": "24533fc6313d9610c17e5514abd3dd431f11197a3f3e278bdec5eb4964469364"
+        },
+        {
+          "id": 3,
+          "name": "",
+          "bytes": 2536,
+          "sha256": "2add81c96abe2459cdf8a78a91421445935ab91d3cdf5187700d9ec715e85839"
+        },
+        {
+          "id": 4,
+          "name": "",
+          "bytes": 11,
+          "sha256": "b5c811d964f508ac7a469ebaa9dfde2bfa4a9c4edbde5a77eecab99f9b9ef7fb"
+        },
+        {
+          "id": 5,
+          "name": "",
+          "bytes": 3,
+          "sha256": "d9d66e08d82b4c5feb47731d5655b4b59de2b32b52972147fc20e41649886903"
+        },
+        {
+          "id": 6,
+          "name": "",
+          "bytes": 25,
+          "sha256": "c08d6a8219320cb1f21f9702142338b6b64c624320620ff260d5be3d3020f434"
+        },
+        {
+          "id": 7,
+          "name": "",
+          "bytes": 2962,
+          "sha256": "b10a3f58748893b52730730049f07cf815e9062af46e746244254d32509f1850"
+        },
+        {
+          "id": 9,
+          "name": "",
+          "bytes": 1948,
+          "sha256": "ab071ca57ce0f066a281ced40db8127ff7d92048776678a388c6f99441bc2b9c"
+        },
+        {
+          "id": 10,
+          "name": "",
+          "bytes": 1205859,
+          "sha256": "e2444c62667704bc5937a1545de3acf9c29f0100e57f4ccb5bc240ee045ea6c6"
+        },
+        {
+          "id": 11,
+          "name": "",
+          "bytes": 684487,
+          "sha256": "61d10e3d0aa9d33d38eb3df5ce232f253b8a2946befa0665bd0fa36c4f2891c2"
+        },
+        {
+          "id": 0,
+          "name": "name",
+          "bytes": 318208,
+          "sha256": "240c9298c14e7b6d5322f68f6b032f13f59025e050d66ae25a0af19ee2cf91f2"
+        },
+        {
+          "id": 0,
+          "name": "producers",
+          "bytes": 124,
+          "sha256": "62e8eadee89085216d378d81b2a9bc76e73d046c2223b17d832990df1f12df8b"
+        },
+        {
+          "id": 0,
+          "name": "target_features",
+          "bytes": 148,
+          "sha256": "97ceea95e0687b14437e21c205ebb40eea27aa5ecaa971f7d87601e3aa213bfd"
+        }
+      ],
+      "fixtureCount": 23,
+      "tokensEqual": true,
+      "wasmApiEqual": true
+    }
+  ],
+  "cause": "With the isolated Cargo home alone the embedded source paths and code/data/name sections differ. Mapping only that home back to the original path reproduces every byte. No different artifact adopted."
+}

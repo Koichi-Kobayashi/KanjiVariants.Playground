@@ -20,6 +20,10 @@ context.testRaw = [raw[0], raw[0]];
 assert.equal(vm.runInContext('normalize(testText, testRaw)', context)[1].valid, false);
 context.testText = '\uD800';
 assert.throws(() => vm.runInContext('normalize(testText, [])', context), /UTF-16/);
+context.fetch=async()=>({ok:true,json:async()=>({wasm:{sha256:'52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431'}})});
+await assert.rejects(vm.runInContext('initialize()',context),/採用済みエンジン/,'Cached official manifest cannot silently load the old engine');
+context.fetch=async()=>({ok:true,json:async()=>({buildOrigin:'self-built',wasm:{sha256:'unreviewed'}})});
+await assert.rejects(vm.runInContext('initialize()',context),/採用済みエンジン/,'Unreviewed self-build rejected before import');
 
 let instances = 0, initCalls = 0, terminated = 0, failNext = false;
 class WorkerStub {
@@ -46,6 +50,8 @@ const assets = new URL('furigana/lindera-6.2.0/', root);
 const manifest = JSON.parse(await fs.readFile(new URL('manifest.json', assets), 'utf8'));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 assert.equal(manifest.version, '6.2.0'); assert.equal(manifest.dictionaryFormat, 2);
+assert.equal(manifest.buildOrigin,'self-built');
+assert.equal(manifest.wasm.sha256,'fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba');
 assert.equal(manifest.publicationApproved, false); assert.ok(manifest.publicationBlockers.length > 0);
 for (const asset of [manifest.javascript, manifest.wasm, ...manifest.dictionary]) {
     const bytes = await fs.readFile(new URL(asset.file, assets));

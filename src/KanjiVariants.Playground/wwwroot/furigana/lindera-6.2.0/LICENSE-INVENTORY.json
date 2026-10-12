@@ -1,12 +1,12 @@
 {
-  "scope": "Source dependency candidates; NOT a binary-attested SBOM",
+  "scope": "Compiled self-build packages and fixed-source notices; NOT a complete binary-attested SBOM",
   "sourceCommit": "0482efcc46b5ec518b7238efae55e9fed9bba0c0",
   "cargoLockSha256": "6b30d175d6234ad39b8b969101af13834b28545f3eb9801e454002832db18d75",
   "target": "wasm32-unknown-unknown",
   "rootFeatures": [],
   "rootDefaultFeatures": false,
   "sourceScope": "WASM-SOURCE-DEPENDENCIES.json",
-  "engineSha256": "52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431",
+  "engineSha256": "fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba",
   "packages": [
     {
       "name": "aho-corasick",
@@ -2966,5 +2966,6 @@
       ],
       "status": "source notices collected; binary inclusion unconfirmed"
     }
-  ]
+  ],
+  "buildProvenance": "SELF-BUILD-PROVENANCE.json"
 }

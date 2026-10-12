@@ -10,6 +10,8 @@ const evidence = path.resolve(root, process.argv[2] ?? 'artifacts/license-audit'
 const target = path.join(root, 'src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0');
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const read = name => fs.readFile(path.join(evidence, name));
+const currentManifest=JSON.parse(await fs.readFile(path.join(target,'manifest.json')));
+if(currentManifest.buildOrigin==='self-built')throw new Error('Historical official-npm collector cannot overwrite adopted self-build evidence. Retain notices and use the self-build verification workflow.');
 for (const [file, expected] of [
     ['lindera-wasm-6.2.0.tgz','ed82e271e54a4bddaeeeddcbe8f69037c5d7dbbd6f273bd516cdb7325c866cdf'],
     ['lindera-ipadic-6.2.0.zip','5ed4bba6b429030b0387df67d40d5751d35dedef0306f4bac6d957cad5f04b72'],

@@ -1,0 +1,37 @@
+{
+  "scope": "desktop localhost; experiment stage Worker plus real production client/Worker; not Blazor render latency",
+  "runs": [
+    {
+      "wasmFetchAndHashMs": 31.700000002980232,
+      "wasmInstantiateMs": 6.299999997019768,
+      "dictionaryLoadHashExpandMs": 295.8999999910593,
+      "tokenizerMs": 36.5,
+      "workerInitializationMs": 398.5,
+      "firstAnalysisMs": 36.5,
+      "repeatedAnalysisMedianMs": 20.5,
+      "wasmLinearBytes": 97124352
+    },
+    {
+      "wasmFetchAndHashMs": 26.599999994039536,
+      "wasmInstantiateMs": 5.100000008940697,
+      "dictionaryLoadHashExpandMs": 289.29999999701977,
+      "tokenizerMs": 38.099999994039536,
+      "workerInitializationMs": 385,
+      "firstAnalysisMs": 39.6000000089407,
+      "repeatedAnalysisMedianMs": 20.200000002980232,
+      "wasmLinearBytes": 97124352
+    },
+    {
+      "wasmFetchAndHashMs": 25.5,
+      "wasmInstantiateMs": 5.0999999940395355,
+      "dictionaryLoadHashExpandMs": 287.20000000298023,
+      "tokenizerMs": 36.400000005960464,
+      "workerInitializationMs": 380,
+      "firstAnalysisMs": 43.3999999910593,
+      "repeatedAnalysisMedianMs": 20.30000001192093,
+      "wasmLinearBytes": 97124352
+    }
+  ],
+  "productionClientColdMs": 495.1000000089407,
+  "productionClientRepeatedMs": 44
+}

@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 const root = path.resolve(process.argv[2] || 'artifacts/publish/wwwroot');
 const base = '/KanjiVariants.Playground/';
+const port=Number(process.argv[3]??5175);
+if(!Number.isInteger(port)||port<1024||port>65535)throw new Error('Invalid local server port');
 const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.json': 'application/json', '.wasm': 'application/wasm', '.txt': 'text/plain; charset=utf-8' };
 http.createServer((req, res) => {
     try {
@@ -20,4 +22,4 @@ http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
         fs.createReadStream(file).pipe(res);
     } catch { res.writeHead(400); res.end(); }
-}).listen(5175, '127.0.0.1', () => console.log('http://localhost:5175/KanjiVariants.Playground/'));
+}).listen(port, '127.0.0.1', () => console.log(`http://localhost:${port}/KanjiVariants.Playground/`));

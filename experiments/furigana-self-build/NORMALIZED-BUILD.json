@@ -1,0 +1,264 @@
+{
+  "date": "2026-10-13",
+  "provenanceSha256": "e1fa48d4a5685f401a353281712d74619fd0231712ebce934fc3476c6374b686",
+  "dependencyCount": 106,
+  "compiledDependenciesAndFeaturesUnchanged": true,
+  "sourceAndLockUnchanged": true,
+  "standardLibraryUnchanged": true,
+  "repeatBuild": {
+    "sameMachine": true,
+    "separateCargoHome": true,
+    "separateSourceDirectory": true,
+    "separateTargetDirectory": true,
+    "byteIdentical": true
+  },
+  "mappings": [
+    {
+      "from": "workspace",
+      "to": "/src/playground"
+    },
+    {
+      "from": "target-directory",
+      "to": "/build/target"
+    },
+    {
+      "from": "Lindera-source-root",
+      "to": "/src/lindera"
+    },
+    {
+      "from": "Cargo-home",
+      "to": "/cargo"
+    },
+    {
+      "from": "Rust-sysroot",
+      "to": "/rust/toolchain"
+    },
+    {
+      "from": "each-Cargo-registry-source-root",
+      "to": "/cargo/registry"
+    }
+  ],
+  "outputs": {
+    "lindera_wasm_bg.wasm": {
+      "bytes": 2214024,
+      "sha256": "fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba",
+      "repeatSha256": "fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba",
+      "pathAudit": {
+        "passed": true,
+        "violations": [],
+        "sourcePathCount": 143,
+        "virtualPathCount": 100,
+        "canonicalRustPathCount": 38,
+        "canonicalRustDepPathCount": 5,
+        "virtualPaths": [
+          "/cargo/registry/aho-corasick-1.1.4/src/ahocorasick.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/automaton.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/dfa.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/nfa/contiguous.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/nfa/noncontiguous.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/packed/api.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/packed/pattern.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/packed/rabinkarp.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/util/alphabet.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/util/debug.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/util/prefilter.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/util/primitives.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/util/remapper.rs",
+          "/cargo/registry/aho-corasick-1.1.4/src/util/search.rs",
+          "/cargo/registry/anyhow-1.0.104/src/error.rs",
+          "/cargo/registry/anyhow-1.0.104/src/fmt.rs",
+          "/cargo/registry/byteorder-1.5.0/src/lib.rs",
+          "/cargo/registry/csv-1.4.0/src/byte_record.rs",
+          "/cargo/registry/csv-1.4.0/src/reader.rs",
+          "/cargo/registry/csv-core-0.1.13/src/reader.rs",
+          "/cargo/registry/daachorse-5.0.0/src/build_helper.rs",
+          "/cargo/registry/daachorse-5.0.0/src/bytewise.rs",
+          "/cargo/registry/daachorse-5.0.0/src/bytewise/builder.rs",
+          "/cargo/registry/daachorse-5.0.0/src/nfa_builder.rs",
+          "/cargo/registry/daachorse-5.0.0/src/prefilter.rs",
+          "/cargo/registry/icu_normalizer-2.2.0/src/lib.rs",
+          "/cargo/registry/idna-1.1.0/src/punycode.rs",
+          "/cargo/registry/idna-1.1.0/src/uts46.rs",
+          "/cargo/registry/itoa-1.0.18/src/lib.rs",
+          "/cargo/registry/js-sys-0.3.103/src/lib.rs",
+          "/cargo/registry/memchr-2.8.3/src/arch/all/packedpair/mod.rs",
+          "/cargo/registry/memchr-2.8.3/src/arch/all/twoway.rs",
+          "/cargo/registry/memchr-2.8.3/src/memmem/searcher.rs",
+          "/cargo/registry/percent-encoding-2.3.2/src/lib.rs",
+          "/cargo/registry/regex-1.13.1/src/builders.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/dfa/onepass.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/dfa/remapper.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/hybrid/dfa.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/hybrid/regex.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/hybrid/search.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/error.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/limited.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/literal.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/prefix.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/reverse_inner.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/reverse_suffix.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/stopat.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/strategy.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/meta/wrappers.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/backtrack.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/builder.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/compiler.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/literal_trie.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/map.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/nfa.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/pikevm.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/nfa/thompson/range_trie.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/alphabet.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/captures.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/determinize/mod.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/determinize/state.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/empty.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/escape.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/iter.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/look.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/pool.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/prefilter/byteset.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/prefilter/memchr.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/prefilter/memmem.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/prefilter/teddy.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/primitives.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/search.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/sparse_set.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/utf8.rs",
+          "/cargo/registry/regex-automata-0.4.16/src/util/wire.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/ast/parse.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/debug.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/error.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/hir/interval.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/hir/literal.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/hir/mod.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/hir/translate.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/unicode.rs",
+          "/cargo/registry/regex-syntax-0.8.11/src/utf8.rs",
+          "/cargo/registry/rkyv-0.8.18/src/util/alloc/aligned_vec.rs",
+          "/cargo/registry/serde_core-1.0.229/src/de/mod.rs",
+          "/cargo/registry/serde_json-1.0.151/src/de.rs",
+          "/cargo/registry/serde_json-1.0.151/src/error.rs",
+          "/cargo/registry/serde_json-1.0.151/src/read.rs",
+          "/cargo/registry/serde_json-1.0.151/src/value/index.rs",
+          "/cargo/registry/smallvec-1.15.1/src/lib.rs",
+          "/cargo/registry/tinyvec-1.11.0/src/arrayvec.rs",
+          "/cargo/registry/unicode-normalization-0.1.25/src/decompose.rs",
+          "/cargo/registry/unicode-normalization-0.1.25/src/lookups.rs",
+          "/cargo/registry/unicode-segmentation-1.13.3/src/grapheme.rs",
+          "/cargo/registry/unicode-segmentation-1.13.3/src/tables.rs",
+          "/cargo/registry/url-2.5.8/src/host.rs",
+          "/cargo/registry/url-2.5.8/src/lib.rs",
+          "/cargo/registry/url-2.5.8/src/parser.rs",
+          "/cargo/registry/wasm-bindgen-0.2.126/src/externref.rs"
+        ],
+        "canonicalRustPaths": [
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/collections/btree/map.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/collections/btree/map/entry.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/collections/btree/navigate.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/collections/btree/node.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/fmt.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/raw_vec/mod.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/slice.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/str.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/string.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/src/sync.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/bstr/mod.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/fmt/builders.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/fmt/mod.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/net/display_buffer.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/net/ip_addr.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/num/imp/bignum.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/num/imp/diy_float.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/num/imp/flt2dec/mod.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/num/imp/flt2dec/strategy/dragon.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/num/imp/flt2dec/strategy/grisu.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/slice/index.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/slice/memchr.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/slice/sort/shared/smallsort.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/slice/sort/stable/quicksort.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/str/lossy.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/str/mod.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/str/pattern.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/unicode/unicode_data.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/../../backtrace/src/symbolize/mod.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/backtrace.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/io/mod.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/path.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sync/lazy_lock.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sync/once.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/sync/mutex/no_threads.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/sync/once/no_threads.rs",
+          "/rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/sys/sync/rwlock/no_threads.rs"
+        ],
+        "canonicalRustDepPaths": [
+          "/rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs",
+          "/rust/deps/hashbrown-0.17.1/src/raw.rs",
+          "/rust/deps/rustc-demangle-0.1.27/src/legacy.rs",
+          "/rust/deps/rustc-demangle-0.1.27/src/lib.rs",
+          "/rust/deps/rustc-demangle-0.1.27/src/v0.rs"
+        ],
+        "sectionPaths": [
+          {
+            "id": 11,
+            "name": "",
+            "sourcePathCount": 143
+          }
+        ]
+      }
+    },
+    "lindera_wasm.js": {
+      "bytes": 66542,
+      "sha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
+      "repeatSha256": "a9e082fca426d6d225a439bac39c9d690aa5176598d7c902ca71e1fe4ba8d03a",
+      "pathAudit": {
+        "passed": true,
+        "violations": [],
+        "sourcePathCount": 0,
+        "virtualPathCount": 0,
+        "canonicalRustPathCount": 0,
+        "canonicalRustDepPathCount": 0,
+        "virtualPaths": [],
+        "canonicalRustPaths": [],
+        "canonicalRustDepPaths": [],
+        "sectionPaths": []
+      }
+    }
+  },
+  "before": {
+    "violations": [
+      {
+        "encoding": "utf8",
+        "rule": "username",
+        "count": 100
+      },
+      {
+        "encoding": "utf8",
+        "rule": "windowsAbsolute",
+        "count": 100
+      },
+      {
+        "encoding": "utf8",
+        "rule": "cargoHome",
+        "count": 100
+      },
+      {
+        "encoding": "utf8",
+        "rule": "nonvirtual-source-path",
+        "count": 100
+      }
+    ],
+    "sourcePathCount": 143,
+    "virtualPathCount": 0,
+    "canonicalRustPathCount": 38,
+    "canonicalRustDepPathCount": 5,
+    "sectionPaths": [
+      {
+        "id": 11,
+        "name": "",
+        "sourcePathCount": 143
+      }
+    ]
+  }
+}

@@ -31,6 +31,8 @@ The remaining uncertainty concerns correspondence and notice coverage for any un
 
 ## 回答の評価
 
+**2026-10-13:** 現行構成は[自前WASMへ移行](FURIGANA-SELF-BUILD.md)した。上記は公式npm配布版の未解決事項・履歴であり、自前版の実コンパイル記録とは区別する。公式版へ戻す判断や公式版の監査を完了する場合には引き続き有用。問い合わせは送信していない。今回の公開承認はfalse。
+
 2026-10-12の後続検証で、固定lock/ソースをRust 1.98.1・wasm-bindgen 0.2.126により`--locked --offline`でビルドし、別targetでも自前WASMのハッシュ一致を確認した。生成JSは公式版と同一だが、自前WASMは公式版と異なる。したがって、上記の公式実buildへの問い合わせ事項は未解消。[検証記録](../experiments/furigana-self-build/REPORT.md)を参照。通知の既知未充足0件と、公式版の全対応未証明を引き続き分ける。問い合わせは送信していない。
 
 - 実buildのlock/feature記録が固定ソースと一致すれば、その根拠を監査結果へ保存する。

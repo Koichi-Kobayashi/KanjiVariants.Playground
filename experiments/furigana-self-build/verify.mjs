@@ -12,8 +12,9 @@ const fixtures=JSON.parse(await fs.readFile(path.join(root,'tests/KanjiVariants.
 const bytes=await Promise.all(manifest.dictionary.map(async x=>new Uint8Array(zlib.gunzipSync(await fs.readFile(path.join(production,x.file))))));
 const sha=buffer=>crypto.createHash('sha256').update(buffer).digest('hex');
 const engines={};
-for(const [kind,directory] of [['official',production],['self',path.join(build,'pkg')]]) {
+for(const [kind,directory] of [['official',path.join(root,'experiments/furigana-p2a/vendor/lindera/package')],['self',production]]) {
  const js=await fs.readFile(path.join(directory,'lindera_wasm.js')),binary=await fs.readFile(path.join(directory,'lindera_wasm_bg.wasm'));
+ assert.equal(sha(binary),kind==='official'?'52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431':'fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba');
  const start=performance.now(),module=await import(pathToFileURL(path.join(directory,'lindera_wasm.js')).href);
  const wasm=await module.default({module_or_path:binary});
  const dictionary=module.loadDictionaryFromBytes(...bytes),tokenizer=new module.Tokenizer(dictionary,'normal');

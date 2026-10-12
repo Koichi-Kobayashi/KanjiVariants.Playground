@@ -43,3 +43,9 @@ WASMパッケージとLindera本体のMIT著作権は異なるため、`LICENSE`
 kanaria 0.2.0は、crateのVCS情報が指す開発元コミットとRustソース13ファイル・元Cargo.tomlのバイト一致を確認しました。同じコミットのMIT許諾全文・著作権表示を`KANARIA-LICENSE.txt`へ保存し、通知不足は解消しました。
 
 確認した固定ソース依存範囲の通知に既知の未充足はありません。一方、`LICENSE-INVENTORY.json`と`WASM-SOURCE-DEPENDENCIES.json`は実バイナリの確定SBOMではなく、npm WASM実ビルドの全依存版・featureの対応は未証明です。完全SBOMをライセンス本文の義務とは扱いませんが、追加・相違依存の通知網羅性が未確定のため、公開前監査方針によってPages公開を停止します。
+
+### 2026-10-13: 自前WASMへの移行（公開未承認）
+
+上記は公式npm版の監査履歴です。現行ローカル配布構成は、固定Lindera v6.2.0ソース・Cargo.lock・Rust 1.98.1・wasm-bindgen 0.2.126から生成した自前WASMへ移行しました。既存27通知・証跡は保持し、`SELF-BUILD-PROVENANCE.json`と`SELF-BUILD-CARGO.lock`を追加しました。106件の実コンパイル依存と既存通知を照合しています。CLI同梱MIT/Apache本文は既存wasm-bindgen通知とSHA-256一致を確認し、生成JS・変換コードの通知としても保持します。CLI実行ファイルは配信しません。IPADICの内容は変更していません。
+
+コンパイル記録は完全なバイナリSBOMではなく、標準ライブラリ内部・最終リンク成分には未証明の範囲が残ります。公式版の来歴未証明と現行自前版の証跡を分け、来歴・通知検証後も公開承認falseによってPages配信を停止します。固定条件・SHA-256・再現性と検証範囲は[自前WASM採用記録](docs/FURIGANA-SELF-BUILD.md)を参照してください。
