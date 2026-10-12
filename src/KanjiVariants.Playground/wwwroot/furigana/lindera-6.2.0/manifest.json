@@ -5,8 +5,7 @@
   "dictionaryFormat": 2,
   "publicationApproved": false,
   "publicationBlockers": [
-    "IPADIC原典20250920とNOTICE内20070801の表記照合",
-    "WASM第三者crate通知の最終確認"
+    "公式npm WASMと限定した固定ソース依存範囲の完全対応が未証明。確認した範囲の通知不足は解消したが、実ビルドの追加・相違依存に対する通知網羅性が未確定（公開前監査基準による停止）"
   ],
   "dictionary": [
     {
@@ -91,5 +90,136 @@
     "file": "lindera_wasm_bg.wasm",
     "sha256": "52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431",
     "bytes": 1784285
+  },
+  "licenseAudit": {
+    "date": "2026-10-12",
+    "status": "blocked",
+    "ipadicDateLabel": "resolved; original NOTICE retained with full COPYING and provenance",
+    "sourceCommit": "0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+    "rustcProducer": "1.98.1 (48a229cea 2026-09-01)",
+    "candidateInventory": "LICENSE-INVENTORY.json",
+    "sourceScope": "WASM-SOURCE-DEPENDENCIES.json",
+    "binaryAttested": false,
+    "noticeFulfillment": {
+      "status": "satisfied-for-fixed-source-scope",
+      "unresolved": [],
+      "kanaria": "resolved by byte-identical crate source and original manifest at license-bearing upstream commit",
+      "limitation": "Does not prove notice completeness for unidentified additional dependencies in the official binary"
+    },
+    "sbomCompleteness": {
+      "status": "unproven",
+      "binaryAttested": false,
+      "reason": "Official build dependency resolution/features/lock use unconfirmed; source graph is not a binary SBOM"
+    },
+    "noticeFiles": [
+      {
+        "file": "IPADIC-COPYING",
+        "sha256": "fca02d9adb601d101eccdf3131119abfff2d9c825ef5c759d7a89ebbaa972099"
+      },
+      {
+        "file": "IPADIC-NOTICE.txt",
+        "sha256": "2cf235bf0842d6d61eb0244fb22e645a321b12408a3cf75feb3a53577d885bde"
+      },
+      {
+        "file": "IPADIC-PROVENANCE.md",
+        "sha256": "e19c01e34eda0cce2330d22059be9b942ecd2d0a407673713a0aab22ad9aa90a"
+      },
+      {
+        "file": "KANARIA-LICENSE.txt",
+        "sha256": "f44d765862a602a68553b3614e63b0ea4646d7698d2c34fc8d60f7998c9a8e7b"
+      },
+      {
+        "file": "KANARIA-PROVENANCE.json",
+        "sha256": "8d8222da6e9869f1042653e1afe9b6e9f8cbc8716981cc10907b67f9ba41f533"
+      },
+      {
+        "file": "LIBYAML-LICENSE",
+        "sha256": "c40112449f254b9753045925248313e9270efa36d226b22d82d4cc6c43c57f29"
+      },
+      {
+        "file": "LICENSE",
+        "sha256": "8c4895986c32387571617c9bdb61f416e9370aa2daec8d041bc8b686fb28c1cf"
+      },
+      {
+        "file": "LICENSE-INVENTORY.json",
+        "sha256": "318828764674f0c9ca8e42171065eba729bbd098ebc30b989b69076a3fe344b4"
+      },
+      {
+        "file": "LINDERA-CORE-LICENSE",
+        "sha256": "d37249886de3136db31717f15f6ade215a36fbed1c782381e38b2bf6047e8ec4"
+      },
+      {
+        "file": "RUST-1.98.1-COPYRIGHT",
+        "sha256": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af"
+      },
+      {
+        "file": "RUST-1.98.1-LICENSE-APACHE",
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "file": "RUST-1.98.1-LICENSE-MIT",
+        "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1"
+      },
+      {
+        "file": "rust-1.98.1/COPYRIGHT-library.html",
+        "sha256": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6"
+      },
+      {
+        "file": "rust-1.98.1/licenses/Apache-2.0.txt",
+        "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+      },
+      {
+        "file": "rust-1.98.1/licenses/BSD-2-Clause.txt",
+        "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df"
+      },
+      {
+        "file": "rust-1.98.1/licenses/CC-BY-SA-4.0.txt",
+        "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+      },
+      {
+        "file": "rust-1.98.1/licenses/GCC-exception-3.1.txt",
+        "sha256": "a3966c9410ef94a1efbfa9ec04e9c1994026a70623fbf0885ce36737bfba3b54"
+      },
+      {
+        "file": "rust-1.98.1/licenses/GPL-2.0-only.txt",
+        "sha256": "54b212ba1f97f6948fa5486239ab505dd820b02e50cbfd296b4062c8609a70af"
+      },
+      {
+        "file": "rust-1.98.1/licenses/GPL-3.0-or-later.txt",
+        "sha256": "05315fce6c35f79b8a35454828995fa26336f235895ac64557abc028f4ffcea2"
+      },
+      {
+        "file": "rust-1.98.1/licenses/ISC.txt",
+        "sha256": "0ff61769b238634e042ab759dddfd104a8e69d091e3600ae3410e401a6164381"
+      },
+      {
+        "file": "rust-1.98.1/licenses/LLVM-exception.txt",
+        "sha256": "e34c58338bd89d43e709e226610d8f32b3e3c47f4ad9a99a8dc1d4ac7842488e"
+      },
+      {
+        "file": "rust-1.98.1/licenses/MIT.txt",
+        "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0"
+      },
+      {
+        "file": "rust-1.98.1/licenses/NCSA.txt",
+        "sha256": "39cb0234065c92b9e6cee3830cbb52b1aa289aa8fe9ba2e66730fec5cf05c630"
+      },
+      {
+        "file": "rust-1.98.1/licenses/OFL-1.1.txt",
+        "sha256": "8eea8287e5876b539670cadb82e99f9a7afddec6f6730811be1daf25d2e9bcfd"
+      },
+      {
+        "file": "rust-1.98.1/licenses/Unicode-3.0.txt",
+        "sha256": "f5062c9a188d81dfe66b56db4182dcf9e4b17c0d9b0d311a8e20b3a1b075c443"
+      },
+      {
+        "file": "THIRD-PARTY-NOTICES.txt",
+        "sha256": "5e0024be91eb08d902007db8135bec8837d224ddcdd4a485c64330a2b2d689a9"
+      },
+      {
+        "file": "WASM-SOURCE-DEPENDENCIES.json",
+        "sha256": "a10d9dd4fa2ce95e0eb062248e8bf99722902307af475d098017eb40c8e1304a"
+      }
+    ]
   }
 }

@@ -1,0 +1,1684 @@
+{
+  "scope": "Fixed-source dependency resolution, NOT official npm binary build metadata",
+  "sourceCommit": "0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+  "cargoLockSha256": "6b30d175d6234ad39b8b969101af13834b28545f3eb9801e454002832db18d75",
+  "rootPackage": "lindera-wasm@6.2.0",
+  "target": "wasm32-unknown-unknown",
+  "rootDefaultFeatures": false,
+  "rootFeatures": [],
+  "transitiveDefaultFeatures": "preserved as declared upstream; root --no-default-features does not disable them",
+  "featuresMeaning": "Union of observed cargo tree feature variants; variants retain host/target resolution differences",
+  "defaultRootComparison": {
+    "rootDefaultsEnabled": true,
+    "rootFeatureVariants": [
+      [
+        "default"
+      ]
+    ],
+    "samePackageIds": true,
+    "sameNonRootFeatures": true
+  },
+  "excluded": "dev dependencies, optional embedded dictionaries; build-only and proc-macro host roles kept separate",
+  "normalCandidates": 105,
+  "normalTargetCandidates": 84,
+  "hostProcMacroSubtreeCandidates": 21,
+  "buildOnlyCandidates": 1,
+  "evidenceFiles": [
+    {
+      "file": "wasm-normal-limited.txt",
+      "sha256": "2cca94ae692769b5898c46056f6bcc6377eb9a491684f1feaf0d6605d406f806"
+    },
+    {
+      "file": "wasm-build-limited.txt",
+      "sha256": "d12f6c8366a81b477ddcfeeb3bcc9a2dc1f6e8f90a1d07fb423ec700ca260b89"
+    },
+    {
+      "file": "wasm-target-limited.txt",
+      "sha256": "0c7a2c6ec10000ca419af4c376fbb8811f2c9d3af992486acb259af9f6834b2d"
+    },
+    {
+      "file": "wasm-package-features.txt",
+      "sha256": "7946045df9d6e89ad706933d6da15ad0a0071a1045c77003852ae270904624d7"
+    },
+    {
+      "file": "wasm-default-package-features.txt",
+      "sha256": "bbc8e6e2582a4240186c783104b6d01ac48db2aca9a2dd8d92888df8f63232c0"
+    },
+    {
+      "file": "wasm-features-limited.txt",
+      "sha256": "ab566432a374980e713f18f835352c53960774d4a9bd3282aa11bdad41142961"
+    },
+    {
+      "file": "wasm-metadata-limited.json",
+      "sha256": "14352341380161ab48852bf425e0139db2ef5afff32de5ad91492dd12e02c259"
+    }
+  ],
+  "packages": [
+    {
+      "name": "aho-corasick",
+      "version": "1.1.4",
+      "declaredLicense": "Unlicense OR MIT",
+      "featureVariants": [
+        [
+          "perf-literal",
+          "std"
+        ]
+      ],
+      "features": [
+        "perf-literal",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "anyhow",
+      "version": "1.0.104",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "bitflags",
+      "version": "1.3.2",
+      "declaredLicense": "MIT/Apache-2.0",
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "features": [
+        "default"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "features": [
+        "default"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "bytecheck_derive",
+      "version": "0.8.2",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "bytecheck",
+      "version": "0.8.2",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "simdutf8"
+        ]
+      ],
+      "features": [
+        "simdutf8"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "byteorder",
+      "version": "1.5.0",
+      "declaredLicense": "Unlicense OR MIT",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "crawdad",
+      "version": "0.4.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "default"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "default"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "csv-core",
+      "version": "0.1.13",
+      "declaredLicense": "Unlicense/MIT",
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "features": [
+        "default"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "csv",
+      "version": "1.4.0",
+      "declaredLicense": "Unlicense/MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "daachorse",
+      "version": "5.0.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "default"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "default"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "encoding_rs_io",
+      "version": "0.1.8",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "encoding_rs",
+      "version": "0.8.41",
+      "declaredLicense": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "featureVariants": [
+        [
+          "alloc",
+          "default"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "default"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.2",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.32",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.32",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.32",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "slab",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "slab",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "glob",
+      "version": "0.3.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "heck",
+      "version": "0.5.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "zerovec"
+        ]
+      ],
+      "features": [
+        "zerovec"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "compiled_data"
+        ]
+      ],
+      "features": [
+        "compiled_data"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "compiled_data"
+        ]
+      ],
+      "features": [
+        "compiled_data"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "baked"
+        ]
+      ],
+      "features": [
+        "baked"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.1",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "featureVariants": [
+        [
+          "compiled_data"
+        ]
+      ],
+      "features": [
+        "compiled_data"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "compiled_data",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "compiled_data",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "indexmap",
+      "version": "2.14.0",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.103",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std",
+          "unsafe-eval"
+        ]
+      ],
+      "features": [
+        "default",
+        "std",
+        "unsafe-eval"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "kanaria",
+      "version": "0.2.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "lindera-analysis",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "features": [
+        "default"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "lindera-binding-core",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "lindera-dictionary",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "default",
+          "mmap"
+        ]
+      ],
+      "features": [
+        "default",
+        "mmap"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "lindera-wasm",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "lindera",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "default",
+          "mmap"
+        ]
+      ],
+      "features": [
+        "default",
+        "mmap"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.2",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "log",
+      "version": "0.4.34",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "declaredLicense": "Unlicense OR MIT",
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "memmap2",
+      "version": "0.9.11",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "multiversion_no_op",
+      "version": "1.0.0",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "munge_macro",
+      "version": "0.4.7",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "munge",
+      "version": "0.4.7",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "race",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "default",
+        "race",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.5",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "zerovec"
+        ]
+      ],
+      "features": [
+        "zerovec"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.106",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "proc-macro"
+        ]
+      ],
+      "features": [
+        "default",
+        "proc-macro"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "ptr_meta_derive",
+      "version": "0.3.1",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "ptr_meta",
+      "version": "0.3.1",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "derive",
+          "ptr_meta_derive",
+          "std"
+        ]
+      ],
+      "features": [
+        "derive",
+        "ptr_meta_derive",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "quote",
+      "version": "1.0.45",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "proc-macro"
+        ]
+      ],
+      "features": [
+        "default",
+        "proc-macro"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "rancor",
+      "version": "0.1.1",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "alloc"
+        ]
+      ],
+      "features": [
+        "alloc"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "regex-automata",
+      "version": "0.4.16",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "alloc",
+          "dfa-onepass",
+          "hybrid",
+          "meta",
+          "nfa-backtrack",
+          "nfa-pikevm",
+          "nfa-thompson",
+          "perf-inline",
+          "perf-literal",
+          "perf-literal-multisubstring",
+          "perf-literal-substring",
+          "std",
+          "syntax",
+          "unicode",
+          "unicode-age",
+          "unicode-bool",
+          "unicode-case",
+          "unicode-gencat",
+          "unicode-perl",
+          "unicode-script",
+          "unicode-segment",
+          "unicode-word-boundary"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "dfa-onepass",
+        "hybrid",
+        "meta",
+        "nfa-backtrack",
+        "nfa-pikevm",
+        "nfa-thompson",
+        "perf-inline",
+        "perf-literal",
+        "perf-literal-multisubstring",
+        "perf-literal-substring",
+        "std",
+        "syntax",
+        "unicode",
+        "unicode-age",
+        "unicode-bool",
+        "unicode-case",
+        "unicode-gencat",
+        "unicode-perl",
+        "unicode-script",
+        "unicode-segment",
+        "unicode-word-boundary"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std",
+          "unicode",
+          "unicode-age",
+          "unicode-bool",
+          "unicode-case",
+          "unicode-gencat",
+          "unicode-perl",
+          "unicode-script",
+          "unicode-segment"
+        ]
+      ],
+      "features": [
+        "default",
+        "std",
+        "unicode",
+        "unicode-age",
+        "unicode-bool",
+        "unicode-case",
+        "unicode-gencat",
+        "unicode-perl",
+        "unicode-script",
+        "unicode-segment"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "regex",
+      "version": "1.13.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "perf",
+          "perf-backtrack",
+          "perf-cache",
+          "perf-dfa",
+          "perf-inline",
+          "perf-literal",
+          "perf-onepass",
+          "std",
+          "unicode",
+          "unicode-age",
+          "unicode-bool",
+          "unicode-case",
+          "unicode-gencat",
+          "unicode-perl",
+          "unicode-script",
+          "unicode-segment"
+        ]
+      ],
+      "features": [
+        "default",
+        "perf",
+        "perf-backtrack",
+        "perf-cache",
+        "perf-dfa",
+        "perf-inline",
+        "perf-literal",
+        "perf-onepass",
+        "std",
+        "unicode",
+        "unicode-age",
+        "unicode-bool",
+        "unicode-case",
+        "unicode-gencat",
+        "unicode-perl",
+        "unicode-script",
+        "unicode-segment"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "rend",
+      "version": "0.5.3",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "bytecheck"
+        ]
+      ],
+      "features": [
+        "bytecheck"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "rkyv_derive",
+      "version": "0.8.18",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "bytecheck"
+        ]
+      ],
+      "features": [
+        "bytecheck"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "rkyv",
+      "version": "0.8.18",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "alloc",
+          "bytecheck",
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "bytecheck",
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.22",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "build-only candidate",
+      "procMacro": true
+    },
+    {
+      "name": "ryu",
+      "version": "1.0.23",
+      "declaredLicense": "Apache-2.0 OR BSL-1.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "scopeguard",
+      "version": "1.2.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "result",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "result",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "features": [
+        "default"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.151",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "serde_yaml_ng",
+      "version": "0.10.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "serde-wasm-bindgen",
+      "version": "0.6.5",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "derive",
+          "serde_derive",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "derive",
+        "serde_derive",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "simdutf8",
+      "version": "0.1.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "std"
+        ]
+      ],
+      "features": [
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "smallvec",
+      "version": "1.15.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "const_generics"
+        ]
+      ],
+      "features": [
+        "const_generics"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "strum_macros",
+      "version": "0.28.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "strum",
+      "version": "0.28.0",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "default",
+          "derive",
+          "std",
+          "strum_macros"
+        ]
+      ],
+      "features": [
+        "default",
+        "derive",
+        "std",
+        "strum_macros"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "syn",
+      "version": "2.0.117",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "clone-impls",
+          "default",
+          "derive",
+          "extra-traits",
+          "fold",
+          "full",
+          "parsing",
+          "printing",
+          "proc-macro",
+          "visit",
+          "visit-mut"
+        ]
+      ],
+      "features": [
+        "clone-impls",
+        "default",
+        "derive",
+        "extra-traits",
+        "fold",
+        "full",
+        "parsing",
+        "printing",
+        "proc-macro",
+        "visit",
+        "visit-mut"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "syn",
+      "version": "3.0.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "clone-impls",
+          "default",
+          "derive",
+          "parsing",
+          "printing",
+          "proc-macro"
+        ]
+      ],
+      "features": [
+        "clone-impls",
+        "default",
+        "derive",
+        "parsing",
+        "printing",
+        "proc-macro"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "synstructure",
+      "version": "0.13.2",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        [
+          "default",
+          "proc-macro"
+        ]
+      ],
+      "features": [
+        "default",
+        "proc-macro"
+      ],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.20",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.20",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.3",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "zerovec"
+        ]
+      ],
+      "features": [
+        "zerovec"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "tinyvec_macros",
+      "version": "0.1.1",
+      "declaredLicense": "MIT OR Apache-2.0 OR Zlib",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "tinyvec",
+      "version": "1.11.0",
+      "declaredLicense": "Zlib OR Apache-2.0 OR MIT",
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "tinyvec_macros"
+        ]
+      ],
+      "features": [
+        "alloc",
+        "default",
+        "tinyvec_macros"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "unicode-blocks",
+      "version": "0.1.10",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "declaredLicense": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "unicode-normalization",
+      "version": "0.1.25",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "unicode-segmentation",
+      "version": "1.13.3",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "unsafe-libyaml",
+      "version": "0.2.11",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "url",
+      "version": "2.5.8",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": false
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "features": [
+        "default",
+        "std"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.3",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.2",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.2",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "derive",
+          "zerofrom"
+        ]
+      ],
+      "features": [
+        "derive",
+        "zerofrom"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.7",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.7",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "derive"
+        ]
+      ],
+      "features": [
+        "derive"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.4",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "yoke",
+          "zerofrom"
+        ]
+      ],
+      "features": [
+        "yoke",
+        "zerofrom"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.3",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "host proc-macro subtree candidate",
+      "procMacro": true
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.6",
+      "declaredLicense": "Unicode-3.0",
+      "featureVariants": [
+        [
+          "derive",
+          "yoke"
+        ]
+      ],
+      "features": [
+        "derive",
+        "yoke"
+      ],
+      "role": "normal target candidate",
+      "procMacro": false
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.21",
+      "declaredLicense": "MIT",
+      "featureVariants": [
+        []
+      ],
+      "features": [],
+      "role": "normal target candidate",
+      "procMacro": false
+    }
+  ]
+}

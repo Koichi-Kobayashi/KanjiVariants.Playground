@@ -34,6 +34,12 @@ Microsoft.AspNetCore.Components.WebAssemblyおよび.NETランタイムを配信
 Webサイトの`licenses.html`からも、これらの通知とデータ出典へアクセスできます。
 ## 自動ふりがな P2b の追加通知（ローカル実装・公開未承認）
 
-Lindera WASM 6.2.0（MIT）と同版のIPADIC format 2を利用します。配布物、SHA-256、必要な通知は`src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0/manifest.json`、`LICENSE`、`IPADIC-NOTICE.txt`に保存しています。
+Lindera WASM 6.2.0（MIT）と同版のIPADIC format 2を利用します。配布物・取得元・SHA-256・監査結果は[ライセンス監査](docs/FURIGANA-LICENSE-AUDIT.md)に記録しています。通知は`src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0/`に保存し、ライセンス画面から参照できます。
 
-IPADICはエンジンと別条件です。NAISTの著作権・許諾・免責およびICOT由来条件を保持します。原典20250920と配布NOTICEの20070801表記の照合、WASM第三者crateの通知確認は未完了です。現時点で公開可能とは判断せず、`scripts/Verify-FuriganaRedistribution.ps1`でPages公開を停止します。
+IPADICはエンジンと別条件です。NAISTの著作権・許諾・免責およびICOT由来条件を、配布元NOTICEに加えて原典の`IPADIC-COPYING`全文で保持します。20250920 UTF-8版と20070801原典の版表記を照合し、`IPADIC-PROVENANCE.md`に記録しました。
+
+WASMパッケージとLindera本体のMIT著作権は異なるため、`LICENSE`と`LINDERA-CORE-LICENSE`を保持します。target・featuresを限定した固定ソース依存候補106件（target 84件、proc-macro host subtree 21件、build-only 1件）の通知を`THIRD-PARTY-NOTICES.txt`に保存しました。MIT/Apacheの選択肢とは別にencoding_rsのWHATWG BSD条件、unicode-identのUnicode条件などを保持します。libyaml原典の通知、Rust 1.98.1の標準ライブラリ通知も同梱しました。
+
+kanaria 0.2.0は、crateのVCS情報が指す開発元コミットとRustソース13ファイル・元Cargo.tomlのバイト一致を確認しました。同じコミットのMIT許諾全文・著作権表示を`KANARIA-LICENSE.txt`へ保存し、通知不足は解消しました。
+
+確認した固定ソース依存範囲の通知に既知の未充足はありません。一方、`LICENSE-INVENTORY.json`と`WASM-SOURCE-DEPENDENCIES.json`は実バイナリの確定SBOMではなく、npm WASM実ビルドの全依存版・featureの対応は未証明です。完全SBOMをライセンス本文の義務とは扱いませんが、追加・相違依存の通知網羅性が未確定のため、公開前監査方針によってPages公開を停止します。

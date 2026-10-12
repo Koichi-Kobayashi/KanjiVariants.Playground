@@ -1,2 +1,2 @@
 # Preserve the exact bytes of pinned third-party artifacts and their notices.
-src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0/* -text
+src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0/** -text

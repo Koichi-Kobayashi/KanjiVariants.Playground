@@ -72,6 +72,8 @@ node scripts/Serve-Pages.mjs artifacts/furigana-p2b-publish/wwwroot
 
 ## 残課題と公開条件
 
+**2026-10-12の後続監査:** 以下はP2b実装時点の課題記録です。[公開前ライセンス監査](FURIGANA-LICENSE-AUDIT.md)でIPADIC版表記とkanaria 0.2.0の配布ソース対応を照合し、MIT全文を含む必要通知を補いました。限定した固定ソース依存範囲では既知の通知不足は解消しました。npm WASM実ビルドとの全依存対応・SBOM完全性は未証明で、追加・相違依存の通知網羅性が未確定のため、公開承認は引き続きfalseです。完全SBOMをライセンス本文の義務とする判断とは区別しています。同梱サイズ表の14ファイルは監査前の測定値で、追加通知は初期画面や解析時には読み込みません。
+
 LinderaのMIT全文と配布辞書のIPADIC NOTICE（NAIST・ICOT条件）を同梱し、ライセンス画面から参照できる。**公開可能とは判断していない**。P2aから残る以下2点を解決し、必要な通知を揃えるまでmanifestの承認はfalseとし、Pages workflowはpublish前に停止する。
 
 1. v6.2.0の辞書build.rsが参照する原典20250920と、配布辞書NOTICE内20070801の表記の照合・配布元確認。

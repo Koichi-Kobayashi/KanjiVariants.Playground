@@ -1,0 +1,2970 @@
+{
+  "scope": "Source dependency candidates; NOT a binary-attested SBOM",
+  "sourceCommit": "0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+  "cargoLockSha256": "6b30d175d6234ad39b8b969101af13834b28545f3eb9801e454002832db18d75",
+  "target": "wasm32-unknown-unknown",
+  "rootFeatures": [],
+  "rootDefaultFeatures": false,
+  "sourceScope": "WASM-SOURCE-DEPENDENCIES.json",
+  "engineSha256": "52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431",
+  "packages": [
+    {
+      "name": "aho-corasick",
+      "version": "1.1.4",
+      "declaredLicense": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/aho-corasick",
+      "role": "normal target candidate",
+      "features": [
+        "perf-literal",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "perf-literal",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/aho-corasick/aho-corasick-1.1.4.crate",
+      "archiveSha256": "ddd31a130427c27518df266943a5308ed92d4b226cc639f5a8f1002816174301",
+      "noticeFiles": [
+        {
+          "file": "COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "file": "UNLICENSE",
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "anyhow",
+      "version": "1.0.104",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/anyhow",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/anyhow/anyhow-1.0.104.crate",
+      "archiveSha256": "330a5ed07fa54e4702c9d6c4174f74427fc0ef6e214bbd677ae50a5099946470",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "bitflags",
+      "version": "1.3.2",
+      "declaredLicense": "MIT/Apache-2.0",
+      "repository": "https://github.com/bitflags/bitflags",
+      "role": "normal target candidate",
+      "features": [
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/bitflags/bitflags-1.3.2.crate",
+      "archiveSha256": "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/fitzgen/bumpalo",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/bumpalo/bumpalo-3.20.2.crate",
+      "archiveSha256": "5d20789868f4b01b2f2caec9f5c4e0213b41e3e5702a50157d699ae31ced2fcb",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "bytecheck_derive",
+      "version": "0.8.2",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rkyv/bytecheck",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/bytecheck_derive/bytecheck_derive-0.8.2.crate",
+      "archiveSha256": "89385e82b5d1821d2219e0b095efa2cc1f246cbf99080f3be46a1a85c0d392d9",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "fd8fd6dd623c97a311881bac2621022a29d2bdf31caa784f029d965dfa9491b6"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "bytecheck",
+      "version": "0.8.2",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rkyv/bytecheck",
+      "role": "normal target candidate",
+      "features": [
+        "simdutf8"
+      ],
+      "featureVariants": [
+        [
+          "simdutf8"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/bytecheck/bytecheck-0.8.2.crate",
+      "archiveSha256": "0caa33a2c0edca0419d15ac723dff03f1956f7978329b1e3b5fdaaaed9d3ca8b",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "744ba853c063f56a8d79385406413e5e3600adbc6aae359c74022701fb55a42a"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "byteorder",
+      "version": "1.5.0",
+      "declaredLicense": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/byteorder",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/byteorder/byteorder-1.5.0.crate",
+      "archiveSha256": "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b",
+      "noticeFiles": [
+        {
+          "file": "COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "file": "UNLICENSE",
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cfg-if",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.4.crate",
+      "archiveSha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "crawdad",
+      "version": "0.4.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/daac-tools/crawdad",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "default"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/crawdad/crawdad-0.4.1.crate",
+      "archiveSha256": "abed0ad19907fc8472dae05f0418dfa82fdf0eaef18427c7c7cc4e42db41534b",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "d0104f0f23684de5caf896ea31b3cabf9c0048955a257c91f07b326f3e7ecd16"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "csv-core",
+      "version": "0.1.13",
+      "declaredLicense": "Unlicense/MIT",
+      "repository": "https://github.com/BurntSushi/rust-csv",
+      "role": "normal target candidate",
+      "features": [
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/csv-core/csv-core-0.1.13.crate",
+      "archiveSha256": "704a3c26996a80471189265814dbc2c257598b96b8a7feae2d31ace646bb9782",
+      "noticeFiles": [
+        {
+          "file": "COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "file": "UNLICENSE",
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "csv",
+      "version": "1.4.0",
+      "declaredLicense": "Unlicense/MIT",
+      "repository": "https://github.com/BurntSushi/rust-csv",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/csv/csv-1.4.0.crate",
+      "archiveSha256": "52cd9d68cf7efc6ddfaaee42e7288d3a99d613d4b50f76ce9827ae0c6e14f938",
+      "noticeFiles": [
+        {
+          "file": "COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "file": "UNLICENSE",
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "daachorse",
+      "version": "5.0.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/daac-tools/daachorse",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "default"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/daachorse/daachorse-5.0.0.crate",
+      "archiveSha256": "cd10668980c9e7ba8aa2e616207d9ec52f7db66ebb47db857ed1f3c342530dad",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/yaahc/displaydoc",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/displaydoc/displaydoc-0.2.5.crate",
+      "archiveSha256": "97369cbbc041bc366949bc74d34658d6cda5621039731c6310521892a3a20ae0",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "encoding_rs_io",
+      "version": "0.1.8",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/BurntSushi/encoding_rs_io",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/encoding_rs_io/encoding_rs_io-0.1.8.crate",
+      "archiveSha256": "fba3fe847045ecff794b9c138293a80db914678c453ad63fbf0c6a9eb6e00b22",
+      "noticeFiles": [
+        {
+          "file": "COPYING",
+          "sha256": "13361f93b3db60ddb43f8fdc97ba469461019bbf7589f6bde833eb3d995d2497"
+        },
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "encoding_rs",
+      "version": "0.8.41",
+      "declaredLicense": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "repository": "https://github.com/hsivonen/encoding_rs",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "default"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/encoding_rs/encoding_rs-0.8.41.crate",
+      "archiveSha256": "7b5ef0006ac9ab233c38522f5ae99cae3625151de8f706cacee1cba4b8e2832a",
+      "noticeFiles": [
+        {
+          "file": "COPYRIGHT",
+          "sha256": "11789f45bb180841cd362a5eee6789c68ddb573a11105e30768c308a6add0190"
+        },
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        },
+        {
+          "file": "LICENSE-WHATWG",
+          "sha256": "838118388fe5c2e7f1dbbaeed13e1c7f3ebf88be91319c7c1d77c18e987d1a50"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.2",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/indexmap-rs/equivalent",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/equivalent/equivalent-1.0.2.crate",
+      "archiveSha256": "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "7365cc8878a1d7ce155a58c4ca09c3d7a6be413efa5334a80ea842912b669349"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/form_urlencoded/form_urlencoded-1.2.2.crate",
+      "archiveSha256": "cb4cb245038516f5f85277875cdaa4f7d2c9a0fa0468de06ed190163b1581fcf",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "20c7855c364d57ea4c97889a5e8d98470a9952dade37bd9248b9a54431670e5e"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.32",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/futures-core/futures-core-0.3.32.crate",
+      "archiveSha256": "7e3450815272ef58cec6d564423f6e755e25379b217b0bc688e295ba24df6b1d",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.32",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/futures-task/futures-task-0.3.32.crate",
+      "archiveSha256": "037711b3d59c33004d3856fbdc83b99d4ff37a24768fa1be9ce3538a1cde4393",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.32",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "slab",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "slab",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/futures-util/futures-util-0.3.32.crate",
+      "archiveSha256": "389ca41296e6190b48053de0321d02a77f32f8a5d2461dd38762c0593805c6d6",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "glob",
+      "version": "0.3.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/glob",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/glob/glob-0.3.4.crate",
+      "archiveSha256": "e4eba85ea1d0a966a983acd07deee566e67395d2d96b6fb39e62b5a833f1eb0b",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/hashbrown",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/hashbrown/hashbrown-0.17.1.crate",
+      "archiveSha256": "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "heck",
+      "version": "0.5.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/withoutboats/heck",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/heck/heck-0.5.0.crate",
+      "archiveSha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/icu_collections/icu_collections-2.2.0.crate",
+      "archiveSha256": "2984d1cd16c883d7935b9e07e44071dca8d917fd52ecc02c04d5fa0b5a3f191c",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "zerovec"
+      ],
+      "featureVariants": [
+        [
+          "zerovec"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/icu_locale_core/icu_locale_core-2.2.0.crate",
+      "archiveSha256": "92219b62b3e2b4d88ac5119f8904c10f8f61bf7e95b640d25ba3075e6cac2c29",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/icu_normalizer_data/icu_normalizer_data-2.2.0.crate",
+      "archiveSha256": "da3be0ae77ea334f4da67c12f149704f19f81d1adf7c51cf482943e84a2bad38",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "compiled_data"
+      ],
+      "featureVariants": [
+        [
+          "compiled_data"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/icu_normalizer/icu_normalizer-2.2.0.crate",
+      "archiveSha256": "c56e5ee99d6e3d33bd91c5d85458b6005a22140021cc324cea84dd0e72cff3b4",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/icu_properties_data/icu_properties_data-2.2.0.crate",
+      "archiveSha256": "8e2bbb201e0c04f7b4b3e14382af113e17ba4f63e2c9d2ee626b720cbce54a14",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "compiled_data"
+      ],
+      "featureVariants": [
+        [
+          "compiled_data"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/icu_properties/icu_properties-2.2.0.crate",
+      "archiveSha256": "bee3b67d0ea5c2cca5003417989af8996f8604e34fb9ddf96208a033901e70de",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.2.0",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "baked"
+      ],
+      "featureVariants": [
+        [
+          "baked"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/icu_provider/icu_provider-2.2.0.crate",
+      "archiveSha256": "139c4cf31c8b5f33d7e199446eff9c1e02decfc2f0eec2c8d71f65befa45b421",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.1",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/hsivonen/idna_adapter",
+      "role": "normal target candidate",
+      "features": [
+        "compiled_data"
+      ],
+      "featureVariants": [
+        [
+          "compiled_data"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/idna_adapter/idna_adapter-1.2.1.crate",
+      "archiveSha256": "3acae9609540aa318d1bc588455225fb2085b9ed0c4f6bd0d9d5bcd86f1a0344",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "8b43ce8accd61e9d370b5ca9e9c4f953279b5c239926c62315b40e24df51b726"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url/",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "compiled_data",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "compiled_data",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/idna/idna-1.1.0.crate",
+      "archiveSha256": "3b0875f23caa03898994f6ddc501886a45c7d3d62d04d2d90788d47be1b1e4de",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "indexmap",
+      "version": "2.14.0",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/indexmap-rs/indexmap",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/indexmap/indexmap-2.14.0.crate",
+      "archiveSha256": "d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "ecc269ef87fd38a1d98e30bfac9ba964a9dbd9315c3770fed98d4d7cb5882055"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/itoa",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/itoa/itoa-1.0.18.crate",
+      "archiveSha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.103",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/js-sys",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std",
+        "unsafe-eval"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std",
+          "unsafe-eval"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/js-sys/js-sys-0.3.103.crate",
+      "archiveSha256": "53b44bfcdb3f8d5837a46dae1ca9660a837176eee74a28b229bc626816589102",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "kanaria",
+      "version": "0.2.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/sam-osamu/com.kanaria",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/kanaria/kanaria-0.2.0.crate",
+      "archiveSha256": "c0f9d9652540055ac4fded998a73aca97d965899077ab1212587437da44196ff",
+      "noticeFiles": [
+        {
+          "file": "upstream/LICENSE.txt",
+          "sha256": "f44d765862a602a68553b3614e63b0ea4646d7698d2c34fc8d60f7998c9a8e7b"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed",
+      "correctedRepository": "https://github.com/samunohito/kanaria",
+      "licenseCorrespondence": {
+        "name": "kanaria",
+        "version": "0.2.0",
+        "commit": "c994ccf06d179851a1c7c3285c3a408ccb6279ec",
+        "licenseSource": "https://github.com/samunohito/kanaria/blob/c994ccf06d179851a1c7c3285c3a408ccb6279ec/LICENSE.txt",
+        "licenseSha256": "f44d765862a602a68553b3614e63b0ea4646d7698d2c34fc8d60f7998c9a8e7b",
+        "copyright": "Copyright (c) 2019 samu no hito",
+        "vcsSha256": "b14b72e776c333fa0c9b3b98e993434ccd37b5b6ee472f7f77635dd9a490dad3",
+        "originalManifestSha256": "247f9e62125ff0193947882b57c480884ba5c32b701b768e89b02bd521dc9104",
+        "sourceFiles": [
+          {
+            "file": "src/char.rs",
+            "sha256": "ad02b6e95fa196f54e7d1c68c279b891614cd4b7d809053a7849115724da3a87"
+          },
+          {
+            "file": "src/constants.rs",
+            "sha256": "423a7880834bd3549e9c6135a5aa515591230a76b82dcfea62e26b6003b90005"
+          },
+          {
+            "file": "src/lib.rs",
+            "sha256": "c511c1c10eb805d9d8da29911c7d7734d65c41c01bff1f97aa15ca764c8c2b6d"
+          },
+          {
+            "file": "src/string/ext.rs",
+            "sha256": "87e10b285453bd0b15091dbd972e3e42c063738b859f86c99a805b4ee78f00bc"
+          },
+          {
+            "file": "src/string/mod.rs",
+            "sha256": "5c34aadcf216f8391b49a770453407884ddaa86e50d88178aafc27b2a84b422b"
+          },
+          {
+            "file": "src/string/params.rs",
+            "sha256": "178fb8adfa7b56deb58307084b337e2757efac5f708a0b0ccd9f7cdeba8b0b11"
+          },
+          {
+            "file": "src/string/string.rs",
+            "sha256": "c32d6c9eb6f5bd4da02ebd0ee9d70a6995a8c83c9c3839fcc1f036c2fd62632a"
+          },
+          {
+            "file": "src/utils/ascii.rs",
+            "sha256": "85344a95356f2a532d8e3a15411d3b9484fef8f5b2e32077f5d8688ce58bd973"
+          },
+          {
+            "file": "src/utils/chars.rs",
+            "sha256": "94b288cbdcb46b6de9b187abaa5efb8031e547c6e749160aa27423b7e253a632"
+          },
+          {
+            "file": "src/utils/ext.rs",
+            "sha256": "664c978a5b6e0ff9c3a9e222afb24a8b6cdde1c11fe61714914362a1b9acb909"
+          },
+          {
+            "file": "src/utils/kana.rs",
+            "sha256": "d790277ed8367a67a7a33b75ddeb68df30eb526ac2b2acf7a24f89f1ac02d85d"
+          },
+          {
+            "file": "src/utils/mod.rs",
+            "sha256": "b216ca48ddbc15254eba763c14d07d96a3855d904d8163743efdd436af400138"
+          },
+          {
+            "file": "src/utils/width.rs",
+            "sha256": "b453a495e3e6d552da9552fbdabdc569a088f274daa443713e2e59c15fa19a68"
+          }
+        ],
+        "status": "crate src and original manifest byte-identical to license-bearing upstream commit"
+      }
+    },
+    {
+      "name": "lindera-analysis",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/lindera/lindera",
+      "role": "normal target candidate",
+      "features": [
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "source": "https://github.com/lindera/lindera/tree/0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+      "archiveSha256": null,
+      "noticeFiles": [
+        {
+          "file": "workspace/LICENSE",
+          "sha256": "d37249886de3136db31717f15f6ade215a36fbed1c782381e38b2bf6047e8ec4"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "lindera-binding-core",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/lindera/lindera",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://github.com/lindera/lindera/tree/0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+      "archiveSha256": null,
+      "noticeFiles": [
+        {
+          "file": "workspace/LICENSE",
+          "sha256": "d37249886de3136db31717f15f6ade215a36fbed1c782381e38b2bf6047e8ec4"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "lindera-dictionary",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/lindera/lindera",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "mmap"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "mmap"
+        ]
+      ],
+      "source": "https://github.com/lindera/lindera/tree/0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+      "archiveSha256": null,
+      "noticeFiles": [
+        {
+          "file": "workspace/LICENSE",
+          "sha256": "d37249886de3136db31717f15f6ade215a36fbed1c782381e38b2bf6047e8ec4"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "lindera-wasm",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/lindera/lindera",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://github.com/lindera/lindera/tree/0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+      "archiveSha256": null,
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "8c4895986c32387571617c9bdb61f416e9370aa2daec8d041bc8b686fb28c1cf"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "lindera",
+      "version": "6.2.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/lindera/lindera",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "mmap"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "mmap"
+        ]
+      ],
+      "source": "https://github.com/lindera/lindera/tree/0482efcc46b5ec518b7238efae55e9fed9bba0c0",
+      "archiveSha256": null,
+      "noticeFiles": [
+        {
+          "file": "workspace/LICENSE",
+          "sha256": "d37249886de3136db31717f15f6ade215a36fbed1c782381e38b2bf6047e8ec4"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.2",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/litemap/litemap-0.8.2.crate",
+      "archiveSha256": "92daf443525c4cce67b150400bc2316076100ce0b3686209eb8cf3c31612e6f0",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "log",
+      "version": "0.4.34",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/log",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/log/log-0.4.34.crate",
+      "archiveSha256": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "declaredLicense": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/memchr",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/memchr/memchr-2.8.3.crate",
+      "archiveSha256": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98",
+      "noticeFiles": [
+        {
+          "file": "COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "file": "UNLICENSE",
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "memmap2",
+      "version": "0.9.11",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RazrFalcon/memmap2-rs",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/memmap2/memmap2-0.9.11.crate",
+      "archiveSha256": "d1219ed1b7f229ee7104d281dd01d6802fe28bb6e95d292942c4daacdeb798c0",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "04ea4849dba9dcae07113850c6f1b1a69052c625210639914eee352023f750ad"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0d25d03b5ab49576178ad0cae7a2648d12c17ad0452fe49c07e55e4b59aa5257"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "multiversion_no_op",
+      "version": "1.0.0",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/hsivonen/multiversion_no_op",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/multiversion_no_op/multiversion_no_op-1.0.0.crate",
+      "archiveSha256": "743fb55ba31b18fb1ecef6bdc9aa2743314978ac084044301a7eee33fb99a20d",
+      "noticeFiles": [
+        {
+          "file": "COPYRIGHT",
+          "sha256": "d2a809eafabba137f508bea16a1b93d8ff24df7da6f38129d830db9bc118bdfe"
+        },
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "munge_macro",
+      "version": "0.4.7",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/djkoloski/munge",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/munge_macro/munge_macro-0.4.7.crate",
+      "archiveSha256": "4568f25ccbd45ab5d5603dc34318c1ec56b117531781260002151b8530a9f931",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "b9c981ef9c76c0188c3ea22dca3c54744ad228071229cde4ff532543e1146a88"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "munge",
+      "version": "0.4.7",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/djkoloski/munge",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/munge/munge-0.4.7.crate",
+      "archiveSha256": "5e17401f259eba956ca16491461b6e8f72913a0a114e39736ce404410f915a0c",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "b9c981ef9c76c0188c3ea22dca3c54744ad228071229cde4ff532543e1146a88"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/matklad/once_cell",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "default",
+        "race",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "race",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/once_cell/once_cell-1.21.4.crate",
+      "archiveSha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url/",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/percent-encoding/percent-encoding-2.3.2.crate",
+      "archiveSha256": "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/pin-project-lite",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/pin-project-lite/pin-project-lite-0.2.17.crate",
+      "archiveSha256": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.5",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "zerovec"
+      ],
+      "featureVariants": [
+        [
+          "zerovec"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/potential_utf/potential_utf-0.1.5.crate",
+      "archiveSha256": "0103b1cef7ec0cf76490e969665504990193874ea05c85ff9bab8b911d0a0564",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.106",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/proc-macro2",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "default",
+        "proc-macro"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "proc-macro"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.106.crate",
+      "archiveSha256": "8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "ptr_meta_derive",
+      "version": "0.3.1",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rkyv/ptr_meta",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/ptr_meta_derive/ptr_meta_derive-0.3.1.crate",
+      "archiveSha256": "7347867d0a7e1208d93b46767be83e2b8f978c3dad35f775ac8d8847551d6fe1",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "635111a955495b5d8d34b8052f69656e8e45f6437f9266329077b9aad5fbe8d3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "ptr_meta",
+      "version": "0.3.1",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rkyv/ptr_meta",
+      "role": "normal target candidate",
+      "features": [
+        "derive",
+        "ptr_meta_derive",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "derive",
+          "ptr_meta_derive",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/ptr_meta/ptr_meta-0.3.1.crate",
+      "archiveSha256": "0b9a0cf95a1196af61d4f1cbdab967179516d9a4a4312af1f31948f8f6224a79",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "635111a955495b5d8d34b8052f69656e8e45f6437f9266329077b9aad5fbe8d3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.45",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/quote",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "default",
+        "proc-macro"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "proc-macro"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/quote/quote-1.0.45.crate",
+      "archiveSha256": "41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "rancor",
+      "version": "0.1.1",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rkyv/rancor",
+      "role": "normal target candidate",
+      "features": [
+        "alloc"
+      ],
+      "featureVariants": [
+        [
+          "alloc"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/rancor/rancor-0.1.1.crate",
+      "archiveSha256": "a063ea72381527c2a0561da9c80000ef822bdd7c3241b1cc1b12100e3df081ee",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "e26fc4190084f5bf7ee5bdab1304ff4bcaa8e201fd7b0ff69370f89057feb901"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "regex-automata",
+      "version": "0.4.16",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "dfa-onepass",
+        "hybrid",
+        "meta",
+        "nfa-backtrack",
+        "nfa-pikevm",
+        "nfa-thompson",
+        "perf-inline",
+        "perf-literal",
+        "perf-literal-multisubstring",
+        "perf-literal-substring",
+        "std",
+        "syntax",
+        "unicode",
+        "unicode-age",
+        "unicode-bool",
+        "unicode-case",
+        "unicode-gencat",
+        "unicode-perl",
+        "unicode-script",
+        "unicode-segment",
+        "unicode-word-boundary"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "dfa-onepass",
+          "hybrid",
+          "meta",
+          "nfa-backtrack",
+          "nfa-pikevm",
+          "nfa-thompson",
+          "perf-inline",
+          "perf-literal",
+          "perf-literal-multisubstring",
+          "perf-literal-substring",
+          "std",
+          "syntax",
+          "unicode",
+          "unicode-age",
+          "unicode-bool",
+          "unicode-case",
+          "unicode-gencat",
+          "unicode-perl",
+          "unicode-script",
+          "unicode-segment",
+          "unicode-word-boundary"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/regex-automata/regex-automata-0.4.16.crate",
+      "archiveSha256": "8fcfdb36bda0c880c5931cdc7a2bcdc8ba4556847b9d912bca70bc94708711ad",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std",
+        "unicode",
+        "unicode-age",
+        "unicode-bool",
+        "unicode-case",
+        "unicode-gencat",
+        "unicode-perl",
+        "unicode-script",
+        "unicode-segment"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std",
+          "unicode",
+          "unicode-age",
+          "unicode-bool",
+          "unicode-case",
+          "unicode-gencat",
+          "unicode-perl",
+          "unicode-script",
+          "unicode-segment"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/regex-syntax/regex-syntax-0.8.11.crate",
+      "archiveSha256": "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "regex",
+      "version": "1.13.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "perf",
+        "perf-backtrack",
+        "perf-cache",
+        "perf-dfa",
+        "perf-inline",
+        "perf-literal",
+        "perf-onepass",
+        "std",
+        "unicode",
+        "unicode-age",
+        "unicode-bool",
+        "unicode-case",
+        "unicode-gencat",
+        "unicode-perl",
+        "unicode-script",
+        "unicode-segment"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "perf",
+          "perf-backtrack",
+          "perf-cache",
+          "perf-dfa",
+          "perf-inline",
+          "perf-literal",
+          "perf-onepass",
+          "std",
+          "unicode",
+          "unicode-age",
+          "unicode-bool",
+          "unicode-case",
+          "unicode-gencat",
+          "unicode-perl",
+          "unicode-script",
+          "unicode-segment"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/regex/regex-1.13.1.crate",
+      "archiveSha256": "f020237b6c8eed93db2e2cb53c00c60a8e1bc73da7d073199a1180401450218d",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "rend",
+      "version": "0.5.3",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/djkoloski/rend",
+      "role": "normal target candidate",
+      "features": [
+        "bytecheck"
+      ],
+      "featureVariants": [
+        [
+          "bytecheck"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/rend/rend-0.5.3.crate",
+      "archiveSha256": "cadadef317c2f20755a64d7fdc48f9e7178ee6b0e1f7fce33fa60f1d68a276e6",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "635111a955495b5d8d34b8052f69656e8e45f6437f9266329077b9aad5fbe8d3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "rkyv_derive",
+      "version": "0.8.18",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rkyv/rkyv",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "bytecheck"
+      ],
+      "featureVariants": [
+        [
+          "bytecheck"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/rkyv_derive/rkyv_derive-0.8.18.crate",
+      "archiveSha256": "1c25ef604ac7dd839d44d64648952ea23c97866f124ff671b0ed2cf3ad9bb06e",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "635111a955495b5d8d34b8052f69656e8e45f6437f9266329077b9aad5fbe8d3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "rkyv",
+      "version": "0.8.18",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rkyv/rkyv",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "bytecheck",
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "bytecheck",
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/rkyv/rkyv-0.8.18.crate",
+      "archiveSha256": "d9776093b7ca170454ab1406954f7b7d97a57c51dc6c0642957fb2ef25c2d399",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "635111a955495b5d8d34b8052f69656e8e45f6437f9266329077b9aad5fbe8d3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.22",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/rustversion",
+      "role": "build-only candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/rustversion/rustversion-1.0.22.crate",
+      "archiveSha256": "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "ryu",
+      "version": "1.0.23",
+      "declaredLicense": "Apache-2.0 OR BSL-1.0",
+      "repository": "https://github.com/dtolnay/ryu",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/ryu/ryu-1.0.23.crate",
+      "archiveSha256": "9774ba4a74de5f7b1c1451ed6cd5285a32eddb5cccb8cc655a4e50009e06477f",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-BOOST",
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "scopeguard",
+      "version": "1.2.0",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/bluss/scopeguard",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/scopeguard/scopeguard-1.2.0.crate",
+      "archiveSha256": "94143f37725109f92c262ed2cf5e59bce7498c01bcc1502d7b9afe439a4e9f49",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "fb77f0a9c53e473abe5103c8632ef9f0f2874d4fb3f17cb2d8c661aab9cee9d7"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "result",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "result",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/serde_core/serde_core-1.0.229.crate",
+      "archiveSha256": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "default"
+      ],
+      "featureVariants": [
+        [
+          "default"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/serde_derive/serde_derive-1.0.229.crate",
+      "archiveSha256": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.151",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/json",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/serde_json/serde_json-1.0.151.crate",
+      "archiveSha256": "c841b55ecdae098c80dcae9cf767f6f8a0c2cdb3416bbef72181df4d0fe73f14",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "serde_yaml_ng",
+      "version": "0.10.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/acatton/serde-yaml-ng",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/serde_yaml_ng/serde_yaml_ng-0.10.0.crate",
+      "archiveSha256": "7b4db627b98b36d4203a7b458cf3573730f2bb591b28871d916dfa9efabfd41f",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4cb6f99bc6158a9feba329a21ac24020c3b2cc6b6597645023adb8ae1371bd74"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "serde-wasm-bindgen",
+      "version": "0.6.5",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/RReverser/serde-wasm-bindgen",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/serde-wasm-bindgen/serde-wasm-bindgen-0.6.5.crate",
+      "archiveSha256": "8302e169f0eddcc139c70f139d19d6467353af16f9fce27e8c30158036a1e16b",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "62a81c033fcf173693b50f068939cd903d8a414d915776ff1fef5d5869aabcb7"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "derive",
+        "serde_derive",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "derive",
+          "serde_derive",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/serde/serde-1.0.229.crate",
+      "archiveSha256": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "simdutf8",
+      "version": "0.1.5",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rusticstuff/simdutf8",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/simdutf8/simdutf8-0.1.5.crate",
+      "archiveSha256": "e3a9fe34e3e7a50316060351f37187a3f546bce95496156754b601a5fa71b76e",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-Apache",
+          "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "1847e0e0698142ed4347c1441a9fa81c8fbddd44b1d8bbcd5e3647f991759d7f"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/tokio-rs/slab",
+      "role": "normal target candidate",
+      "features": [
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/slab/slab-0.4.12.crate",
+      "archiveSha256": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "smallvec",
+      "version": "1.15.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-smallvec",
+      "role": "normal target candidate",
+      "features": [
+        "const_generics"
+      ],
+      "featureVariants": [
+        [
+          "const_generics"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/smallvec/smallvec-1.15.1.crate",
+      "archiveSha256": "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/storyyeller/stable_deref_trait",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/stable_deref_trait/stable_deref_trait-1.2.1.crate",
+      "archiveSha256": "6ce2be8dc25455e1f91df71bfa12ad37d7af1092ae736f3a6cd0e37bc7810596",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "5e05b024f653a5ce199e77cbbbd42fb5553562ec714b819421ed0c3e552a75d7"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "strum_macros",
+      "version": "0.28.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/Peternator7/strum",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/strum_macros/strum_macros-0.28.0.crate",
+      "archiveSha256": "ab85eea0270ee17587ed4156089e10b9e6880ee688791d45a905f5b1ca36f664",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "8bce3b45e49ecd1461f223b46de133d8f62cd39f745cfdaf81bee554b908bd42"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "strum",
+      "version": "0.28.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/Peternator7/strum",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "derive",
+        "std",
+        "strum_macros"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "derive",
+          "std",
+          "strum_macros"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/strum/strum-0.28.0.crate",
+      "archiveSha256": "9628de9b8791db39ceda2b119bbe13134770b56c138ec1d3af810d045c04f9bd",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "8bce3b45e49ecd1461f223b46de133d8f62cd39f745cfdaf81bee554b908bd42"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "syn",
+      "version": "2.0.117",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "clone-impls",
+        "default",
+        "derive",
+        "extra-traits",
+        "fold",
+        "full",
+        "parsing",
+        "printing",
+        "proc-macro",
+        "visit",
+        "visit-mut"
+      ],
+      "featureVariants": [
+        [
+          "clone-impls",
+          "default",
+          "derive",
+          "extra-traits",
+          "fold",
+          "full",
+          "parsing",
+          "printing",
+          "proc-macro",
+          "visit",
+          "visit-mut"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/syn/syn-2.0.117.crate",
+      "archiveSha256": "e665b8803e7b1d2a727f4023456bbbbe74da67099c585258af0ad9c5013b9b99",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.2",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "clone-impls",
+        "default",
+        "derive",
+        "parsing",
+        "printing",
+        "proc-macro"
+      ],
+      "featureVariants": [
+        [
+          "clone-impls",
+          "default",
+          "derive",
+          "parsing",
+          "printing",
+          "proc-macro"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/syn/syn-3.0.2.crate",
+      "archiveSha256": "a207d6d6a2b7fc470b80443726053f18a2481b7e1eee970597051596567987a3",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "synstructure",
+      "version": "0.13.2",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/mystor/synstructure",
+      "role": "host proc-macro subtree candidate",
+      "features": [
+        "default",
+        "proc-macro"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "proc-macro"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/synstructure/synstructure-0.13.2.crate",
+      "archiveSha256": "728a70f3dbaf5bab7f0c4b1ac8d7ae5ea60a4b5549c8a5914361c99147a709d2",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "219920e865eee70b7dcfc948a86b099e7f4fe2de01bcca2ca9a20c0a033f2b59"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.20",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/thiserror-impl/thiserror-impl-2.0.20.crate",
+      "archiveSha256": "bc04cd3e1236dd4a98afca4569f2deb3f120e5422a4023be2cb683f8486292af",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.20",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/thiserror/thiserror-2.0.20.crate",
+      "archiveSha256": "ec86235f5fcc2a73650310756d2ac5b138a5780bbbdfae3eeccec992c435ba4f",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.3",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "zerovec"
+      ],
+      "featureVariants": [
+        [
+          "zerovec"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/tinystr/tinystr-0.8.3.crate",
+      "archiveSha256": "c8323304221c2a851516f22236c5722a72eaa19749016521d6dff0824447d96d",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "tinyvec_macros",
+      "version": "0.1.1",
+      "declaredLicense": "MIT OR Apache-2.0 OR Zlib",
+      "repository": "https://github.com/Soveu/tinyvec_macros",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/tinyvec_macros/tinyvec_macros-0.1.1.crate",
+      "archiveSha256": "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE.md",
+          "sha256": "4f44572785f35152c1fd2eadf565b7e079c0f300b4324f0af653419f9d76b735"
+        },
+        {
+          "file": "LICENSE-MIT.md",
+          "sha256": "1dd8eca0f83669e75fa119e34fb9e1be9d16e3e9b6368962b8019db6e8ae5f7b"
+        },
+        {
+          "file": "LICENSE-ZLIB.md",
+          "sha256": "41ace205715d9f19a3214218cc1c01d57c533e02cd0fef7c8e51a49a7fce5ac5"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "tinyvec",
+      "version": "1.11.0",
+      "declaredLicense": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/Lokathor/tinyvec",
+      "role": "normal target candidate",
+      "features": [
+        "alloc",
+        "default",
+        "tinyvec_macros"
+      ],
+      "featureVariants": [
+        [
+          "alloc",
+          "default",
+          "tinyvec_macros"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/tinyvec/tinyvec-1.11.0.crate",
+      "archiveSha256": "3e61e67053d25a4e82c844e8424039d9745781b3fc4f32b8d55ed50f5f667ef3",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE.md",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSE-MIT.md",
+          "sha256": "fd80a26fbb3f644af1fa994134446702932968519797227e07a1368dea80f0bc"
+        },
+        {
+          "file": "LICENSE-ZLIB.md",
+          "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "unicode-blocks",
+      "version": "0.1.10",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/magiclen/unicode-blocks",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/unicode-blocks/unicode-blocks-0.1.10.crate",
+      "archiveSha256": "328edfd6d0bb91a22e592bed3a3b54c7b1f5c92a517f5a7aca24a2caef10c363",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "b65c9ac375b3b6c538efe6253131c44a73b50c5ee0c48a34319e766633bfee02"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "declaredLicense": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "repository": "https://github.com/dtolnay/unicode-ident",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.24.crate",
+      "archiveSha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "file": "LICENSE-UNICODE",
+          "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "unicode-normalization",
+      "version": "0.1.25",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/unicode-rs/unicode-normalization",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/unicode-normalization/unicode-normalization-0.1.25.crate",
+      "archiveSha256": "5fd4f6878c9cb28d874b009da9e8d183b5abc80117c40bbd187a1fde336be6e8",
+      "noticeFiles": [
+        {
+          "file": "COPYRIGHT",
+          "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+        },
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "unicode-segmentation",
+      "version": "1.13.3",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/unicode-rs/unicode-segmentation",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/unicode-segmentation/unicode-segmentation-1.13.3.crate",
+      "archiveSha256": "c6f5d3c3b1bf09027a88a6bc961fc00497d651009560b5463668dc81b0fa87a8",
+      "noticeFiles": [
+        {
+          "file": "COPYRIGHT",
+          "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+        },
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "unsafe-libyaml",
+      "version": "0.2.11",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/dtolnay/unsafe-libyaml",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/unsafe-libyaml/unsafe-libyaml-0.2.11.crate",
+      "archiveSha256": "673aac59facbab8a9007c7f6108d11f63b603f7cabff99fabf650fea5c32b861",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "url",
+      "version": "2.5.8",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-url",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/url/url-2.5.8.crate",
+      "archiveSha256": "ff67a8a4397373c3ef660812acab3268222035010ab8680ec4215f38ba3d0eed",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "declaredLicense": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/hsivonen/utf8_iter",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/utf8_iter/utf8_iter-1.0.4.crate",
+      "archiveSha256": "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be",
+      "noticeFiles": [
+        {
+          "file": "COPYRIGHT",
+          "sha256": "c30152c94a6d75e021adbc52b3a52470366a46edb917e17deae3259251af244c"
+        },
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/macro-support",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/wasm-bindgen-macro-support/wasm-bindgen-macro-support-0.2.126.crate",
+      "archiveSha256": "f3997c7839262f4ef12cf90b818d6340c18e80f263f1a94bf157d0ec4420380e",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/macro",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/wasm-bindgen-macro/wasm-bindgen-macro-0.2.126.crate",
+      "archiveSha256": "167ce5e579f6bcf889c4f7175a8a5a585de84e8ff93976ce393efa5f2837aab1",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/shared",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.126.crate",
+      "archiveSha256": "dc1b4cb0cc549fcf58d7dfc081778139b3d283a081644e833e84682ad71cea24",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.126",
+      "declaredLicense": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen",
+      "role": "normal target candidate",
+      "features": [
+        "default",
+        "std"
+      ],
+      "featureVariants": [
+        [
+          "default",
+          "std"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/wasm-bindgen/wasm-bindgen-0.2.126.crate",
+      "archiveSha256": "4b067c0c11094aef6b7a801c1e34a26affafdf3d051dba08456b868789aaf9a4",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.3",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/writeable/writeable-0.6.3.crate",
+      "archiveSha256": "1ffae5123b2d3fc086436f8834ae3ab053a283cfac8fe0a0b8eaae044768a4c4",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.2",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/yoke-derive/yoke-derive-0.8.2.crate",
+      "archiveSha256": "de844c262c8848816172cef550288e7dc6c7b7814b4ee56b3e1553f275f1858e",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.2",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "derive",
+        "zerofrom"
+      ],
+      "featureVariants": [
+        [
+          "derive",
+          "zerofrom"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/yoke/yoke-0.8.2.crate",
+      "archiveSha256": "abe8c5fda708d9ca3df187cae8bfb9ceda00dd96231bed36e445a1a48e66f9ca",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.7",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/zerofrom-derive/zerofrom-derive-0.1.7.crate",
+      "archiveSha256": "11532158c46691caf0f2593ea8358fed6bbf68a0315e80aae9bd41fbade684a1",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.7",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "derive"
+      ],
+      "featureVariants": [
+        [
+          "derive"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/zerofrom/zerofrom-0.1.7.crate",
+      "archiveSha256": "69faa1f2a1ea75661980b013019ed6687ed0e83d069bc1114e2cc74c6c04c4df",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.4",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "yoke",
+        "zerofrom"
+      ],
+      "featureVariants": [
+        [
+          "yoke",
+          "zerofrom"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/zerotrie/zerotrie-0.2.4.crate",
+      "archiveSha256": "0f9152d31db0792fa83f70fb2f83148effb5c1f5b8c7686c3459e361d9bc20bf",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.3",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "host proc-macro subtree candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/zerovec-derive/zerovec-derive-0.11.3.crate",
+      "archiveSha256": "625dc425cab0dca6dc3c3319506e6593dcb08a9f387ea3b284dbd52a92c40555",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.6",
+      "declaredLicense": "Unicode-3.0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "role": "normal target candidate",
+      "features": [
+        "derive",
+        "yoke"
+      ],
+      "featureVariants": [
+        [
+          "derive",
+          "yoke"
+        ]
+      ],
+      "source": "https://static.crates.io/crates/zerovec/zerovec-0.11.6.crate",
+      "archiveSha256": "90f911cbc359ab6af17377d242225f4d75119aec87ea711a880987b18cd7b239",
+      "noticeFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.21",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/dtolnay/zmij",
+      "role": "normal target candidate",
+      "features": [],
+      "featureVariants": [
+        []
+      ],
+      "source": "https://static.crates.io/crates/zmij/zmij-1.0.21.crate",
+      "archiveSha256": "b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa",
+      "noticeFiles": [
+        {
+          "file": "LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ],
+      "status": "source notices collected; binary inclusion unconfirmed"
+    }
+  ]
+}

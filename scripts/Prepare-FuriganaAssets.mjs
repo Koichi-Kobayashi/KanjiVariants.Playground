@@ -14,8 +14,11 @@ for(const [file,expected] of [
  ['lindera/package/lindera_wasm_bg.wasm','52f4b492f9dd0edf876b90d3432ae2284b2d996bf8e697327d1fc3b0277e6431']
 ])if(hash(await fs.readFile(path.join(source,file)))!==expected)throw new Error('Unverified artifact: '+file);
 await fs.mkdir(target,{recursive:true});
+let previous;
+try {previous=JSON.parse(await fs.readFile(path.join(target,'manifest.json')));} catch(error) {if(error.code!=='ENOENT')throw error;}
 const manifest={engine:'lindera-wasm',version:'6.2.0',dictionaryId:'lindera-ipadic-6.2.0',dictionaryFormat:2,
- publicationApproved:false,publicationBlockers:['IPADIC原典20250920とNOTICE内20070801の表記照合','WASM第三者crate通知の最終確認'],dictionary:[]};
+ publicationApproved:false,publicationBlockers:previous?.licenseAudit ? previous.publicationBlockers : ['固定配布物のライセンス監査・第三者通知の確認が未完了'],dictionary:[]};
+if(previous?.licenseAudit)manifest.licenseAudit=previous.licenseAudit;
 for(const file of ['lindera_wasm.js','lindera_wasm_bg.wasm','LICENSE']) {
  const bytes=await fs.readFile(path.join(source,'lindera/package',file));await fs.writeFile(path.join(target,file),bytes);
  if(file.endsWith('.wasm'))manifest.wasm={file,sha256:hash(bytes),bytes:bytes.length};
