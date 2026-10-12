@@ -62,3 +62,20 @@ fieldset:disabled { opacity:.65; }
     .detail-facts { grid-template-columns:1fr; gap:3px; }
     .detail-facts dd { margin-bottom:9px; }
 }
+
+/* Grade-aware manual ruby editor: visual ranges, no numeric position inputs. */
+.mode-switch { flex-wrap:wrap; max-width:100%; }
+.furigana-preview { font-size:1.35rem; line-height:2.7; padding:18px 0; }
+.furigana-preview rt { font-size:.55em; }
+.furigana-pending { text-decoration:underline dotted; text-decoration-color:var(--warn); text-underline-offset:5px; }
+.furigana-toggle { display:flex; align-items:center; gap:10px; }
+.furigana-toggle input { width:18px; height:18px; accent-color:var(--accent); }
+.furigana-map { font-size:1.2rem; line-height:2.6; padding:16px; border:1px solid var(--line); border-radius:8px; }
+.furigana-range { display:inline; border:1px solid var(--line); border-radius:6px; background:var(--surface); padding:3px 5px; white-space:pre-wrap; overflow-wrap:anywhere; }
+.furigana-range.selected { border-color:var(--accent); background:var(--soft); }
+.furigana-unlearned { color:var(--warn); text-decoration:underline; text-underline-offset:4px; }
+.furigana-join { font-size:.65rem; padding:8px 4px; border:0; background:var(--soft); color:var(--accent); border-radius:4px; }
+.furigana-editor { margin-top:16px; padding:16px; background:var(--soft); border-radius:8px; }
+.furigana-editor input { width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; color:var(--text); background:var(--surface); }
+.furigana-stale { border:2px solid var(--warn); }
+@media(max-width:600px) { .mode-switch { width:100%; } .mode-switch button { padding:10px 12px; flex:1; } .furigana-map { padding:10px; } }

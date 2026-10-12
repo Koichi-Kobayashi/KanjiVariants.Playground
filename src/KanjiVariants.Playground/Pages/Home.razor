@@ -15,15 +15,17 @@
             <p class="eyebrow">漢字の違いを、調べる。変換する。</p>
             <h1 id="page-title">KanjiVariants <span>Playground</span></h1>
             <p class="lead">「髙橋𠮷野」を「高橋吉野」へ。<br />文章の一括変換と、文字集合への適合・代替候補の診断を試せます。</p>
-            <p class="privacy"><span aria-hidden="true">●</span> 変換・診断はこのブラウザ内で完結します。入力内容は送信しません。</p>
+            <p class="privacy"><span aria-hidden="true">●</span> 変換・診断・ふりがな編集はこのブラウザ内で完結します。入力内容は送信しません。</p>
         </section>
         <div class="mode-switch" role="group" aria-label="機能の選択">
-            <button type="button" aria-pressed="@((!diagnostic).ToString().ToLowerInvariant())" aria-controls="conversion-mode" @onclick="() => diagnostic = false">文字列変換</button>
-            <button type="button" aria-pressed="@diagnostic.ToString().ToLowerInvariant()" aria-controls="diagnostic-mode" @onclick="() => diagnostic = true">文字列診断</button>
+            <button type="button" aria-pressed="@((mode == 0).ToString().ToLowerInvariant())" aria-controls="conversion-mode" @onclick="() => mode = 0">文字列変換</button>
+            <button type="button" aria-pressed="@((mode == 1).ToString().ToLowerInvariant())" aria-controls="diagnostic-mode" @onclick="() => mode = 1">文字列診断</button>
+            <button type="button" aria-pressed="@((mode == 2).ToString().ToLowerInvariant())" aria-controls="furigana-mode" @onclick="() => mode = 2">学年別ふりがな</button>
         </div>
         <p class="help mode-help">入力・設定・結果は各画面で別々に保持します。切り替えても失われません。</p>
-        <div id="conversion-mode" hidden="@diagnostic"><ConversionPanel /></div>
-        <div id="diagnostic-mode" hidden="@(!diagnostic)"><DiagnosticPanel /></div>
+        <div id="conversion-mode" hidden="@(mode != 0)"><ConversionPanel /></div>
+        <div id="diagnostic-mode" hidden="@(mode != 1)"><DiagnosticPanel /></div>
+        <div id="furigana-mode" hidden="@(mode != 2)"><FuriganaPanel /></div>
         <aside class="notes">
             <h2>判定・変換の読み方</h2>
             <p>KanjiVariantsの文字列APIの規則で判定します。ASCII（制御文字を含む）は各集合で使用可能として扱います。Shift-JIS・CP932などへのエンコード可否を示すものではありません。</p>
@@ -38,7 +40,7 @@
 </div>
 
 @code {
-    private bool diagnostic;
+    private int mode;
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender) await JS.InvokeVoidAsync("playground.markReady");

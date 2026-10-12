@@ -1,0 +1,7 @@
+<div class="furigana-preview original-text" aria-label="@Label">@foreach (var part in FuriganaPresentation.Build(Document, ShowReadings)) { if (part.Reading is not null) { <ruby>@part.Text<rt>@part.Reading</rt></ruby> } else { <span class="@(part.NeedsReview ? "furigana-pending" : null)">@part.Text</span> } }</div>
+
+@code {
+    [Parameter, EditorRequired] public FuriganaDocument Document { get; set; } = default!;
+    [Parameter] public bool ShowReadings { get; set; } = true;
+    [Parameter] public string Label { get; set; } = "ふりがな付き文章";
+}

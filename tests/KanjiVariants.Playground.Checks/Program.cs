@@ -62,4 +62,5 @@ catch (ArgumentException) { checks++; }
 ConversionChecks.Run(Check);
 VariationChecks.Run(Check);
 CharacterDetailsChecks.Run(Check);
+FuriganaChecks.Run(Check);
 Console.WriteLine($"Passed {checks} checks.");

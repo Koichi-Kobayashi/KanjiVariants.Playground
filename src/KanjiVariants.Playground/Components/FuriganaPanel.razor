@@ -1,0 +1,118 @@
+@inject FuriganaService Furigana
+@inject ClipboardService Clipboard
+
+<section class="panel input-panel" aria-labelledby="furigana-title">
+    <h2 id="furigana-title">学年別ふりがな</h2>
+    <p class="help">選択した学年までの配当漢字を習ったものとして扱います。未習漢字を含む範囲に、手動で読みを設定します。</p>
+    <label for="furigana-input">ふりがなを付けたい文章</label>
+    <textarea id="furigana-input" rows="3" value="@session.Input" @oninput="InputChanged" aria-describedby="furigana-input-help" spellcheck="false"></textarea>
+    <p id="furigana-input-help" class="help">@session.Input.Length.ToString("N0") / 2,000 UTF-16単位（補助文字は2単位）。超過しても切り捨てません。原文・字形指定は変換しません。</p>
+    <div class="action-row"><div class="target-control">
+        <label for="furigana-grade">小学何年生まで習いましたか</label>
+        <select id="furigana-grade" value="@((int)session.Grade)" @onchange="GradeChanged">
+            @for (int grade = 1; grade <= 6; grade++) { <option value="@grade">小学@(grade)年生まで</option> }
+        </select>
+    </div><button type="button" class="primary" @onclick="Generate">対象を確認する <span aria-hidden="true">→</span></button></div>
+    @if (session.Error is not null) { <p class="error" role="alert">@session.Error</p> }
+</section>
+<section class="results" aria-labelledby="furigana-results-title">
+    <h2 id="furigana-results-title">ふりがなの編集・プレビュー</h2>
+    @if (session.Document is null)
+    { <div class="panel empty"><p>文章を入力して「対象を確認する」を押してください。</p></div> }
+    else if (!session.IsCurrent)
+    {
+        <div class="panel furigana-stale" role="status"><strong>原文が変更されています。現在の文章のプレビューはまだありません。</strong>
+            <p>「対象を確認する」で新しい文章の範囲を作成してください。旧版の読みは新しい文章へ適用しません。</p>
+            <details><summary>前回の文章・読みを参照する（旧版・編集とコピー不可）</summary>
+                <p class="help">小学@((int)session.Document.Diagnosis.TargetGrade) 年生まで・前回の原文</p>
+                <FuriganaPreview Document="session.Document" Label="旧版の文章（現在の文章ではありません）" />
+            </details>
+        </div>
+    }
+    else
+    {
+        var document = session.Document;
+        var missing = document.Ranges.Count(x => document.UnlearnedCount(x) > 0 && string.IsNullOrWhiteSpace(x.Reading));
+        <div class="panel">
+            <p role="status">未習漢字 @document.Diagnosis.UnlearnedItems.Count 字・読み未入力 @missing 範囲</p>
+            <label class="furigana-toggle"><input type="checkbox" checked="@session.ShowReadings" @onchange="ToggleReadings" />ふりがなを表示する</label>
+            <FuriganaPreview Document="document" ShowReadings="session.ShowReadings" />
+            <p class="help">下線は読み未入力の範囲です。推測した読みは付けません。表示OFFでは、コピーも原文だけになります。</p>
+            <button type="button" class="copy-output" disabled="@(editError is not null)" @onclick="Copy">@(session.ShowReadings ? "括弧付き文章をコピー" : "原文をコピー")</button>
+            <p class="help" role="status">@copyStatus</p>
+            @if (document.Diagnosis.UnlearnedItems.Count == 0)
+            { <p>未習漢字はありません。保存した読みは残していますが、ふりがなは表示・コピーしません。</p> }
+            <h3>文章の文字を選んで読みを編集</h3>
+            <p class="help">枠の漢字を押して、熟語全体の読みを入力できます。「1字ずつに分ける」と、間の「結合」で範囲を調整します。</p>
+            <p class="help">分割・結合すると、その範囲の読みは空になります。新しい範囲の読みを入力し直してください。</p>
+            <div class="furigana-map original-text" aria-label="文章中の読み編集範囲">@{ int offset = 0; }@foreach (var range in document.Ranges)
+            {
+                if (offset < range.Start) { <span>@document.Text[offset..range.Start]</span> }
+                <button type="button" class="furigana-range @(selectedStart == range.Start ? "selected" : "")" aria-pressed="@((selectedStart == range.Start).ToString().ToLowerInvariant())" aria-controls="furigana-editor" aria-label="@($"{range.Surface}の読みを編集。未習漢字{document.UnlearnedCount(range)}字")" @onclick="() => Select(range)">@foreach (var unit in document.Units(range)) { <span class="@(FuriganaService.IsUnlearned(unit) ? "furigana-unlearned" : "")">@unit.Original</span> }</button>
+                if (document.CanMerge(range)) { <button type="button" class="furigana-join" aria-label="@($"{range.Surface}と右隣の漢字を結合")" @onclick="() => Merge(range)">結合</button> }
+                offset = range.Start + range.Length;
+            }@if (offset < document.Text.Length) { <span>@document.Text[offset..]</span> }</div>
+            @if (Selected is { } selected)
+            {
+                var unlearned = document.UnlearnedCount(selected);
+                var unitCount = document.Units(selected).Count();
+                <div id="furigana-editor" class="furigana-editor" @key="selected.Start">
+                    <h3>「@selected.Surface」の読み</h3>
+                    <p class="help">未習 @unlearned 字・既習 @(unitCount - unlearned) 字。
+                        @(unlearned == 0 ? "すべて既習のため、保存してもルビは表示しません。" : unlearned < unitCount ? "語全体の読みを守るため、既習字にもルビがかかります。" : "この範囲はすべて未習漢字です。")</p>
+                    <label for="furigana-reading">読み（手動入力）</label>
+                    <input id="furigana-reading" @ref="readingInput" type="text" value="@selected.Reading" @oninput="args => SetReading(selected, args)" aria-describedby="furigana-reading-help" aria-invalid="@((editError is not null).ToString().ToLowerInvariant())" autocomplete="off" />
+                    <p id="furigana-reading-help" class="help">入力するとプレビューに反映します。最大200 UTF-16単位、改行なし。読みは自動推定しません。</p>
+                    <button type="button" class="chip" disabled="@(unitCount < 2)" @onclick="() => Split(selected)">1字ずつに分ける</button>
+                    @if (document.CanMerge(selected)) { <button type="button" class="chip" @onclick="() => Merge(selected)">右隣の漢字と結合</button> }
+                    <button type="button" class="chip" disabled="@(missing == 0)" @onclick="NextMissing">次の読み未入力へ</button>
+                </div>
+            }
+            <p class="help" role="status">@editStatus</p>
+            @if (editError is not null) { <p class="error" role="alert">@editError</p> }
+        </div>
+    }
+</section>
+
+@code {
+    private FuriganaSession session = default!;
+    private int? selectedStart;
+    private string? copyStatus, editStatus, editError;
+    private ElementReference readingInput;
+    private bool focusReading;
+    private FuriganaRange? Selected => session.IsCurrent ? session.Document!.Ranges.FirstOrDefault(x => x.Start == selectedStart) : null;
+    protected override void OnInitialized() => session = new(Furigana);
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (focusReading && Selected is not null) { focusReading = false; await readingInput.FocusAsync(); }
+    }
+    private void ClearStatus() { copyStatus = null; editStatus = null; editError = null; }
+    private void InputChanged(ChangeEventArgs args) { session.SetInput(args.Value?.ToString() ?? ""); ClearStatus(); }
+    private void GradeChanged(ChangeEventArgs args) { session.SetGrade((KanjiGrade)int.Parse(args.Value!.ToString()!)); ClearStatus(); }
+    private void ToggleReadings(ChangeEventArgs args) { session.ShowReadings = args.Value is true; copyStatus = null; }
+    private void Generate()
+    {
+        bool wasCurrent = session.IsCurrent;
+        ClearStatus(); session.Generate();
+        if (!wasCurrent) selectedStart = null;
+        if (session.IsCurrent && Selected is null) selectedStart = session.Document!.Ranges.FirstOrDefault(x => session.Document.UnlearnedCount(x) > 0)?.Start;
+    }
+    private void Select(FuriganaRange range) { selectedStart = range.Start; editError = null; focusReading = true; }
+    private void NextMissing()
+    {
+        var missing = session.Document!.Ranges.Where(x => session.Document.UnlearnedCount(x) > 0 && string.IsNullOrWhiteSpace(x.Reading)).ToArray();
+        if (missing.Length > 0) Select(missing.FirstOrDefault(x => x.Start > selectedStart) ?? missing[0]);
+    }
+    private void SetReading(FuriganaRange range, ChangeEventArgs args)
+    {
+        try { session.SetReading(range, args.Value?.ToString() ?? ""); editError = null; copyStatus = null; }
+        catch (ArgumentException ex) { editError = ex.Message + " この入力は保存されていません。修正するか、別の範囲を選び直してください。"; }
+    }
+    private void Split(FuriganaRange range) { session.Split(range); selectedStart = range.Start; ClearStatus(); editStatus = "1字ずつに分けました。読みを入力してください。"; }
+    private void Merge(FuriganaRange range) { session.MergeNext(range); selectedStart = range.Start; ClearStatus(); editStatus = "範囲を結合しました。語全体の読みを入力してください。"; }
+    private async Task Copy()
+    {
+        bool copied = await Clipboard.CopyAsync(session.CopyText());
+        copyStatus = copied ? "コピーしました。読み未入力の範囲は原文のままです。" : "コピーできませんでした。クリップボード権限を確認してください。";
+    }
+}
