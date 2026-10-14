@@ -100,6 +100,20 @@ dotnet run --project src/KanjiVariants.Playground -c Release --launch-profile re
 
 Visual Studioでは構成を**Release**、プロファイルを**release-http**にして、**Ctrl+F5**で開始できます。通常のビルド・起動に`wasm-tools`は必須ではありません。開発プロファイル・デバッガーの違いは[検証記録](docs/VALIDATION.md#release起動プロファイルの追加確認)を参照してください。
 
+### PDB・配布パスの検証
+
+Debug/ReleaseでSDKのSourceRootとSourceLinkを同時に正規化します。SDK10のRazor生成ソースに残る位置指定は、ファイル生成段階で相対化してからコンパイルし、PDBと埋め込みソースを保持します。依存バージョンや字形判定は変更しません。
+
+```powershell
+dotnet build -c Debug --no-restore
+dotnet build -c Release --no-restore
+dotnet run --project tools/VerifyPlaygroundArtifacts -c Release -- .
+node scripts/Verify-KanjiVariantsDistribution.mjs
+node scripts/Verify-PlaygroundDistribution.mjs
+```
+
+コミット済みのclean checkoutでは検証器に`--git`を追加し、PDB文書チェックサムをHEADのGit blobへ直接照合します。未PushのSourceLink実URLの取得確認は別工程です。
+
 ### 仕様の検証
 
 ```powershell

@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- Retain embedded Razor source with normalized directives (Directory.Build.targets). -->
+    <UseRazorSourceGenerator>false</UseRazorSourceGenerator>
   </PropertyGroup>
 
   <ItemGroup>

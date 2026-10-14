@@ -3,5 +3,9 @@
     <!-- Match the SDK-only Pages build; optional Visual Studio WASM workloads
          must not change implicit package/runtime versions. This app uses no AOT. -->
     <MSBuildEnableWorkloadResolver>false</MSBuildEnableWorkloadResolver>
+    <!-- Let the SDK normalize SourceRoot, compiler paths and SourceLink together. -->
+    <Deterministic>true</Deterministic>
+    <DeterministicSourcePaths>true</DeterministicSourcePaths>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 </Project>

@@ -1,3 +1,41 @@
+# Playground PDB正規化の検証（2026-10-15）
+
+開始HEAD=1493bb3636fbc2734e819a1f60595296ac9e5656、main、clean、SDK10.0.401。過去の監査履歴は以下へ保持する。本節の修正は独立コミット対象で、新コミットのhash・clean checkout再検証結果はGit管理外の証跡と作業報告へ記録する。公開URL取得はPush後の別工程であり、今回成功扱いにしない。
+
+## B1の現在の評価
+
+- KanjiVariants1.2.1: 解消済みの状態を維持。正式DLL/通知/原典hashとWebcil raw/br/gz検証成功。
+- KanjiVariants.Playground: 今回の修正とコミット前の実検証で解消。Debug/Release各23 tracked文書+16 generated文書のchecksum、SourceLink、CodeView、DLL/PDB識別子一致、ローカル絶対パス0。PDB/Embedded Sourceを保持した。
+- 修正後コミットからのclean checkoutでは--gitで再検証する。失敗すればこの解除判断を適用しない。実公開URLは未確認。
+- A2（公開承認false）、B2/B3/B5・完全SBOM/実機などの課題は解除しない。
+
+## 原因・採用方式
+
+元のビルドはSDKのSourceRoot/PathMap正規化を明示せず、CodeViewに開発PCのobjパスを含んでいた。本体1.2.1のDeterministic/DeterministicSourcePaths/ContinuousIntegrationBuildを検証して採用し、既存MSBuildEnableWorkloadResolver=falseは保持する。SourceLinkはSDK内蔵のGitHub providerを利用し追加パッケージは不要。
+
+Blazor固有の問題として、SDK10のRazor source generatorが埋め込みC#へ物理パスの#pragma checksum/#lineを生成する。この内容はコンパイラのPathMapだけでは書き換わらない。SDK標準のファイルベースRazor生成（UseRazorSourceGenerator=false）を使用し、Directory.Build.targetsがobj内の.razor.g.csの位置指定行だけを生成C#からの相対パスへ変換してからCscへ渡す。SDK PathMapが最終PDB文書を/_/へマッピングする。
+
+仮想/_/を直接Razor指令へ書く方法はWindowsがC:\_へ補完するため不採用。相対位置指定でWindows/Unixのソースルートへ依存しないようにする。入力Razor/C#・チェックサム・プログラム本文は変更せず、PDB削除/デバッグ無効化/配布バイナリパッチは行わない。生成C#の実バイト列はコンパイラが改めてchecksumを生成し、PDB Embedded Sourceと照合する。
+
+SDK/Razor生成方式により生成メタデータ・IL配置・MVID・ファイルhashは変わり得るが、既存画面/API仕様は維持する。2,333 Checksで回帰確認。開発時のRazor source generator固有機能への影響は従来の生成方式との差があるため、将来SDK更新時に再評価する。
+
+## 再発検出
+
+- tools/VerifyPlaygroundArtifacts: PEReader/MetadataReader、CodeView仮想パス、必須SourceLinkキー/HEAD/Repository、DLL-PDB GUID/stamp/age、全文書checksum、Embedded Source展開後のpath/checksum検査。
+- working treeモードとclean checkout --gitモードを区別。SDK生成文書はGit blobと偽って照合せず、Embedded Source/生成ファイルで検査する。
+- 構造を持つドライブ絶対パスを検出する。圧縮PDBの任意バイナリが偶然f:\等になる誤検出を避け、Document/CodeView/SourceLinkと展開Embedded Sourceを併用する。
+- Verify-WebcilAssembly.mjsへSDK Webcil section比較処理を共通化し、KanjiVariants/Playground両方のraw/br/gz全バイト一致・仮想CodeView・local path0を検査。旧KanjiVariants1.2.0混入防止と全文通知hashは維持。
+- ActionsはDebugビルド・PDB/Git検査・両Webcil検査を追加するだけで、Action依存/tag/SHA/permissions/公開ゲートを変更しない。実CIはPush禁止のため未実行。
+- 異常系はGit管理外のfixtureで実検証し、絶対パス、PDB identity不一致、source checksum不一致、必須PDB欠落を拒否する。実成果物を改変して問題を隠す方法ではない。
+
+## 回帰・制約
+
+SDK401 locked restore、Debug/Release各0警告・0エラー、2,333 Checks、Worker、Release publish、Pagesサブパス、正式KanjiVariants配布/ライセンス原典、LinderaのWASM/辞書/29通知証跡成功。公開ゲートはfalseで停止を維持する。global.json、両lock、Lindera資産、IPADIC、KanjiVariants版は変更しない。
+
+証跡: artifacts/pdb-normalization/（Git管理外）。本節のコミット前結果と、コミット後のclean checkout/SourceLink結果を分けて保存する。実ブラウザ/VSホットリロード、別OS、モバイル実機の追加検証は今回の証跡から成功を推定しない。
+
+---
+
 # 1.2.1移行の最終確認（2026-10-15）
 
 再インストール済みの標準dotnet（SDK10.0.401）で検証し、global.jsonは変更していない。本節が現在の依存・検証状態で、10/14以下の内容は履歴として保持する。コミット自身のIDはコミット前に埋め込まず、最終作業報告で示す。公開承認false、Push/デプロイなし。

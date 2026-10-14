@@ -1,0 +1,33 @@
+<Project>
+  <UsingTask TaskName="NormalizeRazorSourceLocations" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)/Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup><Files ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true"/><Roots ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true"/><IntermediateRoot ParameterType="System.String" Required="true"/></ParameterGroup>
+    <Task><Using Namespace="System"/><Using Namespace="System.IO"/><Using Namespace="System.Text"/><Code Type="Fragment" Language="cs"><![CDATA[
+      var intermediate = Path.GetFullPath(IntermediateRoot).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
+      foreach (var item in Files) {
+        var file = Path.GetFullPath(item.ItemSpec);
+        if (!file.StartsWith(intermediate, StringComparison.OrdinalIgnoreCase) || !file.EndsWith(".razor.g.cs", StringComparison.OrdinalIgnoreCase) || !File.Exists(file)) continue;
+        var original = File.ReadAllText(file);
+        var lines = original.Split('\n');
+        for (var i = 0; i < lines.Length; i++) {
+          var line = lines[i];
+          if (!line.TrimStart().StartsWith("#pragma checksum ", StringComparison.Ordinal) && !line.TrimStart().StartsWith("#line ", StringComparison.Ordinal)) continue;
+          foreach (var root in Roots) {
+            var mapped = root.GetMetadata("MappedPath");
+            if (String.IsNullOrEmpty(mapped)) continue;
+            var physical = Path.GetFullPath(root.ItemSpec);
+            var relative = new Uri(Path.GetDirectoryName(file) + Path.DirectorySeparatorChar).MakeRelativeUri(new Uri(physical)).ToString();
+            line = line.Replace(physical.Replace('/', '\\'), relative).Replace(physical.Replace('\\', '/'), relative);
+          }
+          lines[i] = line;
+        }
+        var updated = String.Join("\n", lines);
+        if (updated != original) File.WriteAllText(file, updated, new UTF8Encoding(true));
+      }
+    ]]></Code></Task>
+  </UsingTask>
+  <!-- SDK10's Razor generator embeds physical #line/checksum paths. Use its
+       file-based generation stage so these directives can be relative before Csc; the SDK PathMap then virtualizes PDB documents. -->
+  <Target Name="NormalizeGeneratedRazorLocations" BeforeTargets="CoreCompile" DependsOnTargets="InitializeSourceRootMappedPaths" Condition="'$(MSBuildProjectName)' == 'KanjiVariants.Playground'">
+    <NormalizeRazorSourceLocations Files="@(Compile)" Roots="@(SourceRoot)" IntermediateRoot="$(MSBuildProjectDirectory)/$(IntermediateOutputPath)" />
+  </Target>
+</Project>

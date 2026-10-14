@@ -21,7 +21,10 @@ jobs:
         with:
           global-json-file: global.json
       - run: dotnet restore --locked-mode
+      - run: dotnet build src/KanjiVariants.Playground -c Debug --no-restore
       - run: dotnet build -c Release --no-restore
+      - name: Verify portable symbols and local Git sources
+        run: dotnet run --project tools/VerifyPlaygroundArtifacts -c Release -- . --git
       - run: dotnet run --project tests/KanjiVariants.Playground.Checks -c Release --no-build
       - run: node --experimental-default-type=module tests/KanjiVariants.Playground.Checks/FuriganaWorkerChecks.mjs
       - name: Verify adopted self-build assets and notices
@@ -37,6 +40,10 @@ jobs:
       - name: Verify published references
         shell: pwsh
         run: ./scripts/Verify-Pages.ps1
+      - name: Verify both managed Webcil assemblies
+        run: |
+          node scripts/Verify-KanjiVariantsDistribution.mjs
+          node scripts/Verify-PlaygroundDistribution.mjs
       - name: Verify published self-build and all notices
         run: node scripts/Verify-FuriganaLicenseEvidence.mjs artifacts/publish/wwwroot
       - name: Verify furigana redistribution approval
