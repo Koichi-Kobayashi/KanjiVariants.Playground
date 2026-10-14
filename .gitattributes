@@ -1,2 +1,5 @@
 # Preserve the exact bytes of pinned third-party artifacts and their notices.
 src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0/** -text
+
+# Preserve the exact official KanjiVariants package notices and fixed source.
+THIRD-PARTY-NOTICES/KanjiVariants-1.2.1* -text

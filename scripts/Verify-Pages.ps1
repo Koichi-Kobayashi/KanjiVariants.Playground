@@ -15,7 +15,12 @@ foreach ($page in @('index.html', 'licenses.html')) {
         $count++
     }
 }
-if ((Get-FileHash THIRD-PARTY-NOTICES/KanjiVariants-1.2.0.md).Hash -ne (Get-FileHash (Join-Path $root 'licenses/KanjiVariants-1.2.0.txt')).Hash) { throw 'KanjiVariants notice mismatch.' }
+if ((Get-FileHash THIRD-PARTY-NOTICES/KanjiVariants-1.2.1.md).Hash -ne (Get-FileHash (Join-Path $root 'licenses/KanjiVariants-1.2.1.txt')).Hash) { throw 'KanjiVariants notice mismatch.' }
+foreach ($name in @('KanjiVariants-1.2.1-JIS0208.TXT','KanjiVariants-1.2.1-Unicode-LICENSE.txt')) {
+    if ((Get-FileHash (Join-Path 'THIRD-PARTY-NOTICES' $name)).Hash -ne (Get-FileHash (Join-Path $root ('licenses/' + $name))).Hash) { throw "KanjiVariants source/license mismatch: $name" }
+}
+if ((Get-FileHash (Join-Path $root 'licenses/KanjiVariants-1.2.1-JIS0208.TXT')).Hash.ToLowerInvariant() -ne '1c571870457f19c97720631fa83ee491549a96ba1436da1296786a67d8632e87') { throw 'Fixed JIS0208 source hash mismatch.' }
+if (Get-ChildItem -LiteralPath (Join-Path $root 'licenses') -Filter 'KanjiVariants-1.2.0*') { throw 'Old KanjiVariants notices in publish.' }
 $files = Get-ChildItem -LiteralPath (Join-Path $root '_framework') -File
 $raw = ($files | Where-Object { $_.Extension -notin @('.br','.gz') } | Measure-Object Length -Sum).Sum
 $brotli = ($files | Where-Object Extension -eq '.br' | Measure-Object Length -Sum).Sum

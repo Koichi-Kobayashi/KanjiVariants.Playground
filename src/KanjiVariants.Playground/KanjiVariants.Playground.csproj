@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KanjiVariants" Version="1.2.0" />
+    <PackageReference Include="KanjiVariants" Version="1.2.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.12" PrivateAssets="all" />
   </ItemGroup>
@@ -17,7 +17,9 @@
   <ItemGroup>
     <Content Include="../../LICENSE" Link="wwwroot/licenses/Playground-MIT.txt" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="../../LICENSE-NOTICES.md" Link="wwwroot/licenses/LICENSE-NOTICES.txt" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="../../THIRD-PARTY-NOTICES/KanjiVariants-1.2.0.md" Link="wwwroot/licenses/KanjiVariants-1.2.0.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../THIRD-PARTY-NOTICES/KanjiVariants-1.2.1.md" Link="wwwroot/licenses/KanjiVariants-1.2.1.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../THIRD-PARTY-NOTICES/KanjiVariants-1.2.1-JIS0208.TXT" Link="wwwroot/licenses/KanjiVariants-1.2.1-JIS0208.TXT" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../THIRD-PARTY-NOTICES/KanjiVariants-1.2.1-Unicode-LICENSE.txt" Link="wwwroot/licenses/KanjiVariants-1.2.1-Unicode-LICENSE.txt" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="../../THIRD-PARTY-NOTICES/DotNet-*.txt;../../THIRD-PARTY-NOTICES/Blazor-*.txt" Link="wwwroot/licenses/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 

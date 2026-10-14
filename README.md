@@ -70,7 +70,7 @@
 ## 使用技術
 
 - .NET 10 / C# / Blazor WebAssembly Standalone
-- [KanjiVariants本体](https://github.com/Koichi-Kobayashi/KanjiVariants) / [NuGet 1.2.0](https://www.nuget.org/packages/KanjiVariants/1.2.0)
+- [KanjiVariants本体](https://github.com/Koichi-Kobayashi/KanjiVariants) / [NuGet 1.2.1](https://www.nuget.org/packages/KanjiVariants/1.2.1)
 - GitHub Pages / GitHub Actions
 
 初回にアプリ・.NETランタイム・文字データを取得し、その後の変換・診断はブラウザ内で実行します。ASP.NET Coreのサーバープロジェクト、分析SDK、外部フォント、変換・診断用の外部APIは使用していません。
@@ -80,6 +80,8 @@
 ### ローカル起動
 
 [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) **10.0.401**を用意し、リポジトリのルートで実行します。`global.json`とCIでSDKを固定しています。SDK・パッケージを更新するときはlock fileとライセンス通知も確認してください。
+
+このアプリはAOTを使用せず、`Directory.Build.props`で任意の追加workloadの解決を無効にしています。Visual Studioに別版のWASM workloadがインストールされていても、固定SDKと同じ暗黙依存・ブラウザランタイム（10.0.12）を使用します。AOTや追加workloadを正式採用する場合は、この設定・lock・配布ランタイム・通知をまとめて再検証してください。
 
 ```powershell
 dotnet restore --locked-mode
@@ -128,7 +130,7 @@ dotnet run --project tests/KanjiVariants.Playground.Checks -c Release
 
 Playground独自コードは[MIT License](LICENSE)です。**依存関係と外部文字データには、それぞれの利用条件が適用されます。**
 
-IPAのMJデータはCC BY-SA 2.1 JP、Unicode関連データはUnicodeの条件、ICU対応表はUnicode・ICU通知、文部科学省・文化庁由来の資料は文部科学省ウェブサイト利用規約に従います。Python由来のJIS X 0208対応表の生成環境・具体的な通知は、引き続き確認事項です。
+IPAのMJデータはCC BY-SA 2.1 JP、Unicode関連データはUnicodeの条件、ICU対応表はUnicode・ICU通知、文部科学省・文化庁由来の資料は文部科学省ウェブサイト利用規約に従います。JIS X 0208は固定Unicode JIS0208.TXT Table 2.0（legacy mapping）とUnicode License V3に基づき、1区32点の互換処理を維持しています。正式1.2.1の原典・許諾全文・通知を配信し、今回の配布についてA1を解除した評価を[公開前監査](docs/PREPUBLICATION-AUDIT.md)に記録しています。公開承認は保留です。
 
 詳細と著作権・許諾本文は[ライセンス・出典通知](LICENSE-NOTICES.md)と[保存した第三者通知](THIRD-PARTY-NOTICES/)を参照してください。[Webサイトのライセンス画面](https://koichi-kobayashi.github.io/KanjiVariants.Playground/licenses.html)からも確認できます。これらを一律にMITとして扱いません。
 

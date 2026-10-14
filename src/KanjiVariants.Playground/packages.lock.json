@@ -4,9 +4,9 @@
     "net10.0": {
       "KanjiVariants": {
         "type": "Direct",
-        "requested": "[1.2.0, )",
-        "resolved": "1.2.0",
-        "contentHash": "HswJEWBB/956F9nB79AJmBX96v7p2OmmCuvGbEe07XJJ9g14eSi0XXPUoJ7ZUtlA1shJYBgrVsOpBo2vav0+0g=="
+        "requested": "[1.2.1, )",
+        "resolved": "1.2.1",
+        "contentHash": "eBcSkh42YxMdbGDojk5n3jvjLhFXE60mleccyrTDKZkZCKOE17xI5E15/9LeHnO2WjBHbeop6Ok4PQAcDTDpYw=="
       },
       "Microsoft.AspNetCore.App.Internal.Assets": {
         "type": "Direct",

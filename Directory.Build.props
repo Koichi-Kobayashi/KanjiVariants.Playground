@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Match the SDK-only Pages build; optional Visual Studio WASM workloads
+         must not change implicit package/runtime versions. This app uses no AOT. -->
+    <MSBuildEnableWorkloadResolver>false</MSBuildEnableWorkloadResolver>
+  </PropertyGroup>
+</Project>
