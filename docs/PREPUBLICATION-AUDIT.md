@@ -1,3 +1,34 @@
+# GitHub Actions B2/B3の再監査（2026-10-15）
+
+開始HEAD=1723e55490d322ff3032d71007b3f6187927791b、main、clean。公式Release/tag/commit・action.yml・main/post dist・npm lock・内部Actionを今回再取得。詳細なAction別/54固有GHSA別の出典・修正版境界・dist証拠・到達性・制約は[Actions監査](ACTIONS-SECURITY-AUDIT.md)に記録。過去の履歴は下に保持する。
+
+## B2: 評価済み・残余リスクあり（公開判断の保留を維持）
+
+- 従来範囲を再照会: 205 package/version、22該当版、46固有GHSA。更新後は238/25/48。内部upload-artifactを含む同範囲比較では更新前295/29/52、更新後293/32/54。これはlockの照会結果であり、実行脆弱性数ではない。
+- checkout v7.0.1/setup-dotnet v6.0.0/upload-pages-artifact v5.0.0は版を維持。deploy-pagesのみv4(Node20)→v5.0.1(Node24)。解消した固有GHSAは0。追加glob CLI/cross-spawnの2件はlock上で増加し、該当CLIの実行経路は確認されない。最新化を警告解消と説明しない。
+- 実distを取得し、deploy-pagesはsource mapも照合。lockとdistのバージョンの完全対応は証明していない。undici/form-data/unzip等の実装同梱と、Actionが使う分岐を区別する。setup-dotnet cache:false/source-url未指定、deployは同runのartifact metadataを参照しローカル展開しない。HTTP/Octokit応答のDoS等の完全な悪用否定は未検証。
+- PR/Issue等の外部コード起動なし、contents:read、persist-credentials:false、deployだけpages/id-token writeを維持。main以外のdeployを明示拒否し、公開前tarに含まれるsymlink/junction/複数リンクのファイルを拒否する検査を追加。
+- 内部upload-artifact v7.0.0は上流compositeが固定済み。最新v7.0.2への差替えは消費側から行わず、upstream更新・ネットワーク応答経路の残余リスク再評価を残す。HIGH/CRITICALを含む警告の一括解除、公開承認は行わない。
+
+## B3: 解消（固定参照のローカル検証）
+
+直接4 Actionは全40桁SHAとReleaseコメントへ変更。固定値/取得コードのSHA-256はscripts/actions-policy.json、公式Releaseとの再照合はVerify-ActionsPolicy.mjs --upstream。内部ActionのSHAも確認。固定は既知脆弱性の修復ではない。実CIはPush禁止のため未実行で、Node24 runner/OIDC/Artifact API/Pages実行の確認を残す。
+
+## 実行済み検証と公開制御
+
+- SDK10.0.401、locked restore、Debug/Releaseとも0警告・0エラー、2,333 Checks成功。
+- Worker Checks、配布物改変拒否、118パス/資格情報異常系成功。新Action policy検査は正常系・6workflow改変・正常配布・hard link・directory link・対象欠落の11ケース成功。
+- 公式Release→commit/配布コードhash/内部Action再照合、actionlint v1.7.12のYAML/Action静的検証成功（shellcheckは無効で実施）。
+- Release publish、Pagesサブパス/27静的参照、KanjiVariants1.2.1正式DLL/通知/Unicode原典、Playgroundと本体のWebcil raw/br/gz照合成功。両アセンブリのローカル絶対パス0。
+- Debug/Release各23 tracked+16 generated文書のPDB checksum/identity/SourceLinkと現作業ツリーの照合成功（strictGit=false）。ビルドのSourceLink HEADは修正前1723e554...。今回はアプリソース変更なし。新コミットの公開URL取得や実CIの--git検査は未実施と区別する。
+- Lindera WASM/JS/辞書/lock/29通知証跡/106ソース候補のhash検証成功。完全バイナリSBOM証明とはしない。
+- Verify-FuriganaRedistribution.ps1は固定来歴/通知確認後にpublicationApproved=falseで意図どおり停止。upload/deployへ進めず、公開ゲートの安全条件は不変。
+- global.json、Directory.Build.props/targets、両lock、KanjiVariants1.2.1、Lindera/IPADIC/106通知/manifestは変更しない。A1/B1/B4の既存解消状態は維持し、A2/B5/完全SBOM/モバイル実機の課題は解除しない。
+
+証跡: artifacts/actions-security/（Git管理外）。このコミットはSHA固定・監査記録・防御の確定であり、B2の全解除/実CI成功/公開許可を意味しない。Push/デプロイなし。
+
+---
+
 # Playground PDB正規化の検証（2026-10-15）
 
 開始HEAD=1493bb3636fbc2734e819a1f60595296ac9e5656、main、clean、SDK10.0.401。過去の監査履歴は以下へ保持する。本節の修正は独立コミット対象で、新コミットのhash・clean checkout再検証結果はGit管理外の証跡と作業報告へ記録する。公開URL取得はPush後の別工程であり、今回成功扱いにしない。
