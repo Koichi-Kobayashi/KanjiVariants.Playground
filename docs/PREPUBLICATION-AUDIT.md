@@ -1,3 +1,39 @@
+# B5: Pages設定・Environment保護の確認記録（2026-10-15）
+
+確認根拠は、所有者がGitHub Settings画面で確認した結果を、この作業の依頼文で提供したもの。エージェントが設定画面へログインして独立に再確認した、または設定を変更したという意味ではない。開始HEAD=0e0e256b455a30ce9e2399f1b029c793d5470e23、main、clean。取得したorigin/main=0645bdb511dfd664ee4fe5416da85c1c63042637で、ローカルが10コミット先行し、リモートのみの追加コミットはなかった。
+
+## 所有者が確認した設定
+
+| Settings | 項目 | 確認結果 |
+|---|---|---|
+| Pages | Build and deployment | GitHub Actions |
+| Pages | デプロイ先 | github-pages environment |
+| Pages | HTTPS | 有効 |
+| Pages | サイト | 既に公開中 |
+| Environments / github-pages | Deployment branches and tags | Selected branches and tags |
+| 同上 | 許可ブランチ | mainのみ |
+| 同上 | 許可タグ | 0件 |
+| 同上 | Required reviewers | 無効 |
+| 同上 | Wait timer | 無効 |
+| 同上 | Allow administrators to bypass configured protection rules | 有効 |
+| 同上 | Environment secrets / variables | どちらもなし |
+
+**B5の「設定未確認」は解消。** ただしEnvironmentに手動承認や待機時間は要求されず、管理者による保護ルール回避が許可されている。main限定は公開承認そのものではなく、管理者の権限行使・リポジトリ側のmain変更を抑止する完全な障壁でもない。今回GitHub設定は変更しない。
+
+## 公開制御と監査項目の区別
+
+- 新版のPagesデプロイは未承認。publicationApproved=falseと既存の全公開ゲートを維持する。buildが公開ゲートで失敗すれば、後続uploadとneeds:buildのdeployは実行しない。Environmentの承認なし設定を、アプリの公開承認ありとは解釈しない。
+- A1: 正式KanjiVariants1.2.1の固定Unicode原典・通知・互換性・配布検証による解除を維持。過去1.2.0の権利評価を遡及解決しない。
+- B1: 本体1.2.1とPlaygroundのパス正規化は従来のローカル検証で解消。今回のPush後に最新HEADのclean checkoutと実CIで再検証する。
+- B2: Actions依存は評価済み・残余リスクあり。lockの警告とdist/悪用経路を区別し、HTTP応答等の未確認事項を解除しない。詳細は[ACTIONS-SECURITY-AUDIT.md](ACTIONS-SECURITY-AUDIT.md)。
+- B3: 直接4 Actionと内部ActionのSHA固定を維持。Push後に実CIのcheckout/setupの使用SHAとNode24互換性を確認する。
+- B4: KanjiVariants1.2.1のMJ加工データCC BY-SA表示と配布同梱確認による解除を維持。
+- B5: 上記の所有者確認情報に基づき、設定未確認を解消。reviewersなし・管理者bypassありの残余リスクを記録。
+
+この文書の独立コミット後、通常のfast-forward Pushでソースと履歴を公開する。Push後の実CI・raw URL/PDB照合は、このコミット前には成功と記録しない。最終結果はGit管理外のartifacts/push-ci/と作業報告へ記録する。upload/OIDC/deployはゲート停止時に未実行として扱う。公開承認・設定・実装・workflowは今回変更しない。
+
+---
+
 # GitHub Actions B2/B3の再監査（2026-10-15）
 
 開始HEAD=1723e55490d322ff3032d71007b3f6187927791b、main、clean。公式Release/tag/commit・action.yml・main/post dist・npm lock・内部Actionを今回再取得。詳細なAction別/54固有GHSA別の出典・修正版境界・dist証拠・到達性・制約は[Actions監査](ACTIONS-SECURITY-AUDIT.md)に記録。過去の履歴は下に保持する。
