@@ -3,10 +3,8 @@
   "version": "6.2.0",
   "dictionaryId": "lindera-ipadic-6.2.0",
   "dictionaryFormat": 2,
-  "publicationApproved": false,
-  "publicationBlockers": [
-    "所有者による公開承認は未実施（publicationApproved=false）。モバイル実機確認とActions B2残余リスクの受入判断は公開前監査を参照。"
-  ],
+  "publicationApproved": true,
+  "publicationBlockers": [],
   "dictionary": [
     {
       "file": "metadata.json.gz",

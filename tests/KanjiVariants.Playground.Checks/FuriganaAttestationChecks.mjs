@@ -51,8 +51,9 @@ try {
  await fs.writeFile(path.join(raw,a.compilerLogs[0].originalSha256+'.jsonl'),'cached-or-corrupt-log');
  await reject('corrupt preserved original',async()=>{}, {rawEvidence:raw});
  const m=JSON.parse(await fs.readFile(path.join(vendor,'manifest.json')));
- assert.throws(()=>requirePublication(m),/publicationApproved=false/);passed++;
- assert.throws(()=>requirePublication({...m,publicationApproved:true}),/Unresolved publication blockers/);passed++;
+ // Approval-state fixtures remain negative even after the owner approves production.
+ assert.throws(()=>requirePublication({...m,publicationApproved:false,publicationBlockers:[]}),/publicationApproved=false/);passed++;
+ assert.throws(()=>requirePublication({...m,publicationApproved:true,publicationBlockers:['unresolved test blocker']}),/Unresolved publication blockers/);passed++;
  // The pure approval predicate requires both conditions; it never bypasses technical verification in the CLI/gate.
  requirePublication({...m,publicationApproved:true,publicationBlockers:[]});passed++;
  const published=path.join(temp,'publish');await fs.mkdir(path.join(published,'furigana'),{recursive:true});

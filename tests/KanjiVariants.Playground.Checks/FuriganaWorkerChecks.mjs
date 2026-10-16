@@ -52,7 +52,9 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 assert.equal(manifest.version, '6.2.0'); assert.equal(manifest.dictionaryFormat, 2);
 assert.equal(manifest.buildOrigin,'self-built');
 assert.equal(manifest.wasm.sha256,'fbe6bf9a280f10f7e897fb88d997838c6c1bf1df20bf288ea3df23962a1897ba');
-assert.equal(manifest.publicationApproved, false); assert.ok(manifest.publicationBlockers.length > 0);
+// The Worker supports both approval states; deployment authorization is enforced by the gate.
+assert.equal(typeof manifest.publicationApproved, 'boolean'); assert.ok(Array.isArray(manifest.publicationBlockers));
+if (manifest.publicationApproved) assert.deepEqual(manifest.publicationBlockers, []);
 for (const asset of [manifest.javascript, manifest.wasm, ...manifest.dictionary]) {
     const bytes = await fs.readFile(new URL(asset.file, assets));
     assert.equal(bytes.length, asset.bytes); assert.equal(sha(bytes), asset.sha256);

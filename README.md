@@ -136,7 +136,7 @@ dotnet run --project tests/KanjiVariants.Playground.Checks -c Release
 
 自動ふりがなの認証には[案Bの保証範囲と公開ゲート](docs/FURIGANA-ATTESTATION.md)を使用します。固定配布物、記録された106コンパイル依存、公式Rust標準入力54ファイル、宣言範囲の必要通知を独立証跡で照合します。完全な最終リンクSBOMを証明するものではありません。原来歴の未証明評価は保持し、技術検証が成功しても`publicationApproved=false`ならアップロード・デプロイを停止します。今回の保証範囲の承認は、正式公開の承認ではありません。
 
-PC向けの[最新監査判断](docs/PREPUBLICATION-AUDIT.md)と[正式公開チェックリスト](docs/PC-PUBLICATION-CHECKLIST.md)を整理しています。技術検証と案B認証は確認済みで、ActionsのB2残余リスクは2026-10-17に所有者が受け入れました。54件の依存警告は未解消で、完全な安全性を保証するものではありません。正式な公開承認は未実施です。iPhone・Android実機テストはPC向け公開の必須条件とせず、公開後の改善課題とします。
+PC向けの[最新監査判断](docs/PREPUBLICATION-AUDIT.md)と[正式公開チェックリスト](docs/PC-PUBLICATION-CHECKLIST.md)を整理しています。技術検証と案B認証は確認済みで、ActionsのB2残余リスクは2026-10-17に所有者が受け入れました。54件の依存警告は未解消で、完全な安全性を保証するものではありません。同日、所有者がPC向け新版の正式公開と、問題発生時に全検証を通した修正版を再デプロイする復旧方針を承認しました。iPhone・Android実機テストはPC向け公開の必須条件とせず、公開後の改善課題とします。
 
 [公開サイト](https://koichi-kobayashi.github.io/KanjiVariants.Playground/)で一括変換・診断・IVS/SVS入力例を利用できます。[Playgroundのソースコード](https://github.com/Koichi-Kobayashi/KanjiVariants.Playground)はこのリポジトリで管理しています。
 
