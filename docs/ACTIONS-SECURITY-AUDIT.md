@@ -1,3 +1,37 @@
+# B2残余リスクの所有者受入記録（2026-10-17）
+
+**B2は所有者による残余リスク受入済み。54件の依存警告は未解消であり、完全な安全性を保証しない。Playgroundの正式公開は未承認で、`publicationApproved=false`を維持する。**
+
+- 判断者・根拠: リポジトリ所有者が本チャットで「所有者として残余リスクを受け入れる方針を決定しました」と明示した指示。判断記録日2026-10-17、追加調査日2026-10-16。
+- 対象: 判断前HEAD `0f58c63611af02e671d46ffe8169365e698430c9` のPC向け構成。技術検証対象は `9d44be8bc5e4685335cf385510c593677da1c4e0` で、その後は文書変更のみ。対象Actionは下記原監査の固定SHA表と `scripts/actions-policy.json` に記録した直接4 Action・内部upload-artifactの5固定コミット。将来の依存・権限・入力経路変更まで無条件に受け入れる判断ではない。
+- 受入範囲: HIGH/CRITICALを含む54固有GHSAの候補警告、HTTP応答等への残余リスク、および到達性・lockと実distの完全対応が未証明である点。現在の入力制限・SHA固定・最小権限・公開境界の下で具体的な追加必須修正となる攻撃経路を確認していない、という限定された技術評価に基づく。脆弱性修正や非到達の完全証明を意味しない。
+- 承認の境界: B2の受入判断だけを記録する。正式公開承認、公開ゲートの解除、Push、アップロード、OIDC、デプロイの許可ではない。B5のreviewersなし・管理者bypassありという既存設定も変更しない。
+
+## 2026-10-16追加調査の結果
+
+当日の公開情報・依存情報・静的コード調査を記録する。2026-10-17に上流の最新状態を再照会した記録ではない。既存54件の個別GHSA表は下記原監査に保持する。
+
+| 対象・原典 | 確認した対応段階と採用版への関係 |
+|---|---|
+| [setup-dotnet #731](https://github.com/actions/setup-dotnet/issues/731)、[PR #752](https://github.com/actions/setup-dotnet/pull/752) | 報告への担当者応答、PRのマージ、v6.0.0 Releaseへの収録と採用固定SHAへの包含を確認。Issue記載14 GHSAのうち全体54件との重複は8件、現在のsetup-dotnetの13件との重複は0件。Closedだけを全警告解消の根拠にしない |
+| [setup-dotnet PR #767](https://github.com/actions/setup-dotnet/pull/767) | lockと配布distの修正がマージ済みだが採用v6.0.0には未収録。既存13件のうち7件がmainの依存版で対象外となる見込み、6件は残るというlock照合。新Release採用済み・dist全成分認証済みとはしない。後続の[Undici #784](https://github.com/actions/setup-dotnet/pull/784)・[brace-expansion #790](https://github.com/actions/setup-dotnet/pull/790)は当日Open |
+| [upload-pages-artifact #138](https://github.com/actions/upload-pages-artifact/issues/138)、[#142](https://github.com/actions/upload-pages-artifact/issues/142)、[PR #139](https://github.com/actions/upload-pages-artifact/pull/139) | Node 24移行のマージ・v5.0.0 Release・採用を確認。#138の依存警告コメントは個別GHSAとの対応未確定、#142はOpenでも要求する移行自体はRelease済み。npm警告全解消を意味しない |
+| [upload-artifact #574](https://github.com/actions/upload-artifact/issues/574) | 旧v4.3.3への利用者報告、当日Open。画像中の3警告と現行54件の個別対応、対応修正版の包含は確認できず、全件既報・修正済みとはしない |
+| upload-artifact [v7.0.1](https://github.com/actions/upload-artifact/releases/tag/v7.0.1)・[v7.0.2](https://github.com/actions/upload-artifact/releases/tag/v7.0.2) | v7.0.1はHTTPS CONNECT時のヘッダー転送対策（既存54件とは別）、v7.0.2はartifact依存とretry処理の更新。既存警告に該当する依存版の比較では内部Actionの28件は残る。採用compositeはv7.0.0固定で、後続版を使用していない |
+| checkout / deploy-pages | checkoutの[Undici更新 #2590](https://github.com/actions/checkout/pull/2590)、deploy-pagesの[unzip-stream更新 #370](https://github.com/actions/deploy-pages/pull/370)等は当日Open。修正PRの存在と採用distへの修正包含は区別する。直接4 Actionは当日時点の最新Releaseを採用していたが、依存警告は未解消 |
+
+GitHub Advisory Databaseの54件とOSV情報を照合し、前回監査から深刻度・withdrawn状態の変化を認めなかった。固定ソース・distの保存ハッシュ29件と固定5 Actionのaction.ymlも照合した。警告件数は非dev lock上の候補数であり、54個の攻撃成立を実証した数ではない。
+
+採用deploy-pagesの[API呼出しコード](https://github.com/actions/deploy-pages/blob/368f82528645a54fb793d4d04e342629a3f51346/src/internal/api-client.js)は自runのartifact一覧取得とPages作成・状態取得等を使用する。unzip-streamの展開コードはdistに含まれるが、現行経路からdownloadArtifact/展開処理の呼出しを確認していない。HTTP/API応答処理は実際の経路にあり、個々の警告の成立条件がすべて排除されたとはしない。攻撃実証や侵入試験は行っていない。追加の新規脆弱性報告を必要とする具体的な攻撃経路は確認せず、既存報告の経過確認を優先する。
+
+## 継続確認と再判断
+
+既存Issue・PR・公式Release・Security Advisoryを継続確認し、修正版が公開された場合は更新を検討する。更新時はlockだけでなく実distへの収録、内部Action参照、到達性、固定SHA・policy、権限と回帰結果を確認する。composite内部版は上流更新を優先し、利用側でbundleを手修正しない。新たに到達可能な重大問題が判明した場合やworkflowの入力・権限が変わる場合は所有者が受入判断と公開継続を再評価する。
+
+以下の「未判断・未実施」は受入判断前の履歴であり、現在のB2判定は本節を優先する。正式公開の手順は[PC公開チェックリスト](PC-PUBLICATION-CHECKLIST.md)を参照する。
+
+---
+
 # PC向け公開時のB2判断用サマリー（2026-10-16）
 
 技術評価は、以下の2026-10-15監査と現行workflow（9d44be8）に基づく。今回新しいadvisory照会やAction更新は行わない。**現在構成の残余リスクは、PC向け公開に際して所有者へ受入を提案できる水準と評価する。ただし所有者の受入判断は未実施。** 安全性の完全証明や、54件の解消を意味しない。
