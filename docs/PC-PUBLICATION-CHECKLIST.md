@@ -1,0 +1,56 @@
+# PC向け正式公開チェックリスト
+
+2026-10-16、検証対象 `9d44be8bc5e4685335cf385510c593677da1c4e0`。今回は文書整理のみ。正式公開・B2リスク受入を代行せず、公開承認falseと公開ゲートを維持する。
+
+## 対象環境と確認範囲
+
+Windows PCの主要ブラウザでの利用を想定する。ただし、既存の実画面記録はWindows開発環境で使用したCodex内のPC相当ブラウザ1環境であり、ブラウザ製品名・版を特定した横断検証の記録はない。Chrome/Edgeの全版で確認済みとは記載しない。Firefox、Safari、macOS/Linuxでの利用者向け動作は未確認。LinuxのCI成功を、Linuxブラウザの動作確認へ読み替えない。
+
+スマートフォンの動作・性能は保証しない。iPhone/Android実機試験はPC向け公開の必須条件にしない。390px等のviewport試験は表示幅の確認であり、実機性能の証拠ではない。アクセス制限や画面仕様の変更は行わない。
+
+## 再利用する検証証拠
+
+| 項目 | 確認済みの範囲・根拠 |
+|---|---|
+| 既存Checks、Worker | 2,333 Checks、Worker Checks成功。9d44be8のclean checkoutと[実CI](https://github.com/Koichi-Kobayashi/KanjiVariants.Playground/actions/runs/38912944119)を参照 |
+| 変換・診断・詳細 | PC相当ブラウザで髙橋𠮷野→高橋吉野、髙橋診断、髙の詳細を確認。[1.2.1移行時の画面記録](PREPUBLICATION-AUDIT.md#回帰ブラウザ公開制御の結果) |
+| 自動ふりがな・手動修正・学年 | 今日/図書館/宇宙/読みます、手動読みの再生成後保持、1→6→1の非表示・再利用、原文変更時の旧版隔離を確認。[P2b記録](FURIGANA-P2B.md)、[正規化WASM記録](FURIGANA-PATH-NORMALIZATION.md) |
+| コピー | 実画面で貼り戻し確認の記録あり。表示OFF・6年へ変更後・読み未入力の原文コピー等を確認。全ブラウザのClipboard権限を保証する試験ではない |
+| build/publish/サブパス | SDK10.0.401、lock固定、Debug/Release各0警告0エラー。fresh Release publish、/KanjiVariants.Playground/、35静的参照、旧1.2.0通知の混入なし |
+| DLL/PDB/SourceLink/Webcil | 9d44be8のclean checkoutで各23 Git文書+16生成文書、チェックサム・識別子一致。両Webcil raw/br/gz一致、開発PC固有パス0。[認証記録](FURIGANA-ATTESTATION.md#今回の検証記録)とCIのGit照合を参照 |
+| 配布・通知・案B | 固定WASM/JS/辞書、106コンパイル依存、公式Rust54入力、44通知・証跡の検証成功。新認証の正常/異常系30ケース成功、既知通知不足0 |
+| 実CIの停止 | run 38912944119は認証・publish・両Webcil等まで成功。承認ゲートはfailure、uploadとdeployはskipped。停止理由は所有者の確認と既存ゲート記録のpublicationApproved=falseに対応。workflow全体のfailureを全検証成功やデプロイ成功とは呼ばない |
+
+実画面は過去の各実装/移行段階の検証であり、9d44be8で全画面を再操作したという意味ではない。その後の機能変更はなく、今回も文書のみを変更するため、全機能・ビルドの不要な再試験は行わない。9d44be8の公開SourceLink URLを今回新たに取得・チェックサム照合したとは主張しない。公開対象HEADを変えた場合はCIのPDB/Git照合を通し、公開URL照合の対象HEADも明記する。
+
+## 公開前必須と公開手順
+
+チェック済みは記載の対象に限る。承認・実行予定の項目を先にチェックしない。
+
+- [x] 技術検証: 上記Checks、Worker、build、publish、サブパス、DLL/PDB/Webcilの既存結果を確認。
+- [x] 案B: `recorded-build-inputs-and-artifact-identity/v1` の独立証跡・固定hash・106依存・公式標準入力が成功。
+- [x] ライセンス: 正式KanjiVariants1.2.1の通知・Unicode原典、Lindera/IPADIC/Rustの44通知・証跡、既知の通知不足0を確認。
+- [x] PC向け利用想定とモバイル未保証をREADMEへ明記。実機モバイル試験は公開前必須にしない。
+- [ ] **所有者のB2受入判断**: [判断用サマリー](ACTIONS-SECURITY-AUDIT.md#pc向け公開時のb2判断用サマリー2026-10-16)を読み、対象HEAD/Action SHA、54件の警告と残余リスク、判断日、判断者、受入または保留を記録する。現在は未判断。B5のreviewersなし・管理者bypassありも認識する。
+- [ ] **所有者の正式公開承認**: 対象版とPC向け範囲を指定して明示する。B2受入だけでデプロイを承認したことにしない。
+- [ ] **別の承認済み工程で公開設定を更新**: 未解決理由が解消した根拠を記録してpublicationBlockersを空にし、publicationApproved=trueへ変更する。現在manifestに残るモバイル等の保留文言は、今回のPC方針とB2判断に沿ってその工程で整理する。今回は値を変更しない。技術認証・通知不足0・hash・profile検証を削除しない。旧binarySbom/binaryAttested=falseを完全証明済みへ変更しない。
+- [ ] **公開対象の最終確認**: 承認対象HEADからclean publishし、技術認証と配布検証を再実行する。新HEADのSourceLink/PDB照合、公開ソースURL照合の証跡を確認する。文書の未検証項目を自動で成功へ変えない。
+- [ ] **復旧準備**: 公開前に直前の正常deployment/commit、対応する配布物・通知・復旧担当者を記録する。次節の手順と復旧候補が現在の配布条件を満たすことを確認する。
+- [ ] **GitHub Actionsによるデプロイ**: 許可されたPush/手動実行でmainを対象に、全検証→公開ゲート→upload→github-pages Environment→deployの順で完了を確認。現在のSettingsはActions/mainのみ、タグ0、HTTPS有効。upload/OIDC/deployの実動作は、現時点で未確認。
+- [ ] **本番サイト確認**: 公開されたcommit/run/deploymentを記録。Windows PCで実際に使用したブラウザ名・版・OSを記録し、変換、診断、詳細、自動ふりがな、手動修正保持、学年変更、コピー、ライセンスリンクを確認。初回辞書取得と再利用、サブパス、コンソールの重大エラーを確認する。主要ブラウザ追加試験は実施したものだけ記録する。
+
+B2受入・正式公開承認の記入欄: **いずれも未実施**。今回の文書整理コミットは受入・公開承認の証拠ではない。
+
+## 問題発生時の復旧
+
+1. 追加の公開操作を止め、影響、ブラウザ/版、失敗したrun/deploymentと対象commitを保存する。入力文章などの個人情報を不用意に収集しない。
+2. 所有者が復旧を承認し、直前の正常な公開物を復旧候補とする。ただし旧WASM・旧通知に既知の問題がある版を無検証で再公開しない。該当版の必要通知、パス、hash、公開ゲート適合性を確認する。
+3. 必要ならmainへ通常の復旧変更を作成し、レビュー・全ゲートを通してActionsで再配布する。force push、履歴書換え、ゲート迂回やEnvironmentの無断変更を復旧手段にしない。安全な復旧候補がない場合は、所有者判断でサイトの一時停止を検討する。
+4. 本番で復旧内容を確認し、公開承認の扱いと原因・再発防止を記録する。この文書は復旧操作自体の承認ではない。
+
+## 公開後の改善・継続監視
+
+- iPhone/Android実機、低メモリ端末、モバイル性能・メモリ最適化。未実施でもPC向け公開を保留する理由にはしない。
+- WindowsのChrome/Edge/Firefox等の製品名・版を指定した検証範囲拡大、macOS/Linux/Safari、IME・支援技術の追加確認。未検証を対応保証へ読み替えない。
+- B2の公式Action Release・advisory・到達経路を公開後/更新時/新しい重大警告時に確認。上流修正版が出たらlock・実dist・内部Actionを別レビューし、固定SHA・回帰・公開境界検査を保つ。自動承認・依存bundleの手修正は行わない。
+- 完全リンクSBOM、LTO後の全コード/データの一意な由来、完全ビルド入力閉包、第三者環境での独立再現は保証範囲外のまま。将来の証拠改善候補とし、未証明を通知違反の証拠と扱わない。

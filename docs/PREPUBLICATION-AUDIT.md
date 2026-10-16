@@ -1,4 +1,33 @@
-# 案B: 保証範囲を限定した事後認証（2026-10-16）
+# PC向け正式公開の最終整理（2026-10-16・最新評価）
+
+開始時main、HEADと取得済みorigin/mainはともに `9d44be8bc5e4685335cf385510c593677da1c4e0`、作業ツリーclean。本節・[PC公開チェックリスト](PC-PUBLICATION-CHECKLIST.md)を現在の判断として優先し、以下の過去記録は削除しない。今回の変更は文書のみで、公開承認・リスク受入・ゲート解除・Push・デプロイは行わない。
+
+**結論: PC向けの技術・配布監査は確認済み。所有者がB2残余リスクと正式公開を判断する段階であり、まだ公開承認済みではない。** Windows PCの主要ブラウザ利用を想定するが、実画面検証はPC相当の1環境に限り、製品名・版を指定した全主要ブラウザ対応の保証はしない。iPhone/Android実機試験は公開前必須から外し、未保証と明記して公開後の改善へ移す。従来節やFURIGANA-ATTESTATION.mdにある「モバイル実機の最小確認が公開前に残る」という工程上の位置付けは、本PC方針で更新する。実機未検証という事実は変更しない。
+
+| 項目 | 最新状態 | 根拠・留保 |
+|---|---|---|
+| A1: JIS X 0208 | 今回の1.2.1配布について解消 | 正式NuGet1.2.1、固定Unicode原典hash、1区32点互換処理、旧データ差分0、必要通知と実配布検証。旧1.2.0の権利評価を遡及解決しない |
+| B1: 絶対パス | 本体1.2.1・Playgroundとも解消 | clean checkoutのDLL/PDB/SourceLink/Git文書、両Webcil raw/br/gz、開発PC固有パス0 |
+| B2: Actions依存 | 評価済み・条件付き受容を提案、所有者は未判断 | 54固有advisoryはlock候補の警告であり、実悪用54件ではない。HIGH/CRITICAL、HTTP応答等の残余リスクを保持。[判断用サマリー](ACTIONS-SECURITY-AUDIT.md#pc向け公開時のb2判断用サマリー2026-10-16) |
+| B3: Action SHA | 固定済み | 直接4 Actionと内部Actionを固定、権限/順序検査成功。SHA固定は脆弱性修復ではない |
+| B4: MJ表示 | 今回の1.2.1配布について解消 | 独自コードとMJ加工データCC BY-SAの適用範囲を分離し、正式通知の同梱を検証 |
+| B5: Pages/Environment | 設定未確認を解消 | 所有者がSettingsを確認した根拠。Actions、mainのみ、タグ0、HTTPS有効。reviewers/待機なし、管理者bypassありは残る。Environmentは所有者の公開承認を代替しない |
+| 案B | 定義した範囲の技術認証成功 | `recorded-build-inputs-and-artifact-identity/v1`。106コンパイル依存、公式Rust54入力、44通知・証跡、既知不足0、固定配布物同一性。完全SBOMの認証ではない |
+| 公開承認 | 未実施、falseを維持 | 技術認証成功後もゲートで停止。B2受入と公開承認は別々に必要 |
+
+保証範囲外は完全リンクSBOM、LTO後の全コード/データとソースの一意対応、完全ビルド入力閉包、第三者環境の独立再現、コンパイラ/ビルドPC非侵害の証明。元来歴・旧binarySbom=falseを保持し、これらを証明済みへ変えない。通知充足と完全SBOMは区別する。
+
+## 最新CI・検証証拠
+
+9d44be8の[実行38912944119](https://github.com/Koichi-Kobayashi/KanjiVariants.Playground/actions/runs/38912944119)を今回GitHub APIで読み取り確認した。locked restore、Debug/Release、2,333 Checksの実行step、Worker、案B認証と異常系、既存通知/hash、PDB/Git、publish、サブパス、両Webcil、公開物のリンク拒否検査までsuccess。承認stepはfailure、uploadはskipped、deployジョブもskipped。falseでの停止理由は所有者の確認と既存ローカルゲート記録に基づく。今回CIログの全文を再取得したとはしない。workflow全体はfailureであり、upload/OIDC/deployの正常動作を検証済みとは記載しない。
+
+既存ローカル記録はSDK10.0.401・固定lock、2,333 Checks、Worker、認証30ケース、44通知/証跡、fresh publish・35参照、両Webcil、各23 Git文書+16生成文書の照合成功。画面/コピーの確認時点とPCブラウザの制限は[検証範囲](PC-PUBLICATION-CHECKLIST.md#再利用する検証証拠)に整理した。9d44be8の公開SourceLink URL取得とチェックサム照合は今回未実施で、ローカル/CIのSourceLink-Git整合性と区別する。過去の別HEADの公開URL照合を流用しない。
+
+今回は機能・バイナリ・manifest・workflow・SDK・依存を変更しないため、全ビルド/機能テストは繰り返さない。変更文書の参照・用語・承認状態の整合性、差分検査と、対象外ファイルの無変更を確認する。必要な残作業はB2の所有者判断、対象版への正式公開承認、別工程での根拠付きblockers整理/承認値更新、最終対象HEADの公開物・SourceLink確認、Actionsデプロイ、本番PC確認と復旧準備。モバイル実機や完全SBOMを再びPC公開の必須条件として扱わない。
+
+---
+
+# 案B: 保証範囲を限定した事後認証（2026-10-16・実装時点の記録）
 
 開始HEAD `990ae7a022352e2a522f3d7d2272d27afda7084b`、main、作業ツリーclean。所有者が今回明示的に承認した案Bを実装する。**公開承認は引き続きfalse。** 以下に過去の監査を保存し、本節と[認証・ゲート仕様](FURIGANA-ATTESTATION.md)を現在の保証条件として区別する。
 

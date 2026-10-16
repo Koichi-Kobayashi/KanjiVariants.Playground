@@ -1,4 +1,25 @@
-# GitHub Actions B2/B3監査（2026-10-15）
+# PC向け公開時のB2判断用サマリー（2026-10-16）
+
+技術評価は、以下の2026-10-15監査と現行workflow（9d44be8）に基づく。今回新しいadvisory照会やAction更新は行わない。**現在構成の残余リスクは、PC向け公開に際して所有者へ受入を提案できる水準と評価する。ただし所有者の受入判断は未実施。** 安全性の完全証明や、54件の解消を意味しない。
+
+| 判断材料 | 評価 |
+|---|---|
+| 54固有advisory（HIGH/CRITICALを含む） | 固定Actionの非dev lockから得た候補警告。lockと実distの完全対応は未証明で、件数を悪用可能な脆弱性数と同一視しない。アプリのブラウザ配布依存ではない |
+| 入力・到達性 | main push/手動実行だけでPR/Issue等の外部入力起動なし。固定global.json・cache:false・source-url未指定、自runの固定artifactを使用。任意glob CLIや任意archive展開の成立経路は確認されない。ただしすべての呼出しを網羅した悪用試験ではない |
+| 既存対策 | 直接4 Actionと内部ActionのSHA固定、contents:read、persist-credentials:false、deployだけpages/id-token write、main条件、出力のsymlink/hardlink拒否、検証→承認ゲート→upload→needs:buildのdeployという順序 |
+| 残る攻撃条件・影響 | HTTP/Octokit/Azure等の応答やmultipart処理でのDoS・応答処理問題の成立可能性を完全には排除していない。上流固定commit/配信/信頼済みmainの侵害もSHA固定だけでは防げない。DoS、ジョブ失敗、条件が成立した場合のrunner/artifact/公開権限への影響をゼロと断定しない |
+| 受入提案の根拠 | 外部PRから任意コード・パターン・archiveを与える経路がなく、入力・権限・公開境界を制限し検査している。警告が存在するだけで全修正版の採用を公開前必須にする根拠はなく、現監査では追加の必須修正となる具体的悪用経路を確認していない。ただし非到達の完全証明ではない |
+| 所有者の判断事項 | 対象HEADと固定SHA、この残余リスク、B5のreviewersなし/管理者bypassありを確認して受入または保留を記録する。受入の日付・判断者・対象を残し、正式公開承認と分ける。現在はいずれも未実施 |
+
+9d44be8の[実CI](https://github.com/Koichi-Kobayashi/KanjiVariants.Playground/actions/runs/38912944119)は、今回APIでcheckout/setup・安全境界・技術検証・案B認証・publishまでsuccess、公開ゲートfailure、upload/deploy skippedを確認した。ゲートのfalse停止は所有者確認・既存ゲート記録と整合する。Node24を使うcheckout/setupは実行済みだが、upload/OIDC/deployの実行互換性まで確認したことにはならない。以下の旧節にある「実CI未実行」は監査作成時点の記録として保持する。
+
+公開後は公式ActionのReleaseとadvisoryを定期的に、また新しい重大警告・依存更新・入力/権限変更時に再確認する。修正版候補はlockと実dist、処理への到達性、内部Actionを別々に確認し、SHAとpolicyをレビューして更新する。upload-artifactの内部版はupstream compositeの更新を優先し、消費側でbundleを手修正しない。回帰と権限・公開順序検査を維持する。具体的な到達可能な重大問題が判明した場合は、定期更新を待たず公開/配布の継続を所有者が再判断する。現在の固定版を将来も無条件に安全と扱わない。
+
+公開判断の手順は[PC公開チェックリスト](PC-PUBLICATION-CHECKLIST.md)を参照。今回はB2全解除・リスク受入・公開承認・ゲート変更を行わない。
+
+---
+
+# GitHub Actions B2/B3監査（2026-10-15・原監査記録）
 
 開始HEAD: `1723e55490d322ff3032d71007b3f6187927791b`、main、clean。公式GitHub Release/APIと固定コミットのaction.yml・lock・実distを今回再取得した。取得証跡はGit管理外の`artifacts/actions-security/`。過去監査のSHAを最新版の根拠に流用していない。
 
