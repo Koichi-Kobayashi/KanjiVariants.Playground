@@ -31,6 +31,7 @@ assert.equal(sha(lock),pins.lock);
 const provenanceBytes=Buffer.from(JSON.stringify(provenance,null,2)+'\n');
 assert.equal(sha(provenanceBytes),pins.provenance,'Reviewed provenance changed');
 const manifest=JSON.parse(await fs.readFile(path.join(vendor,'manifest.json')));
+assert.ok(!manifest.licenseAudit?.scopedAttestation,'A scoped attestation exists. Re-adoption requires a separate audit; this historical adoption tool must not refresh its trust roots.');
 for(const notice of manifest.licenseAudit.noticeFiles)assert.equal(sha(await fs.readFile(path.join(vendor,notice.file))),notice.sha256,'Existing notice changed before adoption: '+notice.file);
 const inventory=JSON.parse(await fs.readFile(path.join(vendor,'LICENSE-INVENTORY.json')));
 inventory.scope='Compiled self-build packages and fixed-source notices; NOT a complete binary-attested SBOM';

@@ -19,6 +19,7 @@ for(const file of ['lindera_wasm.js','lindera_wasm_bg.wasm'])requireCleanArtifac
 await fs.mkdir(target,{recursive:true});
 let previous;
 try {previous=JSON.parse(await fs.readFile(path.join(target,'manifest.json')));} catch(error) {if(error.code!=='ENOENT')throw error;}
+if(previous?.licenseAudit?.scopedAttestation)throw new Error('Scoped attestation exists; do not automatically refresh adopted assets or evidence. A new artifact requires a separate review.');
 const manifest={engine:'lindera-wasm',version:'6.2.0',dictionaryId:'lindera-ipadic-6.2.0',dictionaryFormat:2,
  publicationApproved:false,publicationBlockers:previous?.licenseAudit ? previous.publicationBlockers : ['固定配布物のライセンス監査・第三者通知の確認が未完了'],dictionary:[]};
 if(previous?.licenseAudit)manifest.licenseAudit=previous.licenseAudit;

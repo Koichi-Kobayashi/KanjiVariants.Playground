@@ -5,7 +5,7 @@
   "dictionaryFormat": 2,
   "publicationApproved": false,
   "publicationBlockers": [
-    "公開承認は保留。標準ライブラリ内部・最終リンク成分の完全SBOM、別環境の再現性、モバイル実機等の未検証事項は監査記録を参照"
+    "所有者による公開承認は未実施（publicationApproved=false）。モバイル実機確認とActions B2残余リスクの受入判断は公開前監査を参照。"
   ],
   "dictionary": [
     {
@@ -83,7 +83,7 @@
   ],
   "licenseAudit": {
     "date": "2026-10-12",
-    "status": "blocked",
+    "status": "scoped-attestation-verified",
     "ipadicDateLabel": "resolved; original NOTICE retained with full COPYING and provenance",
     "sourceCommit": "0482efcc46b5ec518b7238efae55e9fed9bba0c0",
     "rustcProducer": "1.98.1 (48a229cea 2026-09-01)",
@@ -94,7 +94,7 @@
       "status": "satisfied-for-fixed-source-scope",
       "unresolved": [],
       "kanaria": "resolved by byte-identical crate source and original manifest at license-bearing upstream commit",
-      "limitation": "106 compiled packages and recorded Rust notices covered; not proof of every final linked component."
+      "limitation": "106 recorded compiled packages and official 54 standard input files with reviewed notices; final linked SBOM remains unproven."
     },
     "sbomCompleteness": {
       "status": "unproven",
@@ -217,11 +217,77 @@
       {
         "file": "SELF-BUILD-CARGO.lock",
         "sha256": "6b30d175d6234ad39b8b969101af13834b28545f3eb9801e454002832db18d75"
+      },
+      {
+        "file": "attestation-v1/supplement/addr2line/LICENSE-APACHE",
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "file": "attestation-v1/supplement/addr2line/LICENSE-MIT",
+        "sha256": "e99d88d232bf57d70f0fb87f6b496d44b6653f99f8a63d250a54c61ea4bcde40"
+      },
+      {
+        "file": "attestation-v1/supplement/adler2/LICENSE-0BSD",
+        "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17"
+      },
+      {
+        "file": "attestation-v1/supplement/adler2/LICENSE-APACHE",
+        "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb"
+      },
+      {
+        "file": "attestation-v1/supplement/adler2/LICENSE-MIT",
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "file": "attestation-v1/rust-source/library/compiler-builtins/LICENSE.txt",
+        "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"
+      },
+      {
+        "file": "attestation-v1/supplement/memchr/COPYING",
+        "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+      },
+      {
+        "file": "attestation-v1/supplement/memchr/LICENSE-MIT",
+        "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+      },
+      {
+        "file": "attestation-v1/supplement/memchr/UNLICENSE",
+        "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+      },
+      {
+        "file": "attestation-v1/supplement/miniz_oxide/LICENSE",
+        "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+      },
+      {
+        "file": "attestation-v1/supplement/miniz_oxide/LICENSE-APACHE.md",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      },
+      {
+        "file": "attestation-v1/supplement/miniz_oxide/LICENSE-MIT.md",
+        "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+      },
+      {
+        "file": "attestation-v1/supplement/miniz_oxide/LICENSE-ZLIB.md",
+        "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+      },
+      {
+        "file": "attestation-v1/supplement/object/LICENSE-APACHE",
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "file": "attestation-v1/supplement/object/LICENSE-MIT",
+        "sha256": "0b74dfa0bcee5c420c6b7f67b4b2658f9ab8388c97b8e733975f2cecbdd668a6"
       }
     ],
     "buildProvenance": {
       "status": "recorded-self-build",
       "file": "SELF-BUILD-PROVENANCE.json"
+    },
+    "scopedAttestation": {
+      "profile": "recorded-build-inputs-and-artifact-identity/v1",
+      "file": "attestation-v1/ATTESTATION.json",
+      "sha256": "dac89676a8075a7247941d16eba4233fefbf3106c148f5501c3a43672a51f9b6",
+      "status": "verified-scoped-inputs"
     }
   },
   "buildOrigin": "self-built",

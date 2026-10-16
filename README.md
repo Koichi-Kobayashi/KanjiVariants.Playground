@@ -132,6 +132,8 @@ dotnet run --project tests/KanjiVariants.Playground.Checks -c Release
 
 ## GitHub Pagesへの公開
 
+自動ふりがなの認証には[案Bの保証範囲と公開ゲート](docs/FURIGANA-ATTESTATION.md)を使用します。固定配布物、記録された106コンパイル依存、公式Rust標準入力54ファイル、宣言範囲の必要通知を独立証跡で照合します。完全な最終リンクSBOMを証明するものではありません。原来歴の未証明評価は保持し、技術検証が成功しても`publicationApproved=false`ならアップロード・デプロイを停止します。今回の保証範囲の承認は、正式公開の承認ではありません。
+
 [公開サイト](https://koichi-kobayashi.github.io/KanjiVariants.Playground/)で一括変換・診断・IVS/SVS入力例を利用できます。[Playgroundのソースコード](https://github.com/Koichi-Kobayashi/KanjiVariants.Playground)はこのリポジトリで管理しています。
 
 [Pagesワークフロー](.github/workflows/pages.yml)は、`main`へのPushまたは手動実行で復元・Releaseビルド・仕様検証・publishを行い、GitHub公式Pages Actionsでデプロイします。

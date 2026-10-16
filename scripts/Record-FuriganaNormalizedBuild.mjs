@@ -9,6 +9,7 @@ import {inspectArtifact,requireCleanArtifact} from './Verify-FuriganaPaths.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const output=path.join(root,'artifacts/furigana-self-build');
 const vendor=path.join(root,'src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0');
+assert.ok(!JSON.parse(await fs.readFile(path.join(vendor,'manifest.json'))).licenseAudit?.scopedAttestation,'Historical recorder cannot overwrite provenance after scoped attestation; review a new profile separately.');
 const json=async f=>JSON.parse(await fs.readFile(f,'utf8'));
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function preserveEvidence(bytes,extension){const directory=path.join(output,'normalized-evidence');await fs.mkdir(directory,{recursive:true});await fs.writeFile(path.join(directory,sha(bytes)+extension),bytes);}

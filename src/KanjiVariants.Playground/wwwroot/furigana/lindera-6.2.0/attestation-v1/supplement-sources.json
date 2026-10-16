@@ -1,0 +1,117 @@
+[
+  {
+    "name": "addr2line",
+    "version": "0.25.1",
+    "url": "https://static.crates.io/crates/addr2line/addr2line-0.25.1.crate",
+    "archiveSha256": "1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b",
+    "declaredLicense": "Apache-2.0 OR MIT",
+    "files": [
+      {
+        "file": "supplement/addr2line/LICENSE-APACHE",
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+        "archiveMember": "addr2line-0.25.1/LICENSE-APACHE"
+      },
+      {
+        "file": "supplement/addr2line/LICENSE-MIT",
+        "sha256": "e99d88d232bf57d70f0fb87f6b496d44b6653f99f8a63d250a54c61ea4bcde40",
+        "archiveMember": "addr2line-0.25.1/LICENSE-MIT"
+      }
+    ]
+  },
+  {
+    "name": "adler2",
+    "version": "2.0.1",
+    "url": "https://static.crates.io/crates/adler2/adler2-2.0.1.crate",
+    "archiveSha256": "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa",
+    "declaredLicense": "0BSD OR MIT OR Apache-2.0",
+    "files": [
+      {
+        "file": "supplement/adler2/LICENSE-0BSD",
+        "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17",
+        "archiveMember": "adler2-2.0.1/LICENSE-0BSD"
+      },
+      {
+        "file": "supplement/adler2/LICENSE-APACHE",
+        "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb",
+        "archiveMember": "adler2-2.0.1/LICENSE-APACHE"
+      },
+      {
+        "file": "supplement/adler2/LICENSE-MIT",
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+        "archiveMember": "adler2-2.0.1/LICENSE-MIT"
+      }
+    ]
+  },
+  {
+    "name": "memchr",
+    "version": "2.7.6",
+    "url": "https://static.crates.io/crates/memchr/memchr-2.7.6.crate",
+    "archiveSha256": "f52b00d39961fc5b2736ea853c9cc86238e165017a493d1d5c8eac6bdc4cc273",
+    "declaredLicense": "Unlicense OR MIT",
+    "files": [
+      {
+        "file": "supplement/memchr/COPYING",
+        "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f",
+        "archiveMember": "memchr-2.7.6/COPYING"
+      },
+      {
+        "file": "supplement/memchr/LICENSE-MIT",
+        "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f",
+        "archiveMember": "memchr-2.7.6/LICENSE-MIT"
+      },
+      {
+        "file": "supplement/memchr/UNLICENSE",
+        "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+        "archiveMember": "memchr-2.7.6/UNLICENSE"
+      }
+    ]
+  },
+  {
+    "name": "miniz_oxide",
+    "version": "0.8.9",
+    "url": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.8.9.crate",
+    "archiveSha256": "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316",
+    "declaredLicense": "MIT OR Zlib OR Apache-2.0",
+    "files": [
+      {
+        "file": "supplement/miniz_oxide/LICENSE",
+        "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b",
+        "archiveMember": "miniz_oxide-0.8.9/LICENSE"
+      },
+      {
+        "file": "supplement/miniz_oxide/LICENSE-APACHE.md",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "archiveMember": "miniz_oxide-0.8.9/LICENSE-APACHE.md"
+      },
+      {
+        "file": "supplement/miniz_oxide/LICENSE-MIT.md",
+        "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d",
+        "archiveMember": "miniz_oxide-0.8.9/LICENSE-MIT.md"
+      },
+      {
+        "file": "supplement/miniz_oxide/LICENSE-ZLIB.md",
+        "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39",
+        "archiveMember": "miniz_oxide-0.8.9/LICENSE-ZLIB.md"
+      }
+    ]
+  },
+  {
+    "name": "object",
+    "version": "0.37.3",
+    "url": "https://static.crates.io/crates/object/object-0.37.3.crate",
+    "archiveSha256": "ff76201f031d8863c38aa7f905eca4f53abbfa15f609db4277d44cd8938f33fe",
+    "declaredLicense": "Apache-2.0 OR MIT",
+    "files": [
+      {
+        "file": "supplement/object/LICENSE-APACHE",
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+        "archiveMember": "object-0.37.3/LICENSE-APACHE"
+      },
+      {
+        "file": "supplement/object/LICENSE-MIT",
+        "sha256": "0b74dfa0bcee5c420c6b7f67b4b2658f9ab8388c97b8e733975f2cecbdd668a6",
+        "archiveMember": "object-0.37.3/LICENSE-MIT"
+      }
+    ]
+  }
+]

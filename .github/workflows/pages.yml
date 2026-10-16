@@ -34,6 +34,10 @@ jobs:
       - run: node --experimental-default-type=module tests/KanjiVariants.Playground.Checks/FuriganaWorkerChecks.mjs
       - name: Verify adopted self-build assets and notices
         run: node scripts/Verify-FuriganaLicenseEvidence.mjs
+      - name: Verify reviewed scoped attestation and official standard inputs
+        run: node scripts/Verify-FuriganaAttestation.mjs --fetch-inputs
+      - name: Check scoped attestation tamper rejection
+        run: node tests/KanjiVariants.Playground.Checks/FuriganaAttestationChecks.mjs
       - name: Check distribution tamper rejection
         run: node tests/KanjiVariants.Playground.Checks/FuriganaDistributionChecks.mjs
       - name: Check local path and sensitive string rejection

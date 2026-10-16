@@ -1,0 +1,3339 @@
+[
+  {
+    "package": "stable_deref_trait@1.2.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "stable_deref_trait",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libstable_deref_trait-1b970e65f5f666e5.rlib",
+      "libstable_deref_trait-1b970e65f5f666e5.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "cfg-if@1.0.4",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "cfg_if",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libcfg_if-4488d5a1172f6f60.rlib",
+      "libcfg_if-4488d5a1172f6f60.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "unicode-ident@1.0.24",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "unicode_ident",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libunicode_ident-b815852653f6b9cc.rlib",
+      "libunicode_ident-b815852653f6b9cc.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "utf8_iter@1.0.4",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "utf8_iter",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libutf8_iter-cb1a574a1932364a.rlib",
+      "libutf8_iter-cb1a574a1932364a.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "litemap@0.8.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "litemap",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "liblitemap-0573293e5a51d06d.rlib",
+      "liblitemap-0573293e5a51d06d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "smallvec@1.15.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "const_generics"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "smallvec",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libsmallvec-2bbb3fda4d9e8877.rlib",
+      "libsmallvec-2bbb3fda4d9e8877.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "writeable@0.6.3",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "writeable",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libwriteable-ceff309242f00d61.rlib",
+      "libwriteable-ceff309242f00d61.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "itoa@1.0.18",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "itoa",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libitoa-1977e67a523df2c6.rlib",
+      "libitoa-1977e67a523df2c6.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "simdutf8@0.1.5",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "simdutf8",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libsimdutf8-617283d5b5a4abed.rlib",
+      "libsimdutf8-617283d5b5a4abed.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_properties_data@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_normalizer_data@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "quote@1.0.45",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "proc-macro"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "memchr@2.8.3",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "memchr",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libmemchr-a8037d43361fc500.rlib",
+      "libmemchr-a8037d43361fc500.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "once_cell@1.21.4",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default",
+      "race",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "once_cell",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libonce_cell-ec859cbc2cae7696.rlib",
+      "libonce_cell-ec859cbc2cae7696.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde@1.0.229",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "derive",
+      "serde_derive",
+      "std"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "wasm-bindgen-shared@0.2.126",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde_core@1.0.229",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "result",
+      "std"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "proc-macro2@1.0.106",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "proc-macro"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "rustversion@1.0.22",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "ryu@1.0.23",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "ryu",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libryu-f9a825c0811e8d3c.rlib",
+      "libryu-f9a825c0811e8d3c.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde_json@1.0.151",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "zmij@1.0.21",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "hashbrown@0.17.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "hashbrown",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libhashbrown-ea968ca5492f619d.rlib",
+      "libhashbrown-ea968ca5492f619d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "thiserror@2.0.20",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "multiversion_no_op@1.0.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "multiversion_no_op",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "multiversion_no_op-ee8ff2144f3e7df8.dll",
+      "multiversion_no_op-ee8ff2144f3e7df8.dll.lib",
+      "multiversion_no_op-ee8ff2144f3e7df8.dll.exp",
+      "multiversion_no_op-ee8ff2144f3e7df8.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "anyhow@1.0.104",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "heck@0.5.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "heck",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libheck-8653e6218904e5cd.rlib",
+      "libheck-8653e6218904e5cd.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "scopeguard@1.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "scopeguard",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libscopeguard-16f9235c81821c2d.rlib",
+      "libscopeguard-16f9235c81821c2d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_properties_data@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "icu_properties_data",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libicu_properties_data-9ae8d2a5b0d36f19.rlib",
+      "libicu_properties_data-9ae8d2a5b0d36f19.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_normalizer_data@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "icu_normalizer_data",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libicu_normalizer_data-6c3ec199979a56d7.rlib",
+      "libicu_normalizer_data-6c3ec199979a56d7.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "bumpalo@3.20.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "bumpalo",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libbumpalo-d2831b030285bca6.rlib",
+      "libbumpalo-d2831b030285bca6.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "csv-core@0.1.13",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "csv_core",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libcsv_core-8aab41cd9a0bc840.rlib",
+      "libcsv_core-8aab41cd9a0bc840.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "percent-encoding@2.3.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "percent_encoding",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libpercent_encoding-1481fe047b71348d.rlib",
+      "libpercent_encoding-1481fe047b71348d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "equivalent@1.0.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "equivalent",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libequivalent-1b79808aa458e8b5.rlib",
+      "libequivalent-1b79808aa458e8b5.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "tinyvec_macros@0.1.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "tinyvec_macros",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libtinyvec_macros-000f46ebf5fac522.rlib",
+      "libtinyvec_macros-000f46ebf5fac522.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "unicode-ident@1.0.24",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "unicode_ident",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libunicode_ident-26cd77c54af83aa6.rlib",
+      "libunicode_ident-26cd77c54af83aa6.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "log@0.4.34",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "log",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "liblog-403d2e90733cd3c2.rlib",
+      "liblog-403d2e90733cd3c2.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "form_urlencoded@1.2.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "form_urlencoded",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libform_urlencoded-bb87bfb8317aa9a2.rlib",
+      "libform_urlencoded-bb87bfb8317aa9a2.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "memmap2@0.9.11",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "memmap2",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libmemmap2-55d603e0b283b8b6.rlib",
+      "libmemmap2-55d603e0b283b8b6.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "zmij@1.0.21",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "zmij",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libzmij-22bf80dc432d8765.rlib",
+      "libzmij-22bf80dc432d8765.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "byteorder@1.5.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "byteorder",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libbyteorder-c654dcd3a0fa1348.rlib",
+      "libbyteorder-c654dcd3a0fa1348.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "futures-core@0.3.32",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "futures_core",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libfutures_core-189f400efa572318.rlib",
+      "libfutures_core-189f400efa572318.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "glob@0.3.4",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "glob",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libglob-99d09f3ad3f68a40.rlib",
+      "libglob-99d09f3ad3f68a40.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "pin-project-lite@0.2.17",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "pin_project_lite",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libpin_project_lite-59c0cb5616445350.rlib",
+      "libpin_project_lite-59c0cb5616445350.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "wasm-bindgen-shared@0.2.126",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "wasm_bindgen_shared",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libwasm_bindgen_shared-673ce3efad91af03.rlib",
+      "libwasm_bindgen_shared-673ce3efad91af03.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "crawdad@0.4.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "crawdad",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libcrawdad-020caaef375b9408.rlib",
+      "libcrawdad-020caaef375b9408.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "futures-task@0.3.32",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "futures_task",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libfutures_task-89125f51cfd5482d.rlib",
+      "libfutures_task-89125f51cfd5482d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "tinyvec@1.11.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default",
+      "tinyvec_macros"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "tinyvec",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libtinyvec-9067ccf8a0d90799.rlib",
+      "libtinyvec-9067ccf8a0d90799.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "bitflags@1.3.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "bitflags",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libbitflags-da46ebe568bb2eb6.rlib",
+      "libbitflags-da46ebe568bb2eb6.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "anyhow@1.0.104",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "anyhow",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libanyhow-20fa3e1ce857ff42.rlib",
+      "libanyhow-20fa3e1ce857ff42.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "daachorse@5.0.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "daachorse",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libdaachorse-38b4a9e32cc886b7.rlib",
+      "libdaachorse-38b4a9e32cc886b7.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "slab@0.4.12",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "slab",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libslab-194ef6bf17007e25.rlib",
+      "libslab-194ef6bf17007e25.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "wasm-bindgen-shared@0.2.126",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "wasm_bindgen_shared",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libwasm_bindgen_shared-7daa33abe21f87ab.rlib",
+      "libwasm_bindgen_shared-7daa33abe21f87ab.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "kanaria@0.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "kanaria",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libkanaria-c97956ec5175b50e.rlib",
+      "libkanaria-c97956ec5175b50e.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "unicode-blocks@0.1.10",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "unicode_blocks",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libunicode_blocks-cd75e4fd4ef48c1b.rlib",
+      "libunicode_blocks-cd75e4fd4ef48c1b.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "indexmap@2.14.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "indexmap",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libindexmap-6b7e250e80fed82d.rlib",
+      "libindexmap-6b7e250e80fed82d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "unicode-segmentation@1.13.3",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "unicode_segmentation",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libunicode_segmentation-ef5d129bb18821fb.rlib",
+      "libunicode_segmentation-ef5d129bb18821fb.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "quote@1.0.45",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "proc-macro"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "quote",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libquote-fe14b98937eeddd7.rlib",
+      "libquote-fe14b98937eeddd7.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "aho-corasick@1.1.4",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "perf-literal",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "aho_corasick",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libaho_corasick-aa946c4781842cda.rlib",
+      "libaho_corasick-aa946c4781842cda.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "unicode-normalization@0.1.25",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "unicode_normalization",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libunicode_normalization-1d0561e552f18473.rlib",
+      "libunicode_normalization-1d0561e552f18473.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "rustversion@1.0.22",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "rustversion",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "rustversion-4cbf38d3c0e692f8.dll",
+      "rustversion-4cbf38d3c0e692f8.dll.lib",
+      "rustversion-4cbf38d3c0e692f8.dll.exp",
+      "rustversion-4cbf38d3c0e692f8.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "unsafe-libyaml@0.2.11",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "unsafe_libyaml",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libunsafe_libyaml-8c0d82e9f690955e.rlib",
+      "libunsafe_libyaml-8c0d82e9f690955e.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "encoding_rs@0.8.41",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "proc-macro2@1.0.106",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "proc-macro"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "proc_macro2",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libproc_macro2-48830b3c00ee6896.rlib",
+      "libproc_macro2-48830b3c00ee6896.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "wasm-bindgen@0.2.126",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "custom-build"
+    ],
+    "platform": "host",
+    "targetName": "build-script-build",
+    "crateTypes": [
+      "bin"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "build-script-build.exe",
+      "build_script_build.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "regex-syntax@0.8.11",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std",
+      "unicode",
+      "unicode-age",
+      "unicode-bool",
+      "unicode-case",
+      "unicode-gencat",
+      "unicode-perl",
+      "unicode-script",
+      "unicode-segment"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "regex_syntax",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libregex_syntax-ce6109881d0bb375.rlib",
+      "libregex_syntax-ce6109881d0bb375.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde_core@1.0.229",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "result",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "serde_core",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libserde_core-b60d0d0e7b3c74c3.rlib",
+      "libserde_core-b60d0d0e7b3c74c3.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "futures-util@0.3.32",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "slab",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "futures_util",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libfutures_util-5e45707ccf379507.rlib",
+      "libfutures_util-5e45707ccf379507.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "csv@1.4.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "csv",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libcsv-0d4451ee158f1b75.rlib",
+      "libcsv-0d4451ee158f1b75.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "encoding_rs_io@0.1.8",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "encoding_rs_io",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libencoding_rs_io-ceb5a5aab745a89d.rlib",
+      "libencoding_rs_io-ceb5a5aab745a89d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde_json@1.0.151",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "serde_json",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libserde_json-3c9252e60b128232.rlib",
+      "libserde_json-3c9252e60b128232.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "encoding_rs@0.8.41",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "default"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "encoding_rs",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libencoding_rs-d8fae0995704f866.rlib",
+      "libencoding_rs-d8fae0995704f866.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "syn@3.0.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "clone-impls",
+      "default",
+      "derive",
+      "parsing",
+      "printing",
+      "proc-macro"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "syn",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libsyn-5d01a805a65ad17b.rlib",
+      "libsyn-5d01a805a65ad17b.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "regex@1.13.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "perf",
+      "perf-backtrack",
+      "perf-cache",
+      "perf-dfa",
+      "perf-inline",
+      "perf-literal",
+      "perf-onepass",
+      "std",
+      "unicode",
+      "unicode-age",
+      "unicode-bool",
+      "unicode-case",
+      "unicode-gencat",
+      "unicode-perl",
+      "unicode-script",
+      "unicode-segment"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "regex",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libregex-762f28de0ceb9829.rlib",
+      "libregex-762f28de0ceb9829.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "regex-automata@0.4.16",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "dfa-onepass",
+      "hybrid",
+      "meta",
+      "nfa-backtrack",
+      "nfa-pikevm",
+      "nfa-thompson",
+      "perf-inline",
+      "perf-literal",
+      "perf-literal-multisubstring",
+      "perf-literal-substring",
+      "std",
+      "syntax",
+      "unicode",
+      "unicode-age",
+      "unicode-bool",
+      "unicode-case",
+      "unicode-gencat",
+      "unicode-perl",
+      "unicode-script",
+      "unicode-segment",
+      "unicode-word-boundary"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "regex_automata",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libregex_automata-79554e05a56b5c69.rlib",
+      "libregex_automata-79554e05a56b5c69.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "syn@2.0.117",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "clone-impls",
+      "default",
+      "derive",
+      "extra-traits",
+      "fold",
+      "full",
+      "parsing",
+      "printing",
+      "proc-macro",
+      "visit",
+      "visit-mut"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "syn",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libsyn-b7024a104dc63b72.rlib",
+      "libsyn-b7024a104dc63b72.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "thiserror-impl@2.0.20",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "thiserror_impl",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "thiserror_impl-d1ada4c66db14ace.dll",
+      "thiserror_impl-d1ada4c66db14ace.dll.lib",
+      "thiserror_impl-d1ada4c66db14ace.dll.exp",
+      "thiserror_impl-d1ada4c66db14ace.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "synstructure@0.13.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "proc-macro"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "synstructure",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libsynstructure-cfb87cf53df4d0c9.rlib",
+      "libsynstructure-cfb87cf53df4d0c9.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "rkyv_derive@0.8.18",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "bytecheck"
+    ],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "rkyv_derive",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "rkyv_derive-b87a34b08a191fed.dll",
+      "rkyv_derive-b87a34b08a191fed.dll.lib",
+      "rkyv_derive-b87a34b08a191fed.dll.exp",
+      "rkyv_derive-b87a34b08a191fed.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde_derive@1.0.229",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default"
+    ],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "serde_derive",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "serde_derive-fdecb6bb18c30a5e.dll",
+      "serde_derive-fdecb6bb18c30a5e.dll.lib",
+      "serde_derive-fdecb6bb18c30a5e.dll.exp",
+      "serde_derive-fdecb6bb18c30a5e.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "thiserror@2.0.20",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "thiserror",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libthiserror-d1ea719ba572285c.rlib",
+      "libthiserror-d1ea719ba572285c.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde@1.0.229",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "derive",
+      "serde_derive",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "serde",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libserde-7cfff89a9718b5e1.rlib",
+      "libserde-7cfff89a9718b5e1.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "displaydoc@0.2.5",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "displaydoc",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "displaydoc-863a5e540e535772.dll",
+      "displaydoc-863a5e540e535772.dll.lib",
+      "displaydoc-863a5e540e535772.dll.exp",
+      "displaydoc-863a5e540e535772.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde_yaml_ng@0.10.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "serde_yaml_ng",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libserde_yaml_ng-6951664b78641c2b.rlib",
+      "libserde_yaml_ng-6951664b78641c2b.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "munge_macro@0.4.7",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "munge_macro",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "munge_macro-369866f9ff220c8b.dll",
+      "munge_macro-369866f9ff220c8b.dll.lib",
+      "munge_macro-369866f9ff220c8b.dll.exp",
+      "munge_macro-369866f9ff220c8b.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "munge@0.4.7",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "munge",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libmunge-41a5b492e56ef1b6.rlib",
+      "libmunge-41a5b492e56ef1b6.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "zerovec-derive@0.11.3",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "zerovec_derive",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "zerovec_derive-e314c056aafd8021.dll",
+      "zerovec_derive-e314c056aafd8021.dll.lib",
+      "zerovec_derive-e314c056aafd8021.dll.exp",
+      "zerovec_derive-e314c056aafd8021.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "ptr_meta_derive@0.3.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "ptr_meta_derive",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "ptr_meta_derive-5485b0774306536d.dll",
+      "ptr_meta_derive-5485b0774306536d.dll.lib",
+      "ptr_meta_derive-5485b0774306536d.dll.exp",
+      "ptr_meta_derive-5485b0774306536d.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "ptr_meta@0.3.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "derive",
+      "ptr_meta_derive",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "ptr_meta",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libptr_meta-da22d7c3a66e8ab8.rlib",
+      "libptr_meta-da22d7c3a66e8ab8.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "rancor@0.1.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "rancor",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "librancor-4639d3048c7e8a6b.rlib",
+      "librancor-4639d3048c7e8a6b.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "bytecheck_derive@0.8.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "bytecheck_derive",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "bytecheck_derive-b714b112c909d93c.dll",
+      "bytecheck_derive-b714b112c909d93c.dll.lib",
+      "bytecheck_derive-b714b112c909d93c.dll.exp",
+      "bytecheck_derive-b714b112c909d93c.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "yoke-derive@0.8.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "yoke_derive",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "yoke_derive-c41c5d158df64651.dll",
+      "yoke_derive-c41c5d158df64651.dll.lib",
+      "yoke_derive-c41c5d158df64651.dll.exp",
+      "yoke_derive-c41c5d158df64651.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "bytecheck@0.8.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "simdutf8"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "bytecheck",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libbytecheck-f5785d352ff2675a.rlib",
+      "libbytecheck-f5785d352ff2675a.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "strum_macros@0.28.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "strum_macros",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "strum_macros-c1d2af9bbf9173be.dll",
+      "strum_macros-c1d2af9bbf9173be.dll.lib",
+      "strum_macros-c1d2af9bbf9173be.dll.exp",
+      "strum_macros-c1d2af9bbf9173be.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "strum@0.28.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "derive",
+      "std",
+      "strum_macros"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "strum",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libstrum-1fdd0ef6ee20aec8.rlib",
+      "libstrum-1fdd0ef6ee20aec8.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "zerofrom-derive@0.1.7",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "zerofrom_derive",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "zerofrom_derive-2290936278268ce3.dll",
+      "zerofrom_derive-2290936278268ce3.dll.lib",
+      "zerofrom_derive-2290936278268ce3.dll.exp",
+      "zerofrom_derive-2290936278268ce3.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "zerofrom@0.1.7",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "derive"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "zerofrom",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libzerofrom-ada8a9e423e345ee.rlib",
+      "libzerofrom-ada8a9e423e345ee.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "yoke@0.8.2",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "derive",
+      "zerofrom"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "yoke",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libyoke-0bf12a2569fcf456.rlib",
+      "libyoke-0bf12a2569fcf456.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "zerotrie@0.2.4",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "yoke",
+      "zerofrom"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "zerotrie",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libzerotrie-ff78371d1e07384d.rlib",
+      "libzerotrie-ff78371d1e07384d.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "zerovec@0.11.6",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "derive",
+      "yoke"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "zerovec",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libzerovec-4e9d03173973f926.rlib",
+      "libzerovec-4e9d03173973f926.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "potential_utf@0.1.5",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "zerovec"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "potential_utf",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libpotential_utf-a8113fdf9a5ca5a7.rlib",
+      "libpotential_utf-a8113fdf9a5ca5a7.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "tinystr@0.8.3",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "zerovec"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "tinystr",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libtinystr-e4735e17f73b1ed2.rlib",
+      "libtinystr-e4735e17f73b1ed2.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_collections@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "icu_collections",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libicu_collections-6ee00427068eb9c8.rlib",
+      "libicu_collections-6ee00427068eb9c8.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "rend@0.5.3",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "bytecheck"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "rend",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "librend-995f7a82af4cd589.rlib",
+      "librend-995f7a82af4cd589.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_locale_core@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "zerovec"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "icu_locale_core",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libicu_locale_core-e8f3bbd6e36c4508.rlib",
+      "libicu_locale_core-e8f3bbd6e36c4508.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_provider@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "baked"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "icu_provider",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libicu_provider-d1409b02d639e595.rlib",
+      "libicu_provider-d1409b02d639e595.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_normalizer@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "compiled_data"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "icu_normalizer",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libicu_normalizer-7d7a74ef02325392.rlib",
+      "libicu_normalizer-7d7a74ef02325392.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "idna_adapter@1.2.1",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "compiled_data"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "idna_adapter",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libidna_adapter-338faa36c35e6a6c.rlib",
+      "libidna_adapter-338faa36c35e6a6c.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "icu_properties@2.2.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "compiled_data"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "icu_properties",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libicu_properties-9a7076e7382d3d4e.rlib",
+      "libicu_properties-9a7076e7382d3d4e.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "wasm-bindgen-macro-support@0.2.126",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "host",
+    "targetName": "wasm_bindgen_macro_support",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libwasm_bindgen_macro_support-c5a36de86349a2d8.rlib",
+      "libwasm_bindgen_macro_support-c5a36de86349a2d8.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "idna@1.1.0",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "compiled_data",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "idna",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libidna-94b4263d71b09385.rlib",
+      "libidna-94b4263d71b09385.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "wasm-bindgen-macro@0.2.126",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "proc-macro"
+    ],
+    "platform": "host",
+    "targetName": "wasm_bindgen_macro",
+    "crateTypes": [
+      "proc-macro"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "wasm_bindgen_macro-955c2519016c2ca0.dll",
+      "wasm_bindgen_macro-955c2519016c2ca0.dll.lib",
+      "wasm_bindgen_macro-955c2519016c2ca0.dll.exp",
+      "wasm_bindgen_macro-955c2519016c2ca0.pdb"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "url@2.5.8",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "url",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "liburl-7604063e3175cafc.rlib",
+      "liburl-7604063e3175cafc.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "rkyv@0.8.18",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "alloc",
+      "bytecheck",
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "rkyv",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "librkyv-e9c5e49aba07f841.rlib",
+      "librkyv-e9c5e49aba07f841.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "wasm-bindgen@0.2.126",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "wasm_bindgen",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libwasm_bindgen-eba9b2665761d351.rlib",
+      "libwasm_bindgen-eba9b2665761d351.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "lindera@6.2.0",
+    "source": "fixed-lindera-workspace",
+    "features": [
+      "default",
+      "mmap"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "lindera",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "liblindera-48a8b3198644ef03.rlib",
+      "liblindera-48a8b3198644ef03.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "lindera-dictionary@6.2.0",
+    "source": "fixed-lindera-workspace",
+    "features": [
+      "default",
+      "mmap"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "lindera_dictionary",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "liblindera_dictionary-1266191c70f98e56.rlib",
+      "liblindera_dictionary-1266191c70f98e56.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "lindera-binding-core@6.2.0",
+    "source": "fixed-lindera-workspace",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "lindera_binding_core",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "liblindera_binding_core-5f66fc1a2883f582.rlib",
+      "liblindera_binding_core-5f66fc1a2883f582.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "lindera-analysis@6.2.0",
+    "source": "fixed-lindera-workspace",
+    "features": [
+      "default"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "lindera_analysis",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "liblindera_analysis-e14b39bc3f925d79.rlib",
+      "liblindera_analysis-e14b39bc3f925d79.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "serde-wasm-bindgen@0.6.5",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "serde_wasm_bindgen",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libserde_wasm_bindgen-43925067eb4aca6c.rlib",
+      "libserde_wasm_bindgen-43925067eb4aca6c.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "js-sys@0.3.103",
+    "source": "registry+https://github.com/rust-lang/crates.io-index",
+    "features": [
+      "default",
+      "std",
+      "unsafe-eval"
+    ],
+    "targetKinds": [
+      "lib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "js_sys",
+    "crateTypes": [
+      "lib"
+    ],
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "libjs_sys-c27352d92da9bf83.rlib",
+      "libjs_sys-c27352d92da9bf83.rmeta"
+    ],
+    "fresh": false
+  },
+  {
+    "package": "lindera-wasm@6.2.0",
+    "source": "fixed-lindera-workspace",
+    "features": [],
+    "targetKinds": [
+      "cdylib"
+    ],
+    "platform": "wasm32-unknown-unknown",
+    "targetName": "lindera_wasm",
+    "crateTypes": [
+      "cdylib"
+    ],
+    "profile": {
+      "opt_level": "s",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "artifacts": [
+      "lindera_wasm.wasm"
+    ],
+    "fresh": false
+  }
+]

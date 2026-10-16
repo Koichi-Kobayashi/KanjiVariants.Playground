@@ -3,3 +3,6 @@ src/KanjiVariants.Playground/wwwroot/furigana/lindera-6.2.0/** -text
 
 # Preserve the exact official KanjiVariants package notices and fixed source.
 THIRD-PARTY-NOTICES/KanjiVariants-1.2.1* -text
+
+# Reviewed attestation policy uses byte-level trust roots on every platform.
+scripts/furigana-attestation-policy.json -text

@@ -1,3 +1,21 @@
+# 案B: 保証範囲を限定した事後認証（2026-10-16）
+
+開始HEAD `990ae7a022352e2a522f3d7d2272d27afda7084b`、main、作業ツリーclean。所有者が今回明示的に承認した案Bを実装する。**公開承認は引き続きfalse。** 以下に過去の監査を保存し、本節と[認証・ゲート仕様](FURIGANA-ATTESTATION.md)を現在の保証条件として区別する。
+
+旧ゲートの完全SBOM/binaryAttested=true要求を、`recorded-build-inputs-and-artifact-identity/v1` のレビュー済み独立証跡の検証へ置き換える。旧来歴は原バイト列を保持し、`completeness.binarySbom=false` は変更しない。manifestの旧SBOM評価と旧binaryAttestedも未証明/falseのまま。新しい`scopedAttestation`は、最終リンク全成分やLTO後の全コードを認証したという意味ではない。
+
+現行保証は、固定WASM/JS/辞書の同一性、固定ソース/lock、保存した4原ログと106コンパイル依存のvariant、公式Rust標準入力54ファイル、記録したbindgen処理前後・同一PCの分離再現、宣言範囲の通知と既知未充足0件。既存29通知・証跡を変更せず、標準入力候補5 crateとcompiler-builtinsの原典許諾15ファイルを追加し44ファイルを検証する。49件のRust library lock候補は追加runtime依存ではない。
+
+公開用projectionは物理パスを除いた122 compiler-artifact行×2。ローカルrawモードは元来歴のhashと一致する保存版から再導出して照合する。CIは原ログを保持しないため、レビュー済みprojection/来歴/公式標準archive/配布物hashを検証する範囲に限定する。生ログとの対応をCIが独立に再導出したとは記録しない。認証JSONとポリシーは検証器側の固定rootと照合し、同時改変だけで未知成果物を認証できない。検証コード自体を変更できる権限者に対する署名・暗号的防御ではない。
+
+未証明: 最終リンク全構成要素、LTO後の一意ソース対応、ビルド全入力閉包、第三者環境の独立再現、コンパイラ/ビルドPC非侵害。これらは残余リスクであり、通知不足が確認された状態とは区別する。今回はビルド時の署名付き認証ではなく事後のローカル審査。
+
+A1/B1/B3/B4/B5の既存評価は維持する。B2のActions残余リスク、モバイル実機未検証、所有者の公開承認は今回解除しない。新workflowの実CIはPush禁止のため未実施。技術認証が成功しても最終ゲートはfalseで停止し、upload/OIDC/deployへ進めない。現在のcommit以降の公開SourceLink URL確認もPush後の工程であり成功扱いしない。
+
+今回のローカル検証はSDK401 locked restore、Debug/Release 0警告0エラー、2,333 Checks、Worker、新認証30ケース、既存改変拒否・118パスケース・11 Action policyケース、fresh publish・35静的参照・両Webcil raw/br/gz、44通知/証跡、新認証のpublish実バイト照合を成功。4原ログの保存版と106依存のvariant、公式std54入力も再照合した。公開ゲートは技術検証成功後に所有者承認falseで停止。詳細と検証範囲は[今回の記録](FURIGANA-ATTESTATION.md#今回の検証記録)を参照。旧成果物の混入を検出した再利用publishは採用しない。
+
+---
+
 # B5: Pages設定・Environment保護の確認記録（2026-10-15）
 
 確認根拠は、所有者がGitHub Settings画面で確認した結果を、この作業の依頼文で提供したもの。エージェントが設定画面へログインして独立に再確認した、または設定を変更したという意味ではない。開始HEAD=0e0e256b455a30ce9e2399f1b029c793d5470e23、main、clean。取得したorigin/main=0645bdb511dfd664ee4fe5416da85c1c63042637で、ローカルが10コミット先行し、リモートのみの追加コミットはなかった。

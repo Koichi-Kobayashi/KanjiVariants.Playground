@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "profile": "recorded-build-inputs-and-artifact-identity/v1",
+  "claims": [
+    "fixed-artifact-identity",
+    "fixed-source-and-lock",
+    "recorded-106-compiled-packages",
+    "recorded-features-host-target-kinds",
+    "official-54-standard-inputs",
+    "recorded-bindgen-input-output",
+    "notices-for-declared-scope",
+    "zero-known-missing-notices",
+    "recorded-same-machine-isolated-repeat"
+  ],
+  "exclusions": [
+    "complete-final-linked-sbom",
+    "post-lto-instruction-data-source-bijection",
+    "complete-build-input-closure",
+    "independent-third-party-reproduction",
+    "uncompromised-compiler-or-build-host"
+  ],
+  "approval": "Owner authorized Plan B scope on 2026-10-16; deployment NOT authorized.",
+  "trust": "Reviewed verifier + roots in version control; this is not a signature, build-time attestation or independent-builder proof.",
+  "ci": "Rechecks reviewed projections, immutable original provenance, official std archive and published bytes. Does not re-read private original logs.",
+  "local": "Additionally requires all four original content-addressed logs and retained bindgen/raw/repeat outputs."
+}
